@@ -1,0 +1,104 @@
+%----------------------------------------------------------------------------------------
+% STUST MEng. Thesis
+% Original authors : AIoRLab/NCLab/WNDCLab Thesis LaTeX Team
+% Department of Electronic Engineering
+% National Souther Taiwan of Sciences and Technology
+% GitHub : https://github.com/yingchao-chen/STUST-thesis-template
+% Version 1.0 (2020.01.31)
+%----------------------------------------------------------------------------------------
+
+\input{Configurations/Template}
+\input{Configurations/config}
+
+
+\begin{document}
+\newcommand\n{\mbox{\qquad}}
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+
+%----------------------------------------------------------------------------------------
+%	論文編印項目次序
+%   編排順序依照學術論文格式規範文件進行排序
+%----------------------------------------------------------------------------------------
+
+% ----- 封面頁 -----
+\input{Instance/FrontCover}
+
+% ----- 書  脊 -----
+
+% ----- 空白頁 -----
+\newpage　\thispagestyle{empty}\newpage
+
+% ----- 書名頁 -----
+\input{Instance/title}
+
+% ----- 博碩士論文授權書 -----
+% \includepdf[pagecommand={\thispagestyle{empty}}]{Externals/powerofattorney.pdf}
+
+% ----- 博士論文指導教授推薦書 (碩士可直接註解省略) -----
+% \includepdf[pagecommand={\thispagestyle{empty}}]{Externals/recommend.pdf}
+
+% 論文口試委員會審定書
+% \includepdf[pagecommand={\thispagestyle{empty}}]{Externals/sign.pdf}
+
+%----------------------------------------------------------------------------------------
+%	論文內容 由此開始
+%----------------------------------------------------------------------------------------
+% \newwatermark[pages=1-100,fontfamily=bch,color=gray!100,scale=4,xpos=4,ypos=20]{\transparent{0.4}\includegraphics[width=1.25cm]{\watermarkimage}}
+\AddToShipoutPictureBG{\STUSTwatermark}  % 浮水印設定
+\setcounter{page}{1}        % 摘要為第一頁
+\pagenumbering{roman}       %用羅馬RS編號
+
+% 中英文摘要
+\input{Instance/abstract_zhTW} \addchaptertocentry{\abstractname}
+\input{Instance/abstract_EN} \addchaptertocentry{\abstractname}
+
+% 誌謝 or 序言 （視需要）
+\input{Instance/acknowledgement} \addchaptertocentry{\acknowledgementname}
+
+% 目次
+\renewcommand{\contentsname}{目\hspace{15mm}次}
+\tableofcontents \addchaptertocentry{\contentsname}
+\newpage
+
+% 表目錄
+\renewcommand{\tablename}{表}
+\renewcommand{\listtablename}{表\hspace{5.5mm}目\hspace{5.5mm}錄}
+\listoftables \addchaptertocentry{\listtablename}
+\newpage
+
+% 圖目錄
+\renewcommand{\figurename}{圖}
+\renewcommand{\listfigurename}{圖\hspace{5.5mm}目\hspace{5.5mm}錄}
+\listoffigures \addchaptertocentry{\listfigurename}
+\newpage
+
+% 論文本文
+\mainmatter % Begin numeric (1,2,3...) page numbering
+\input{Chapters/Introduction.tex}
+\input{Chapters/Method}
+\input{Chapters/Result}
+\input{Chapters/Conclusion.tex}
+
+%----------------------------------------------------------------------------------------
+% 參考文獻  文献データベース
+\input{Chapters/Reference.tex} \addchaptertocentry{\bibname}
+%----------------------------------------------------------------------------------------
+
+% 附錄及符號(公式)彙編（視需要）
+% \appendix
+% \input{Appendices/AppendixA}
+
+%----------------------------------------------------------------------------------------
+%	論文內容 結束
+%----------------------------------------------------------------------------------------
+
+% 自傳或簡歷 (可有可無)
+
+
+%----------------------------------------------------------------------------------------
+
+\clearpage
+% \end{CJK}
+\end{document}

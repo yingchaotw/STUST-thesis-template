@@ -1,0 +1,85 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[oneside,
+12pt, % The default document font size, options: 10pt, 11pt, 12pt
+english, % ngerman for German
+onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
+]{Configurations/STUST-MS-Thesis} % The class file specifying the document structure
+
+\setcounter{secnumdepth}{6}
+\setcounter{tocdepth}{6}
+% \newtheorem{note}{註：}
+
+
+\listfiles
+
+%----------------------------------------------------------------------------------------
+%見た目を変更するパッケージとして
+%----------------------------------------------------------------------------------------
+\usepackage{titlesec, titletoc}   
+\titlecontents{chapter}[0em]{}
+{\hspace{0em}\makebox[4.1em][l]
+	{第\zhnumber{\thecontentslabel}章}}{}
+{\titlerule*[0.7pc]{.}\contentspage}
+
+\titleformat{\chapter}{\centering\Huge\bfseries}{Chapter\,{\thechapter}}{1em}{}
+\titleformat{\chapter}{\centering\Huge\bfseries}{第\,\zhnumber{\thechapter}\,章}{1em}{}    %設定章節樣式
+
+% ----- 中国語,日本語,韓国語使用の設定
+\usepackage{xeCJK}       % \usepackage{CJKutf8}
+% \defaultCJKfontfeatures{AutoFakeBold=18,AutoFakeSlant=.6}    %設定中文字粗體為6點，斜體為6點
+\defaultfontfeatures{AutoFakeBold=2.5,AutoFakeSlant=.2}
+\setCJKsansfont{Noto Serif CJK JP}
+\setCJKmonofont{Noto Serif CJK JP}
+\setCJKmainfont{AR PL UKai TW}       %預設中文字體	AR PL UKai TW
+\setmainfont{Times New Roman}        %預設英文字體
+\setsansfont{fonts/times.ttf} 		 %直接使用目錄底下指定字體
+%----------------------------------------------------------------------------------------
+
+
+\usepackage[final]{pdfpages}    %PDFの各ページを挿入するためのパッケージです
+
+\usepackage{url}         %URLをリンクとして表示するためのパッケージ
+\usepackage[redeflists]{IEEEtrantools}   %複数行にわたった数式を書く場合には，IEEEeqnarray 環境が便利です
+\usepackage{zhnumber}
+\usepackage{indentfirst}      %首段文章縮排套件
+\linespread{1.5} %行距1.5倍
+
+% \usepackage[utf8]{inputenc} % Required for inputting international characters
+% \usepackage[printwatermark]{xwatermark}
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{palatino} % Use the Palatino font by default
+\usepackage{indentfirst} \setlength{\parindent}{2em}
+\usepackage{xcolor}
+\usepackage{lettrine}  % used for chinese bigger capital
+\usepackage{Package/slashbox}
+\usepackage{booktabs,amsmath}
+\usepackage{algorithm}
+\usepackage{transparent}
+\usepackage{enumerate}
+\usepackage{multirow}
+
+%----------------------------------------------------------------------------------------
+% 參考文獻 Reference package
+%----------------------------------------------------------------------------------------
+\makeatletter
+\def\blx@maxline{77}
+\makeatother
+\usepackage[redeflists]{IEEEtrantools}   %複数行にわたった数式を書く場合には，IEEEeqnarray 環境が便利です
+\usepackage[hyperref=true,backend=biber,sorting=none,backref=true]{biblatex}
+\addbibresource{References/\RefName.bib} % The filename of the bibliography
+% \usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % User the bibtex backend with the authoryear citation style (which resembles APA)
+
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+\usepackage{makecell}
+\cleardoublepage
+\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+
+% \newwatermark[pages=3-112,fontfamily=bch,color=gray!100,scale=4,xpos=4,ypos=20]{\transparent{0.4}\includegraphics[width=1.25cm]{\watermarkimage}}
+
+
+
