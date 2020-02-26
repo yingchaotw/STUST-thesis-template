@@ -13,7 +13,7 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 % \newtheorem{note}{註：}
 
 
-\listfiles
+% \listfiles
 
 %----------------------------------------------------------------------------------------
 %見た目を変更するパッケージとして
@@ -28,8 +28,7 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \titleformat{\chapter}{\centering\Huge\bfseries}{第\,\zhnumber{\thechapter}\,章}{1em}{}    %設定章節樣式
 
 % ----- 中国語,日本語,韓国語使用の設定
-\usepackage{xeCJK}       % \usepackage{CJKutf8}
-% \defaultCJKfontfeatures{AutoFakeBold=18,AutoFakeSlant=.6}    %設定中文字粗體為6點，斜體為6點
+\usepackage{xeCJK}
 \defaultfontfeatures{AutoFakeBold=2.5,AutoFakeSlant=.2}
 \setCJKsansfont{Noto Serif CJK JP}
 \setCJKmonofont{Noto Serif CJK JP}
@@ -64,9 +63,9 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 %----------------------------------------------------------------------------------------
 % 參考文獻 Reference package
 %----------------------------------------------------------------------------------------
-\makeatletter
-\def\blx@maxline{77}
-\makeatother
+% \makeatletter
+% \def\blx@maxline{77}
+% \makeatother
 \usepackage[redeflists]{IEEEtrantools}   %複数行にわたった数式を書く場合には，IEEEeqnarray 環境が便利です
 \usepackage[hyperref=true,backend=biber,sorting=none,backref=true]{biblatex}
 \addbibresource{References/\RefName.bib} % The filename of the bibliography
@@ -78,7 +77,8 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \usepackage{makecell}
 \cleardoublepage
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
-
+\usepackage{datetime}
+\usepackage{ifthen}
 % \newwatermark[pages=3-112,fontfamily=bch,color=gray!100,scale=4,xpos=4,ypos=20]{\transparent{0.4}\includegraphics[width=1.25cm]{\watermarkimage}}
 
 

@@ -1995,7 +1995,7 @@
     <bcf:datasource type="file" datatype="bibtex">References/reference.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">goossens97</bcf:citekey>
+    <bcf:citekey order="1">m1</bcf:citekey>
     <bcf:citekey order="2">talbot97</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->

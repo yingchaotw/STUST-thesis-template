@@ -1,8 +1,19 @@
 %
 % Thesis Defined
 %
+
+\ifx\CoAdvisor\undefined
+\newif\ifCoAdvisor  % 是否有共同指導教授參與
+
+
+% 有共同指導教授
+% \CoAdvisortrue
+% 沒有共同指導教授
+\CoAdvisorfalse
+
+
 % 參考文獻[BIB]檔名
-\def\RefName{reference}			
+\def\RefName{reference}
 
 
 % 研究生中文名字
@@ -12,16 +23,17 @@
 
 
 % 指導教授中文名字
-\def\professortwname{林默娘}  
+\def\Advisortwname{林默娘}  
 % 指導教授英文名字
-\def\professorenname{Mo-Niang Lin Ph.D.}  
+\def\Advisorenname{Mo-Niang Lin Ph.D.}  
 
 
+\ifCoAdvisor
 % 共同指導教授中文名字
-\def\Jointprofessortwname{弁慶}
+\def\CoAdvisortwname{弁慶}
 % 共同指導教授英文名字
-\def\Jointprofessorenname{Benkei Ph.D.}  
-
+\def\CoAdvisorenname{Benkei Ph.D.}  
+\fi
 
 \def\schooltwname{南臺科技大學}
 \def\schoolenname{Souther Taiwan University of Sciences and Technology}

@@ -357,7 +357,7 @@
     
 	% \begin{minipage}{0.5\textwidth}
 	% \begin{flushright}
-    % \emph{Supervisor\hspace{4mm}}{\bfseries \professorenname}
+    % \emph{Supervisor\hspace{4mm}}{\bfseries \Advisorenname}
     % \end{flushright}
 	% \end{minipage}\\[1cm]
 
@@ -400,7 +400,7 @@
     % \end{minipage}
     % \begin{minipage}{0.5\textwidth}
     % \begin{flushright}
-    % \emph{指導教授\hspace{4mm}}{\bfseries \professortwname}
+    % \emph{指導教授\hspace{4mm}}{\bfseries \Advisortwname}
     % \end{flushright}
     % \end{minipage}\\[1cm]
     % %{\normalsize \byname{} \authorname \par} % Author name
@@ -521,20 +521,22 @@
 
 %設定超連結文字顏色，目錄連結:黑色，url:藍色，cite:黑色
 \usepackage{hyperref} % Required for customising links and the PDF
-\hypersetup{
-			pdfpagemode={UseOutlines},
-			linktocpage,
-			bookmarksopen=true,
-			bookmarksopenlevel=0,
-			hypertexnames=false,
+\hypersetup{ %
+			pdfpagemode={UseOutlines}, %
+			linktocpage, %
+			bookmarksopen=true, %
+			bookmarksopenlevel=0, %
+			bookmarksnumbered=true, %
+			hypertexnames=false, %
 			colorlinks=true, % Set to false to disable coloring links
 			citecolor=black, % The color of citations
 			linkcolor=black, % The color of references to document elements (sections, figures, etc)
 			urlcolor=blue, % The color of hyperlinks (URLs)
-			pdfstartview={FitV},
-			filecolor=magenta,
-			unicode,
-			breaklinks=true,
+			pdfstartview={FitV}, %
+			pdftitle = {The title}, % 
+			filecolor=magenta, %
+			unicode, %
+			breaklinks=true, %
 }
 
 \pdfstringdefDisableCommands{ % If there is an explicit linebreak in a section heading (or anything printed to the pdf-bookmarks), it is replaced by a space

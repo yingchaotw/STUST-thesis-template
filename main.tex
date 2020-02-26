@@ -4,7 +4,7 @@
 % Department of Electronic Engineering
 % National Souther Taiwan of Sciences and Technology
 % GitHub : https://github.com/yingchao-chen/STUST-thesis-template
-% Version 1.0 (2020.01.31)
+% Version 1.0 (2020.02.26)
 %----------------------------------------------------------------------------------------
 
 \input{Configurations/Template}
@@ -45,8 +45,10 @@
 %----------------------------------------------------------------------------------------
 %	論文內容 由此開始
 %----------------------------------------------------------------------------------------
-% \newwatermark[pages=1-100,fontfamily=bch,color=gray!100,scale=4,xpos=4,ypos=20]{\transparent{0.4}\includegraphics[width=1.25cm]{\watermarkimage}}
+\phantomsection     %加這個命令後，目錄中的超鏈接才指向正確的頁碼
+
 \AddToShipoutPictureBG{\STUSTwatermark}  % 浮水印設定
+% \clearpage          %加這個命令後，目錄中的頁碼才顯示正確
 \setcounter{page}{1}        % 摘要為第一頁
 \pagenumbering{roman}       %用羅馬RS編號
 
@@ -58,19 +60,19 @@
 \input{Instance/acknowledgement} \addchaptertocentry{\acknowledgementname}
 
 % 目次
-\renewcommand{\contentsname}{目\hspace{15mm}次}
+\renewcommand{\contentsname}{目\hspace{3em}次}
 \tableofcontents \addchaptertocentry{\contentsname}
 \newpage
 
 % 表目錄
 \renewcommand{\tablename}{表}
-\renewcommand{\listtablename}{表\hspace{5.5mm}目\hspace{5.5mm}錄}
+\renewcommand{\listtablename}{表\hspace{1em}目\hspace{1em}錄}
 \listoftables \addchaptertocentry{\listtablename}
 \newpage
 
 % 圖目錄
 \renewcommand{\figurename}{圖}
-\renewcommand{\listfigurename}{圖\hspace{5.5mm}目\hspace{5.5mm}錄}
+\renewcommand{\listfigurename}{圖\hspace{1em}目\hspace{1em}錄}
 \listoffigures \addchaptertocentry{\listfigurename}
 \newpage
 

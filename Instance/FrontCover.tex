@@ -3,7 +3,7 @@
 %----------------------------------------------------------------------------------------
 
 \begin{titlepage}
-% \vspace*{1mm}
+\vspace*{1mm}
 
 \begin{center}
 
@@ -18,22 +18,30 @@
 \vspace{5mm}
 
 % \vspace{1\baselineskip}
-{\fontsize{22pt}{10pt}  \textbf{\titleen}}
-\vspace{15mm}\\
+{\fontsize{22pt}{10pt}  \textbf{\titleen}}\\
+\textcolor{blue}{\Large{\today（初稿）}}
+\vspace{20mm}
 
 \vspace{0.5\baselineskip}
-%\LARGE  {（初稿）}
-\vspace{30mm}
+
+% \displaydate{\today}
+% \maketitle
+
+% \vspace{30mm}
 
 \begin{tabular}{rl}
 \fontsize{18pt}{10pt}\makebox[6em][s]{研\hspace{\fill}究\hspace{\fill}生}： & 
 \fontsize{18pt}{10pt} \authortwname \\[20mm]
 
 \fontsize{18pt}{10pt}\makebox[6em][s]{指\hspace{\fill}導\hspace{\fill}教\hspace{\fill}授}： &
-\fontsize{18pt}{10pt} \professortwname \\[5mm]
+\fontsize{18pt}{10pt} \Advisortwname \\[5mm]
 
+\ifCoAdvisor
 \fontsize{18pt}{10pt}\makebox[6em][s]{共\hspace{\fill}同\hspace{\fill}指\hspace{\fill}導}： &
-\fontsize{18pt}{10pt} \Jointprofessortwname \\[10mm]
+\fontsize{18pt}{10pt} \CoAdvisortwname \\[8mm]
+\else
+\vspace{8mm}
+\fi
 \end{tabular}
 
 \vspace{15mm}
@@ -41,3 +49,4 @@
 \end{center}
 
 \end{titlepage} 
+\clearpage

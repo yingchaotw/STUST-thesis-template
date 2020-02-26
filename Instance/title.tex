@@ -7,7 +7,7 @@
 %----------------------------------------------------------------------------------------
 
 \begin{titlepage}
-% \vspace*{1mm}
+\vspace*{1mm}
 
 \begin{center}
 
@@ -22,22 +22,25 @@
 \vspace{5mm}
 
 % \vspace{1\baselineskip}
-{\fontsize{22pt}{10pt}  \textbf{\titleen}}
-\vspace{15mm}\\
-
-\vspace{0.5\baselineskip}
+{\fontsize{22pt}{10pt}  \textbf{\titleen}}\\
 %\LARGE  {（初稿）}
 \vspace{30mm}
+
+\vspace{0.5\baselineskip}
 
 \fontsize{18pt}{10pt} \authortwname
 \vspace{20mm}
 
 \begin{tabular}{rl}
 \fontsize{18pt}{10pt}\makebox[6em][s]{指\hspace{\fill}導\hspace{\fill}教\hspace{\fill}授}： &
-\fontsize{18pt}{10pt} \professortwname \\[5mm]
+\fontsize{18pt}{10pt} \Advisortwname \\[5mm]
 
+\ifCoAdvisor
 \fontsize{18pt}{10pt}\makebox[6em][s]{共\hspace{\fill}同\hspace{\fill}指\hspace{\fill}導}： &
-\fontsize{18pt}{10pt} \Jointprofessortwname \\[10mm]
+\fontsize{18pt}{10pt} \CoAdvisortwname \\[8mm]
+\else
+\vspace{8mm}
+\fi
 \end{tabular}
 
 \vspace{15mm}
@@ -45,9 +48,7 @@
 \end{center}
 
 \end{titlepage} 
-
-
-
+\clearpage
 
 % \begin{titlepage}
 % \vspace*{1mm}
@@ -61,8 +62,8 @@
 % \vspace{15mm}
 
 % {\large\bfseries{研究生：}\large\authortwname\\
-% \large\bfseries{指導教授：}\large\professortwname\\
-% \large\bfseries{共同指導：}\large\Jointprofessortwname}
+% \large\bfseries{指導教授：}\large\Advisortwname\\
+% \large\bfseries{共同指導：}\large\CoAdvisortwname}
 
 % \vspace{15mm}
 % {\Large\bfseries{\schooltwname}\\

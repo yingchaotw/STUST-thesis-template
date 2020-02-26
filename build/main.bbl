@@ -19,39 +19,26 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
-    \entry{goossens97}{book}{}
-      \name{author}{3}{}{%
-        {{hash=0743efb276e9219ee664a9b3dbd60619}{%
-           family={Goossens},
-           familyi={G\bibinitperiod},
-           given={Michel},
-           giveni={M\bibinitperiod}}}%
-        {{hash=22439d3b66be376e3f27270d8d300c89}{%
-           family={Rahtz},
-           familyi={R\bibinitperiod},
-           given={Sebastian},
-           giveni={S\bibinitperiod}}}%
-        {{hash=9355edd511e3f6fdd880ee98722a53fb}{%
-           family={Mittelbach},
-           familyi={M\bibinitperiod},
-           given={Frank},
-           giveni={F\bibinitperiod}}}%
+    \entry{m1}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d1d12a98508a460ec3b5f0d2de560f3a}{%
+           family={林志豪},
+           familyi={林\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Addison Wesley Longman, Inc}%
-      }
-      \strng{namehash}{e0fe5244f7bd4501ecba8372b6fdd95b}
-      \strng{fullhash}{e0fe5244f7bd4501ecba8372b6fdd95b}
-      \strng{bibnamehash}{e0fe5244f7bd4501ecba8372b6fdd95b}
-      \strng{authorbibnamehash}{e0fe5244f7bd4501ecba8372b6fdd95b}
-      \strng{authornamehash}{e0fe5244f7bd4501ecba8372b6fdd95b}
-      \strng{authorfullhash}{e0fe5244f7bd4501ecba8372b6fdd95b}
+      \strng{namehash}{d1d12a98508a460ec3b5f0d2de560f3a}
+      \strng{fullhash}{d1d12a98508a460ec3b5f0d2de560f3a}
+      \strng{bibnamehash}{d1d12a98508a460ec3b5f0d2de560f3a}
+      \strng{authorbibnamehash}{d1d12a98508a460ec3b5f0d2de560f3a}
+      \strng{authornamehash}{d1d12a98508a460ec3b5f0d2de560f3a}
+      \strng{authorfullhash}{d1d12a98508a460ec3b5f0d2de560f3a}
       \field{sortinit}{1}
       \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{The \LaTeX{} graphics companion: illustrating documents with \TeX{} and {PostScript}}
-      \field{year}{1997}
+      \field{journaltitle}{國立臺灣科技大學 自動化及控制研究所}
+      \field{month}{碩士論文}
+      \field{title}{交叉視覺架構之即時侵入物追蹤與定位系統}
+      \field{year}{2012}
     \endentry
     \entry{talbot97}{inproceedings}{}
       \name{author}{2}{}{%

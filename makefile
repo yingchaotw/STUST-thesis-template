@@ -28,6 +28,7 @@ all:
 	$(LATEX) $(TEX_Parameter) $(TEX_FILES)
 	$(BIBTEX) $(BUILD_DIR)/$(TARGET)
 	$(LATEX) $(TEX_Parameter) $(TEX_FILES)
+	mv $(BUILD_DIR)/$(TARGET).pdf .
 
 clean:
 	rm -rf $(BUILD_DIR)
