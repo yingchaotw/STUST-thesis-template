@@ -1,8 +1,10 @@
-![](Figures/Logos/stustlargelogo.png)
+[![](Figures/Logos/stustlargelogo.png "研究生學位考試專區")](https://www.stust.edu.tw/tc/node/DegreeExam)
 # STUST Thesis LaTeX
 
 - 南臺科技大學
 - Southern Taiwan University of Science of Technology
+
+[本樣版範例](main.pdf)
 
 ## 前言
 如果您發現這個板型有問題，請提交 Issus，也非常歡迎您提交 PR 協助修正問題。
@@ -54,6 +56,20 @@ Compiled with fontconfig version 2.11.0; using 2.13.1
 上述內容中除加註有「視需要」者或本規範其他另有規定者外，研究論文均必須一一含入。除非有絕對必要如軟體研發等，否則論文應儘量不附電腦磁碟或 CD 等無法裝訂之附件。
 
 本規範之空行表示法為「x (1.5×12pt)行」，其中 1.5 代表「行距」之設定，12pt 為字體高度設定。
+
+### 服用方式
+如電腦有支援 make 功能可直接 `make all` 編譯 latex 產出論文
+也可直接 `xelatex main.tex` 編譯此樣本
+如有問題請提出 **Issus** 將會盡快改善並修正問題
+
+### 變數宣告
+[config.tex](Configurations/config.tex)
+如有共同指導教授請將變數 `CoAdvisor` 變數設為 true
+其語法為
+```latex=
+\CoAdvisortrue  % 有共同指導教授，此行能夠印出共同指導教授資訊
+\CoAdvisorfalse % 沒有共同指導教授，將隱藏共同指導教授資訊
+```
 
 ### 頁碼
 論文除「書名頁」與「論文考試委員審定書」外，均應於每頁的下方中央編排頁碼。頁碼應置於下側距離紙張邊緣至少1.5公分處(本規範之設定為1.75cm)。論文之篇前部份應以小寫羅馬數字，即 iv、v、vi、vii、…. 等；本文及篇後部份應以阿拉伯數字編排。頁碼前後不應使用任何符號（例如：不可用“page” 或 -1-，僅以1表之即可）。頁碼無論是篇前或本文，一律使用半形之Times New Roman字型。

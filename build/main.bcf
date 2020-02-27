@@ -1997,6 +1997,7 @@
   <bcf:section number="0">
     <bcf:citekey order="1">m1</bcf:citekey>
     <bcf:citekey order="2">talbot97</bcf:citekey>
+    <bcf:citekey order="3">goossens97</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

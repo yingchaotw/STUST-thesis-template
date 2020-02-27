@@ -24,6 +24,7 @@ TEX_FILES = $(TARGET).tex
 # REF=Reference/reference.bib
 
 all:
+	@echo ========== make a directory ==========
 	mkdir -p $(BUILD_DIR)
 	$(LATEX) $(TEX_Parameter) $(TEX_FILES)
 	$(BIBTEX) $(BUILD_DIR)/$(TARGET)

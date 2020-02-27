@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.9.14)  26 FEB 2020 20:31
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.9.14)  27 FEB 2020 17:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -512,7 +512,7 @@ Package scrhack Info: undefining \float@addtolists on input line 163.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-Package scrhack Info: loading setspace hack on input line 175.
+Package scrhack Info: loading setspace hack on input line 176.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/setspace.hak
 File: setspace.hak 2019/02/01 v3.26b KOMA-Script package (hacking package setsp
@@ -758,7 +758,7 @@ LaTeX Info: Redefining \pageref on input line 6454.
 )
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of hyperref version, that doesn't
-(scrhack)             need that hack, on input line 524.
+(scrhack)             need that hack, on input line 525.
 Package hyperref Info: Driver (autodetected): hxetex.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/hxetex.def
@@ -784,19 +784,19 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip91
 )
-Package hyperref Info: Option `linktocpage' set `true' on input line 540.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 540.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 540.
+Package hyperref Info: Option `linktocpage' set `true' on input line 541.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 541.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 541.
 
-Package hyperref Info: Option `hypertexnames' set `false' on input line 540.
-Package hyperref Info: Option `colorlinks' set `true' on input line 540.
+Package hyperref Info: Option `hypertexnames' set `false' on input line 541.
+Package hyperref Info: Option `colorlinks' set `true' on input line 541.
 
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
 File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 
 )
-Package hyperref Info: Option `unicode' set `true' on input line 540.
-Package hyperref Info: Option `breaklinks' set `true' on input line 540.
+Package hyperref Info: Option `unicode' set `true' on input line 541.
+Package hyperref Info: Option `breaklinks' set `true' on input line 541.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count325
@@ -821,7 +821,7 @@ File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2019/02/27 1.8b listings configuration
 ))
-Package scrhack Info: loading listings hack on input line 550.
+Package scrhack Info: loading listings hack on input line 551.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/listings.hak
 File: listings.hak 2019/02/01 v3.26b KOMA-Script package (hacking package listi
@@ -1208,57 +1208,62 @@ Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
 \multirow@dima=\skip106
 \bigstrutjot=\dimen340
 )
+(/usr/local/texlive/2019/texmf-dist/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count376
+\cp@tempcnt=\count377
+)
 (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2018/11/02 v3.12 programmable bibliographies (PK/MW)
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count376
+\lrq@indent=\count378
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count377
-\c@listtotal=\count378
-\c@listcount=\count379
-\c@liststart=\count380
-\c@liststop=\count381
-\c@citecount=\count382
-\c@citetotal=\count383
-\c@multicitecount=\count384
-\c@multicitetotal=\count385
-\c@instcount=\count386
-\c@maxnames=\count387
-\c@minnames=\count388
-\c@maxitems=\count389
-\c@minitems=\count390
-\c@citecounter=\count391
-\c@maxcitecounter=\count392
-\c@savedcitecounter=\count393
-\c@uniquelist=\count394
-\c@uniquename=\count395
-\c@refsection=\count396
-\c@refsegment=\count397
-\c@maxextratitle=\count398
-\c@maxextratitleyear=\count399
-\c@maxextraname=\count400
-\c@maxextradate=\count401
-\c@maxextraalpha=\count402
-\c@abbrvpenalty=\count403
-\c@highnamepenalty=\count404
-\c@lownamepenalty=\count405
-\c@maxparens=\count406
-\c@parenlevel=\count407
-\blx@tempcnta=\count408
-\blx@tempcntb=\count409
-\blx@tempcntc=\count410
-\blx@maxsection=\count411
-\blx@maxsegment@0=\count412
-\blx@notetype=\count413
-\blx@parenlevel@text=\count414
-\blx@parenlevel@foot=\count415
-\blx@sectionciteorder@0=\count416
-\blx@entrysetcounter=\count417
+\c@tabx@nest=\count379
+\c@listtotal=\count380
+\c@listcount=\count381
+\c@liststart=\count382
+\c@liststop=\count383
+\c@citecount=\count384
+\c@citetotal=\count385
+\c@multicitecount=\count386
+\c@multicitetotal=\count387
+\c@instcount=\count388
+\c@maxnames=\count389
+\c@minnames=\count390
+\c@maxitems=\count391
+\c@minitems=\count392
+\c@citecounter=\count393
+\c@maxcitecounter=\count394
+\c@savedcitecounter=\count395
+\c@uniquelist=\count396
+\c@uniquename=\count397
+\c@refsection=\count398
+\c@refsegment=\count399
+\c@maxextratitle=\count400
+\c@maxextratitleyear=\count401
+\c@maxextraname=\count402
+\c@maxextradate=\count403
+\c@maxextraalpha=\count404
+\c@abbrvpenalty=\count405
+\c@highnamepenalty=\count406
+\c@lownamepenalty=\count407
+\c@maxparens=\count408
+\c@parenlevel=\count409
+\blx@tempcnta=\count410
+\blx@tempcntb=\count411
+\blx@tempcntc=\count412
+\blx@maxsection=\count413
+\blx@maxsegment@0=\count414
+\blx@notetype=\count415
+\blx@parenlevel@text=\count416
+\blx@parenlevel@foot=\count417
+\blx@sectionciteorder@0=\count418
+\blx@entrysetcounter=\count419
 \labelnumberwidth=\skip107
 \labelalphawidth=\skip108
 \biblabelsep=\skip109
@@ -1269,9 +1274,9 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \bibhang=\skip114
 \blx@bcfin=\read3
 \blx@bcfout=\write3
-\c@mincomprange=\count418
-\c@maxcomprange=\count419
-\c@mincompwidth=\count420
+\c@mincomprange=\count420
+\c@maxcomprange=\count421
+\c@mincompwidth=\count422
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1280,74 +1285,74 @@ File: blx-dm.def 2018/11/02 v3.12 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count421
-\c@savedafterword=\count422
-\c@annotator=\count423
-\c@savedannotator=\count424
-\c@author=\count425
-\c@savedauthor=\count426
-\c@bookauthor=\count427
-\c@savedbookauthor=\count428
-\c@commentator=\count429
-\c@savedcommentator=\count430
-\c@editor=\count431
-\c@savededitor=\count432
-\c@editora=\count433
-\c@savededitora=\count434
-\c@editorb=\count435
-\c@savededitorb=\count436
-\c@editorc=\count437
-\c@savededitorc=\count438
-\c@foreword=\count439
-\c@savedforeword=\count440
-\c@holder=\count441
-\c@savedholder=\count442
-\c@introduction=\count443
-\c@savedintroduction=\count444
-\c@namea=\count445
-\c@savednamea=\count446
-\c@nameb=\count447
-\c@savednameb=\count448
-\c@namec=\count449
-\c@savednamec=\count450
-\c@translator=\count451
-\c@savedtranslator=\count452
-\c@shortauthor=\count453
-\c@savedshortauthor=\count454
-\c@shorteditor=\count455
-\c@savedshorteditor=\count456
-\c@labelname=\count457
-\c@savedlabelname=\count458
-\c@institution=\count459
-\c@savedinstitution=\count460
-\c@lista=\count461
-\c@savedlista=\count462
-\c@listb=\count463
-\c@savedlistb=\count464
-\c@listc=\count465
-\c@savedlistc=\count466
-\c@listd=\count467
-\c@savedlistd=\count468
-\c@liste=\count469
-\c@savedliste=\count470
-\c@listf=\count471
-\c@savedlistf=\count472
-\c@location=\count473
-\c@savedlocation=\count474
-\c@organization=\count475
-\c@savedorganization=\count476
-\c@origlocation=\count477
-\c@savedoriglocation=\count478
-\c@origpublisher=\count479
-\c@savedorigpublisher=\count480
-\c@publisher=\count481
-\c@savedpublisher=\count482
-\c@language=\count483
-\c@savedlanguage=\count484
-\c@origlanguage=\count485
-\c@savedoriglanguage=\count486
-\c@pageref=\count487
-\c@savedpageref=\count488
+\c@afterword=\count423
+\c@savedafterword=\count424
+\c@annotator=\count425
+\c@savedannotator=\count426
+\c@author=\count427
+\c@savedauthor=\count428
+\c@bookauthor=\count429
+\c@savedbookauthor=\count430
+\c@commentator=\count431
+\c@savedcommentator=\count432
+\c@editor=\count433
+\c@savededitor=\count434
+\c@editora=\count435
+\c@savededitora=\count436
+\c@editorb=\count437
+\c@savededitorb=\count438
+\c@editorc=\count439
+\c@savededitorc=\count440
+\c@foreword=\count441
+\c@savedforeword=\count442
+\c@holder=\count443
+\c@savedholder=\count444
+\c@introduction=\count445
+\c@savedintroduction=\count446
+\c@namea=\count447
+\c@savednamea=\count448
+\c@nameb=\count449
+\c@savednameb=\count450
+\c@namec=\count451
+\c@savednamec=\count452
+\c@translator=\count453
+\c@savedtranslator=\count454
+\c@shortauthor=\count455
+\c@savedshortauthor=\count456
+\c@shorteditor=\count457
+\c@savedshorteditor=\count458
+\c@labelname=\count459
+\c@savedlabelname=\count460
+\c@institution=\count461
+\c@savedinstitution=\count462
+\c@lista=\count463
+\c@savedlista=\count464
+\c@listb=\count465
+\c@savedlistb=\count466
+\c@listc=\count467
+\c@savedlistc=\count468
+\c@listd=\count469
+\c@savedlistd=\count470
+\c@liste=\count471
+\c@savedliste=\count472
+\c@listf=\count473
+\c@savedlistf=\count474
+\c@location=\count475
+\c@savedlocation=\count476
+\c@organization=\count477
+\c@savedorganization=\count478
+\c@origlocation=\count479
+\c@savedoriglocation=\count480
+\c@origpublisher=\count481
+\c@savedorigpublisher=\count482
+\c@publisher=\count483
+\c@savedpublisher=\count484
+\c@language=\count485
+\c@savedlanguage=\count486
+\c@origlanguage=\count487
+\c@savedoriglanguage=\count488
+\c@pageref=\count489
+\c@savedpageref=\count490
 \shorthandwidth=\skip115
 \shortjournalwidth=\skip116
 \shortserieswidth=\skip117
@@ -1377,13 +1382,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
-\c@textcitecount=\count489
-\c@textcitetotal=\count490
-\c@textcitemaxnames=\count491
-\c@biburlnumpenalty=\count492
-\c@biburlucpenalty=\count493
-\c@biburllcpenalty=\count494
-\c@smartand=\count495
+\c@textcitecount=\count491
+\c@textcitetotal=\count492
+\c@textcitemaxnames=\count493
+\c@biburlnumpenalty=\count494
+\c@biburlucpenalty=\count495
+\c@biburllcpenalty=\count496
+\c@smartand=\count497
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -1395,8 +1400,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count496
-\c@bbx:relatedtotal=\count497
+\c@bbx:relatedcount=\count498
+\c@bbx:relatedtotal=\count499
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1424,17 +1429,17 @@ File: biblatex.cfg
 (/usr/local/texlive/2019/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen341
-\c@nlinenum=\count498
+\c@nlinenum=\count500
 \TeXr@lab=\toks42
 )
 (/usr/local/texlive/2019/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2018/04/13 v5.2d context-sensitive quotations (JAW)
-\csq@reset=\count499
-\csq@gtype=\count500
-\csq@glevel=\count501
-\csq@qlevel=\count502
-\csq@maxlvl=\count503
-\csq@tshold=\count504
+\csq@reset=\count501
+\csq@gtype=\count502
+\csq@glevel=\count503
+\csq@qlevel=\count504
+\csq@maxlvl=\count505
+\csq@tshold=\count506
 \csq@ltx@everypar=\toks43
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/csquotes/csquotes.def
@@ -1464,7 +1469,7 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@toks=\toks44
 \XKV@tempa@toks=\toks45
 )
-\XKV@depth=\count505
+\XKV@depth=\count507
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/local/texlive/2019/texmf-dist/tex/latex/fmtcount/fcprefix.sty
@@ -1476,52 +1481,52 @@ Package: fcprefix 2012/09/28
 Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
 Package: fcnumparser 2017/06/15
-\fc@digit@counter=\count506
+\fc@digit@counter=\count508
 ))
-\c@padzeroesN=\count507
-\fc@tmpcatcode=\count508
+\c@padzeroesN=\count509
+\fc@tmpcatcode=\count510
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/fmtcount/fc-english.def
 Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
 File: fc-english.def 2016/01/12
 )
-\@DT@modctr=\count509
-\@ordinalctr=\count510
-\@orgargctr=\count511
-\@strctr=\count512
-\@tmpstrctr=\count513
-\@DT@loopN=\count514
-\@DT@X=\count515
+\@DT@modctr=\count511
+\@ordinalctr=\count512
+\@orgargctr=\count513
+\@strctr=\count514
+\@tmpstrctr=\count515
+\@DT@loopN=\count516
+\@DT@X=\count517
 )
 (/usr/local/texlive/2019/texmf-dist/tex/latex/datetime/datetime-defaults.sty
 Package: datetime-defaults 2013/09/10
 )
-\@day=\count516
-\@month=\count517
-\@year=\count518
-\c@HOUR=\count519
-\c@HOURXII=\count520
-\c@MINUTE=\count521
-\c@TOHOUR=\count522
-\c@TOMINUTE=\count523
-\c@SECOND=\count524
-\currenthour=\count525
-\currentminute=\count526
-\currentsecond=\count527
+\@day=\count518
+\@month=\count519
+\@year=\count520
+\c@HOUR=\count521
+\c@HOURXII=\count522
+\c@MINUTE=\count523
+\c@TOHOUR=\count524
+\c@TOMINUTE=\count525
+\c@SECOND=\count526
+\currenthour=\count527
+\currentminute=\count528
+\currentsecond=\count529
 Package datetime Info: No datetime.cfg file found, using default settings on in
 put line 308.
-\@dtctr=\count528
-\dayofyear=\count529
-\dayofweek=\count530
+\@dtctr=\count530
+\dayofyear=\count531
+\dayofweek=\count532
 LaTeX Info: Redefining \today on input line 736.
 \dt@a=\toks46
 \dt@b=\toks47
 )) (./Configurations/config.tex)
 (/usr/local/texlive/2019/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
 Package: xeCJK-listings 2019/04/07 v3.7.2 xeCJK patch file for listings
-\l__xeCJK_listings_max_char_int=\count531
-\l__xeCJK_listings_flag_int=\count532
+\l__xeCJK_listings_max_char_int=\count533
+\l__xeCJK_listings_flag_int=\count534
 )
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -1623,7 +1628,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count533
+\c@section@level=\count535
 )
 LaTeX Info: Redefining \ref on input line 14.
 LaTeX Info: Redefining \pageref on input line 14.
@@ -1633,7 +1638,7 @@ LaTeX Info: Redefining \nameref on input line 14.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-\c@lstlisting=\count534
+\c@lstlisting=\count536
 Package scrhack Info: undefining \float@addtolists on input line 14.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
@@ -1813,9 +1818,30 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <15.39993> not available
 
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <15.39993> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 21.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 34.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <18> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 34.
 
-LaTeX Font Warning: Font shape `TU/ARPLUKaiTW(0)/m/sc' undefined
-(Font)              using `TU/ARPLUKaiTW(0)/m/n' instead on input line 48.
+Overfull \hbox (24.0pt too wide) detected at line 36
+\TU/ARPLUKaiTW(0)/bx/n/18 君 の 名 は
+ []
+
+
+Overfull \hbox (2.39996pt too wide) detected at line 38
+\TU/ARPLUKaiTW(0)/bx/n/18 指 導 教 授
+ []
+
+
+Overfull \hbox (6.0pt too wide) detected at line 40
+\TU/ARPLUKaiTW(0)/bx/n/18 林 默 娘
+ []
+
+LaTeX Font Info:    Font shape `T1/ppl/bx/sc' in size <18> not available
+(Font)              Font shape `T1/ppl/b/sc' tried instead on input line 54.
+
+LaTeX Font Warning: Font shape `TU/ARPLUKaiTW(0)/bx/sc' undefined
+(Font)              using `TU/ARPLUKaiTW(0)/bx/n' instead on input line 54.
 
 [1
 
@@ -1826,37 +1852,37 @@ LaTeX Font Warning: Font shape `TU/ARPLUKaiTW(0)/m/sc' undefined
 ]) [1
 
 ] (./Instance/title.tex
-LaTeX Font Info:    Calculating math sizes for size <18> on input line 34.
+LaTeX Font Info:    Calculating math sizes for size <18> on input line 30.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <18> not available
-(Font)              size <17.28> substituted on input line 34.
+(Font)              size <17.28> substituted on input line 30.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <12.59995> not available
-(Font)              size <12> substituted on input line 34.
+(Font)              size <12> substituted on input line 30.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <18> not available
-(Font)              size <17.28> substituted on input line 34.
+(Font)              size <17.28> substituted on input line 30.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <12.59995> not available
-(Font)              size <12> substituted on input line 34.
+(Font)              size <12> substituted on input line 30.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <18> not available
-(Font)              size <17.28> substituted on input line 34.
+(Font)              size <17.28> substituted on input line 30.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <12.59995> not available
-(Font)              size <12> substituted on input line 34.
+(Font)              size <12> substituted on input line 30.
 
 [1
 
 ]) (./Instance/abstract_zhTW.tex
 --------------------
- 摘\hspace {3em}要
+ 摘\hspace {2em}要
 --------------------
 ) (./Instance/abstract_EN.tex
 File: Figures/Logos/stust.png Graphic file (type bmp)
@@ -1877,7 +1903,7 @@ File: Figures/Logos/stust.png Graphic file (type bmp)
 
 ]
 --------------------
- 誌\hspace {3em}謝
+ 誌\hspace {2em}謝
 --------------------
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--9
@@ -1936,9 +1962,6 @@ File: Figures/Logos/stust.png Graphic file (type bmp)
 File: Figures/Logos/stust.png Graphic file (type bmp)
 <Figures/Logos/stust.png>
  [2]
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 32.
-
 
 LaTeX Warning: Reference `2' on page 3 undefined on input line 32.
 
@@ -1985,13 +2008,9 @@ File: Figures/Logos/stust.png Graphic file (type bmp)
  [6
 
 ]
-
-Package biblatex Warning: Month out of range or not an integer
-(biblatex)                at entry 'm1' on input line 4.
-
 File: Figures/Logos/stust.png Graphic file (type bmp)
 <Figures/Logos/stust.png>
-[7
+ [7
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 106.
@@ -2016,15 +2035,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  )
-(\end occurred when \ifx on line 5 was incomplete)
-(\end occurred when \ifx on line 161 was incomplete)
-(\end occurred when \ifx on line 5 was incomplete) 
+(\end occurred when \ifx on line 161 was incomplete) 
 Here is how much of TeX's memory you used:
- 41463 strings out of 492922
- 804087 string characters out of 6133407
- 1334097 words of memory out of 5000000
- 44923 multiletter control sequences out of 15000+600000
- 564596 words of font info for 139 fonts, out of 8000000 for 9000
+ 41507 strings out of 492922
+ 804404 string characters out of 6133407
+ 1334874 words of memory out of 5000000
+ 44963 multiletter control sequences out of 15000+600000
+ 566177 words of font info for 141 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  52i,11n,70p,1037b,4601s stack positions out of 5000i,500n,10000p,200000b,80000s
 

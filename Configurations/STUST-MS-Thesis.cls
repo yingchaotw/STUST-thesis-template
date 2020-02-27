@@ -118,8 +118,9 @@
 % 解決 XeTeX 中文的斷行問題
 \XeTeXlinebreaklocale "zh"
 \XeTeXlinebreakskip = 0pt plus 1pt
-%\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
-
+%%%%%%%%%%%%%%%%%%%%
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+%%%%%%%%%%%%%%%%%%%%
 
 
 %----------------------------------------------------------------------------------------
