@@ -1,4 +1,4 @@
-[![](Figures/Logos/stustlargelogo.png "研究生學位考試專區")](https://www.stust.edu.tw/tc/node/DegreeExam)
+[![](Figures/Logos/stustlargelogo.png "研究生學位考試專區")](https://academic.stust.edu.tw/tc/node/DegreeExam)
 # STUST Thesis LaTeX
 
 - 南臺科技大學
