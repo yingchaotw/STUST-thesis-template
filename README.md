@@ -55,7 +55,7 @@ Compiled with fontconfig version 2.11.0; using 2.13.1
 
 上述內容中除加註有「視需要」者或本規範其他另有規定者外，研究論文均必須一一含入。除非有絕對必要如軟體研發等，否則論文應儘量不附電腦磁碟或 CD 等無法裝訂之附件。
 
-本規範之空行表示法為「x (1.5×12pt)行」，其中 1.5 代表「行距」之設定，12pt 為字體高度設定。
+本規範之空行表示法為「 x (1.5 × 12pt)行」，其中 1.5 代表「行距」之設定，12pt 為字體高度設定。
 
 ### 服用方式
 如電腦有支援 make 功能可直接 `make all` 編譯 latex 產出論文
@@ -66,7 +66,7 @@ Compiled with fontconfig version 2.11.0; using 2.13.1
 [config.tex](Configurations/config.tex)
 如有共同指導教授請將變數 `CoAdvisor` 變數設為 true
 其語法為
-```latex=
+```latex=.
 \CoAdvisortrue  % 有共同指導教授，此行能夠印出共同指導教授資訊
 \CoAdvisorfalse % 沒有共同指導教授，將隱藏共同指導教授資訊
 ```
@@ -89,6 +89,12 @@ Compiled with fontconfig version 2.11.0; using 2.13.1
 | \LARGE |          17pt|	17pt |		20pt |
 | \huge  |          20pt|	20pt |		25pt |
 | \Huge  |          25pt|	25pt |		25pt |
+
+## 工具
+
+- Visual Studio Code
+    - [Latex Support](https://marketplace.visualstudio.com/items?itemName=torn4dom4n.latex-support)
+- 文獻管理 [Zotero](https://www.zotero.org/)
 
 
 [1]: https://academic.stust.edu.tw/Sysid/academic/files/DegreeExamination/THESIS_example.pdf

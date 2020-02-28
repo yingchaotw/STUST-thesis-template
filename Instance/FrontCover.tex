@@ -19,15 +19,17 @@
 
 % \vspace{1\baselineskip}
 {\fontsize{22pt}{0pt}  \textbf{\titleen}}\\
-\textcolor{blue}{\Large{\today（初稿）}}
+
+\ifdraft
+\vspace{25mm}
+\else
+\textcolor{blue}{\Large{\today（\version）}}
 \vspace{20mm}
+\fi
 
 \vspace{3.5\baselineskip}
 
-% \displaydate{\today}
-% \maketitle
 
-% \vspace{30mm}
 \begin{flushleft}
 \begin{adjustwidth}{10em}{}
 \begin{tabular}{rl}

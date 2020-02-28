@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.9.14)  27 FEB 2020 17:19
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.9.14)  28 FEB 2020 17:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1819,29 +1819,29 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <15.39993> not available
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <15.39993> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 34.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 36.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <18> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 34.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 36.
 
-Overfull \hbox (24.0pt too wide) detected at line 36
+Overfull \hbox (24.0pt too wide) detected at line 38
 \TU/ARPLUKaiTW(0)/bx/n/18 君 の 名 は
  []
 
 
-Overfull \hbox (2.39996pt too wide) detected at line 38
+Overfull \hbox (2.39996pt too wide) detected at line 40
 \TU/ARPLUKaiTW(0)/bx/n/18 指 導 教 授
  []
 
 
-Overfull \hbox (6.0pt too wide) detected at line 40
+Overfull \hbox (6.0pt too wide) detected at line 42
 \TU/ARPLUKaiTW(0)/bx/n/18 林 默 娘
  []
 
 LaTeX Font Info:    Font shape `T1/ppl/bx/sc' in size <18> not available
-(Font)              Font shape `T1/ppl/b/sc' tried instead on input line 54.
+(Font)              Font shape `T1/ppl/b/sc' tried instead on input line 56.
 
 LaTeX Font Warning: Font shape `TU/ARPLUKaiTW(0)/bx/sc' undefined
-(Font)              using `TU/ARPLUKaiTW(0)/bx/n' instead on input line 54.
+(Font)              using `TU/ARPLUKaiTW(0)/bx/n' instead on input line 56.
 
 [1
 
@@ -1852,31 +1852,31 @@ LaTeX Font Warning: Font shape `TU/ARPLUKaiTW(0)/bx/sc' undefined
 ]) [1
 
 ] (./Instance/title.tex
-LaTeX Font Info:    Calculating math sizes for size <18> on input line 30.
+LaTeX Font Info:    Calculating math sizes for size <18> on input line 34.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <18> not available
-(Font)              size <17.28> substituted on input line 30.
+(Font)              size <17.28> substituted on input line 34.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <12.59995> not available
-(Font)              size <12> substituted on input line 30.
+(Font)              size <12> substituted on input line 34.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <18> not available
-(Font)              size <17.28> substituted on input line 30.
+(Font)              size <17.28> substituted on input line 34.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <12.59995> not available
-(Font)              size <12> substituted on input line 30.
+(Font)              size <12> substituted on input line 34.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <18> not available
-(Font)              size <17.28> substituted on input line 30.
+(Font)              size <17.28> substituted on input line 34.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <12.59995> not available
-(Font)              size <12> substituted on input line 30.
+(Font)              size <12> substituted on input line 34.
 
 [1
 
@@ -1952,7 +1952,7 @@ Chapter 1.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 10.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 14.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 13.
 File: Figures/Logos/stust.png Graphic file (type bmp)
 <Figures/Logos/stust.png>
 [1
@@ -1963,16 +1963,16 @@ File: Figures/Logos/stust.png Graphic file (type bmp)
 <Figures/Logos/stust.png>
  [2]
 
-LaTeX Warning: Reference `2' on page 3 undefined on input line 32.
+LaTeX Warning: Reference `2' on page 3 undefined on input line 30.
 
 
-LaTeX Warning: Reference `3' on page 3 undefined on input line 34.
+LaTeX Warning: Reference `3' on page 3 undefined on input line 32.
 
 
-LaTeX Warning: Reference `4' on page 3 undefined on input line 36.
+LaTeX Warning: Reference `4' on page 3 undefined on input line 34.
 
 
-LaTeX Warning: Reference `5' on page 3 undefined on input line 42.
+LaTeX Warning: Reference `5' on page 3 undefined on input line 40.
 
 ) (./Chapters/Method.tex
 File: Figures/Logos/stust.png Graphic file (type bmp)
@@ -2037,12 +2037,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  )
 (\end occurred when \ifx on line 161 was incomplete) 
 Here is how much of TeX's memory you used:
- 41507 strings out of 492922
- 804404 string characters out of 6133407
- 1334874 words of memory out of 5000000
- 44963 multiletter control sequences out of 15000+600000
+ 41521 strings out of 492922
+ 805084 string characters out of 6133407
+ 1334888 words of memory out of 5000000
+ 44977 multiletter control sequences out of 15000+600000
  566177 words of font info for 141 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 52i,11n,70p,1037b,4601s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,11n,70p,1037b,4603s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on build/main.pdf (16 pages).
