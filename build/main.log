@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.9.14)  28 FEB 2020 17:55
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.9.14)  1 MAR 2020 11:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1039,7 +1039,7 @@ Package fontspec Info: Font family 'fonts/times.ttf(0)' created for font
 ex-text;"
 (fontspec)             - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
 
-LaTeX Info: Redefining \sffamily on input line 39.
+LaTeX Info: Redefining \sffamily on input line 38.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
 
@@ -1849,9 +1849,7 @@ LaTeX Font Warning: Font shape `TU/ARPLUKaiTW(0)/bx/sc' undefined
 
 
 
-]) [1
-
-] (./Instance/title.tex
+]) (./Instance/title.tex
 LaTeX Font Info:    Calculating math sizes for size <18> on input line 34.
 
 
@@ -1879,6 +1877,7 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <12.59995> not available
 (Font)              size <12> substituted on input line 34.
 
 [1
+
 
 ]) (./Instance/abstract_zhTW.tex
 --------------------
@@ -1918,7 +1917,7 @@ File: Figures/Logos/stust.png Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 64.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 67.
  (build/main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
@@ -2013,11 +2012,11 @@ File: Figures/Logos/stust.png Graphic file (type bmp)
  [7
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 106.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 106.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 109.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 109.
  (build/main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 106.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 106.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 109.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 109.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: .
 
@@ -2045,4 +2044,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  52i,11n,70p,1037b,4603s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on build/main.pdf (16 pages).
+Output written on build/main.pdf (15 pages).
