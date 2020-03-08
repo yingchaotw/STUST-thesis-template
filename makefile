@@ -32,8 +32,6 @@ all:
 	$(BIBTEX) $(BUILD_DIR)/$(TARGET)
 	@echo ========== second commpiling document ==========
 	$(LATEX) $(TEX_Parameter) $(TEX_FILES)
-	@echo ============ move compiled document ============
-	mv $(BUILD_DIR)/$(TARGET).pdf .
 
 clean:
 	rm -rf $(BUILD_DIR)

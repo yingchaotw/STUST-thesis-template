@@ -12,7 +12,6 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \setcounter{tocdepth}{6}
 % \newtheorem{note}{註：}
 
-
 % \listfiles
 
 %----------------------------------------------------------------------------------------
@@ -30,11 +29,11 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 % ----- 中国語,日本語,韓国語使用の設定
 \usepackage{xeCJK}
 \defaultfontfeatures{AutoFakeBold=2.5,AutoFakeSlant=.2}
-\setCJKsansfont{Noto Serif CJK JP}
-\setCJKmonofont{Noto Serif CJK JP}
-\setCJKmainfont{AR PL UKai TW}       %預設中文字體	AR PL UKai TW
 \setmainfont{Times New Roman}        %預設英文字體
 \setsansfont{fonts/times.ttf} 		 %直接使用目錄底下指定字體
+\setCJKmainfont{AR PL UKai TW}       %預設中文字體	AR PL UKai TW
+\setCJKsansfont{Noto Serif CJK JP}
+\setCJKmonofont{Noto Serif CJK JP}
 
 \usepackage{fontspec}
 %----------------------------------------------------------------------------------------
@@ -49,7 +48,6 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \linespread{1.5} %行距1.5倍
 
 % \usepackage[utf8]{inputenc} % Required for inputting international characters
-% \usepackage[printwatermark]{xwatermark}
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage{palatino} % Use the Palatino font by default
 \usepackage{indentfirst} \setlength{\parindent}{2em}
@@ -66,14 +64,9 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 %----------------------------------------------------------------------------------------
 % 參考文獻 Reference package
 %----------------------------------------------------------------------------------------
-% \makeatletter
-% \def\blx@maxline{77}
-% \makeatother
 \usepackage[redeflists]{IEEEtrantools}   %複数行にわたった数式を書く場合には，IEEEeqnarray 環境が便利です
 \usepackage[hyperref=true,backend=biber,sorting=none,backref=true]{biblatex}
 \addbibresource{References/\RefName.bib} % The filename of the bibliography
-% \usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % User the bibtex backend with the authoryear citation style (which resembles APA)
-
 
 \frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
 \pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content

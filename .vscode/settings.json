@@ -1,21 +1,26 @@
 {
-    "C_Cpp.errorSquiggles": "Disabled",
-    "latex-workshop.hover.citation.enabled": false,
-    "latex-workshop.bind.enter.key": false,
-    "latex-workshop.latex.outDir": "%DIR%/build",
+    "editor.wordWrap": "off",
+    "editor.wordWrapColumn": 80,
+    "editor.wrappingIndent": "same",
+    "latex-workshop.hover.citation.enabled": true,
+    "latex-workshop.bind.enter.key": true,
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.clean.subfolder.enabled": true,
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
+    "latex-workshop.latex.outDir": "./build",                 // 設定輸出資料夾
     "latex-workshop.latex.recipes": [
-        {
-            "name": "xelatex",
-            "tools": [
-                "xelatex"
-            ]
-        },
         {
             "name": "xe->bib->xe->xe",
             "tools": [
                 "xelatex",
-                "bibtex",
+                "biber",
                 "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "xelatex",
+            "tools": [
                 "xelatex"
             ]
         }
@@ -29,7 +34,14 @@
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
-                "-pdf",
+                "--output-directory=%OUTDIR%",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
                 "--output-directory=%OUTDIR%",
                 "%DOCFILE%"
             ]
@@ -43,36 +55,12 @@
                 "-file-line-error",
                 "%DOCFILE%"
             ]
-        },
-        {
-            "name": "bibtex",
-            "command": "bibtex",
-            "args": [
-                "%DOCFILE%"
-            ]
         }
     ],
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.latex.clean.fileTypes": [
-        "*.aux",
-        "*.bbl",
-        "*.blg",
-        "*.idx",
-        "*.ind",
-        "*.lof",
-        "*.lot",
-        "*.out",
-        "*.toc",
-        "*.acn",
-        "*.acr",
-        "*.alg",
-        "*.glg",
-        "*.glo",
-        "*.gls",
-        "*.ist",
-        "*.fls",
-        "*.log",
-        "*.fdb_latexmk",
-        "*.synctex.gz"
+        "%DIR%/build/*",
+        "build/*",
+        "%OUTDIR%/*"
     ]
 }
