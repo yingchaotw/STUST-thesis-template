@@ -24,12 +24,14 @@ TEX_FILES = $(TARGET).tex
 # REF=Reference/reference.bib
 
 all:
-	@echo ========== make a directory ==========
+	@echo =============== make a directory ===============
 	mkdir -p $(BUILD_DIR)
+	@echo ========== first commpiling document ==========
 	$(LATEX) $(TEX_Parameter) $(TEX_FILES)
+	@echo ============= reference commpiling =============
 	$(BIBTEX) $(BUILD_DIR)/$(TARGET)
+	@echo ========== second commpiling document ==========
 	$(LATEX) $(TEX_Parameter) $(TEX_FILES)
-	mv $(BUILD_DIR)/$(TARGET).pdf .
 
 clean:
 	rm -rf $(BUILD_DIR)

@@ -1,10 +1,13 @@
 [![](Figures/Logos/stustlargelogo.png "研究生學位考試專區")](https://academic.stust.edu.tw/tc/node/DegreeExam)
-# STUST Thesis LaTeX
 
-- 南臺科技大學
+# 南臺科技大學 Latex 論文版型
+
+- 南臺科技大學 (南台科技大學)
 - Southern Taiwan University of Science of Technology
 
-[本樣版範例](main.pdf)
+[本樣版範例](build/main.pdf)
+
+[Latex 環境建置](https://hackmd.io/@YingChao/LaTeX_Setup)
 
 ## 前言
 如果您發現這個板型有問題，請提交 Issus，也非常歡迎您提交 PR 協助修正問題。
@@ -51,11 +54,11 @@ Compiled with fontconfig version 2.11.0; using 2.13.1
 13. 附錄及符號(公式)彙編（視需要）
 14. 作者簡介（視需要）
 
-[論文範例][1]
+[教務處論文範例][1]
 
 上述內容中除加註有「視需要」者或本規範其他另有規定者外，研究論文均必須一一含入。除非有絕對必要如軟體研發等，否則論文應儘量不附電腦磁碟或 CD 等無法裝訂之附件。
 
-本規範之空行表示法為「x (1.5×12pt)行」，其中 1.5 代表「行距」之設定，12pt 為字體高度設定。
+本規範之空行表示法為「 x (1.5 × 12pt)行」，其中 1.5 代表「行距」之設定，12pt 為字體高度設定。
 
 ### 服用方式
 如電腦有支援 make 功能可直接 `make all` 編譯 latex 產出論文
@@ -66,7 +69,7 @@ Compiled with fontconfig version 2.11.0; using 2.13.1
 [config.tex](Configurations/config.tex)
 如有共同指導教授請將變數 `CoAdvisor` 變數設為 true
 其語法為
-```latex=
+```latex=.
 \CoAdvisortrue  % 有共同指導教授，此行能夠印出共同指導教授資訊
 \CoAdvisorfalse % 沒有共同指導教授，將隱藏共同指導教授資訊
 ```
@@ -89,6 +92,12 @@ Compiled with fontconfig version 2.11.0; using 2.13.1
 | \LARGE |          17pt|	17pt |		20pt |
 | \huge  |          20pt|	20pt |		25pt |
 | \Huge  |          25pt|	25pt |		25pt |
+
+## 工具
+
+- Visual Studio Code
+    - [Latex Support](https://marketplace.visualstudio.com/items?itemName=torn4dom4n.latex-support)
+- 文獻管理 [Zotero](https://www.zotero.org/)
 
 
 [1]: https://academic.stust.edu.tw/Sysid/academic/files/DegreeExamination/THESIS_example.pdf

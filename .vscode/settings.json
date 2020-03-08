@@ -1,0 +1,66 @@
+{
+    "editor.wordWrap": "off",
+    "editor.wordWrapColumn": 80,
+    "editor.wrappingIndent": "same",
+    "latex-workshop.hover.citation.enabled": true,
+    "latex-workshop.bind.enter.key": true,
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.clean.subfolder.enabled": true,
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
+    "latex-workshop.latex.outDir": "./build",                 // 設定輸出資料夾
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xe->bib->xe->xe",
+            "tools": [
+                "xelatex",
+                "biber",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            // 編譯工具和命令
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "--output-directory=%OUTDIR%",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "--output-directory=%OUTDIR%",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.clean.fileTypes": [
+        "%DIR%/build/*",
+        "build/*",
+        "%OUTDIR%/*"
+    ]
+}

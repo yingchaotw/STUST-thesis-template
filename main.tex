@@ -1,15 +1,14 @@
-%----------------------------------------------------------------------------------------
+%========================================================================================
 % STUST MEng. Thesis
 % Original authors : AIoRLab/NCLab/WNDCLab Thesis LaTeX Team
 % Department of Electronic Engineering
 % National Souther Taiwan of Sciences and Technology
 % GitHub : https://github.com/yingchao-chen/STUST-thesis-template
 % Version 1.0 (2020.02.26)
-%----------------------------------------------------------------------------------------
+%========================================================================================
 
 \input{Configurations/Template}
 \input{Configurations/config}
-
 
 \begin{document}
 \newcommand\n{\mbox{\qquad}}
@@ -26,9 +25,12 @@
 \input{Instance/FrontCover}
 
 % ----- 書  脊 -----
+% \input{Instance/Spine}
 
 % ----- 空白頁 -----
+\ifdraft
 \newpage　\thispagestyle{empty}\newpage
+\fi
 
 % ----- 書名頁 -----
 \input{Instance/title}
@@ -43,7 +45,7 @@
 % \includepdf[pagecommand={\thispagestyle{empty}}]{Externals/sign.pdf}
 
 %----------------------------------------------------------------------------------------
-%	論文內容 由此開始
+%	論文內容 由此開始 
 %----------------------------------------------------------------------------------------
 \phantomsection     %加這個命令後，目錄中的超鏈接才指向正確的頁碼
 
