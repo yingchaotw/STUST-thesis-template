@@ -1,4 +1,5 @@
 [![](Figures/Logos/stustlargelogo.png "研究生學位考試專區")](https://academic.stust.edu.tw/tc/node/DegreeExam)
+
 # 南臺科技大學 Latex 論文版型
 
 - 南臺科技大學 (南台科技大學)
