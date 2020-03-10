@@ -2,12 +2,14 @@
     "editor.wordWrap": "off",
     "editor.wordWrapColumn": 80,
     "editor.wrappingIndent": "same",
+    "latex-workshop.progress.barStyle":"Block Quadrants",
     "latex-workshop.hover.citation.enabled": true,
     "latex-workshop.bind.enter.key": true,
     "latex-workshop.latex.autoClean.run": "onBuilt",
-    "latex-workshop.latex.clean.subfolder.enabled": true,
+    "latex-workshop.synctex.afterBuild.enabled":true,
     "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
-    "latex-workshop.latex.outDir": "./build",                 // 設定輸出資料夾
+    "latex-workshop.latex.outDir": "build",                 // 設定輸出資料夾
+    "latex-workshop.latex.clean.subfolder.enabled": true,
     "latex-workshop.latex.recipes": [
         {
             "name": "xe->bib->xe->xe",

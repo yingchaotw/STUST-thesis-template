@@ -524,7 +524,6 @@
 \usepackage{hyperref} % Required for customising links and the PDF
 \hypersetup{ %
 			pdfpagemode={UseOutlines}, %
-			linktocpage, %
 			bookmarksopen=true, %
 			bookmarksopenlevel=0, %
 			bookmarksnumbered=true, %
@@ -537,7 +536,8 @@
 			pdftitle = {The title}, % 
 			filecolor=magenta, %
 			unicode, %
-			breaklinks=true, %
+			% linktocpage, % Set link at page number
+			breaklinks=true %
 }
 
 \pdfstringdefDisableCommands{ % If there is an explicit linebreak in a section heading (or anything printed to the pdf-bookmarks), it is replaced by a space
