@@ -43,7 +43,7 @@ Compiled with fontconfig version 2.11.0; using 2.13.1
 - [X] 1. 封面
 - [ ] 2. 博碩士論文延後公開申請書（視需要）
 - [X] 3. 空白頁（封面與書名頁間加一空白頁）
-- [ ] 4. 書名頁
+- [X] 4. 書名頁
 - [ ] 5. 論文口試委員審定書
 - [X] 6. 摘要（中文及英文)
 - [X] 7. 誌謝（視需要）
@@ -55,7 +55,7 @@ Compiled with fontconfig version 2.11.0; using 2.13.1
 - [ ] 13. 附錄及符號(公式)彙編（視需要）
 - [X] 14. 作者簡介（視需要）
 
-未勾選部分為論文提交時，學校才會提供文檔，屆時再自行匯入論文中合併。
+未勾選部分的第二項及第五項為論文提交時，學校才會提供文檔，屆時再自行匯入論文中合併。
 
 [南臺科大教務處論文範例][1]
 
@@ -66,7 +66,25 @@ Compiled with fontconfig version 2.11.0; using 2.13.1
 ### 服用方式
 如電腦有支援 make 功能可直接 `make all` 編譯 latex 產出論文
 也可直接 `xelatex main.tex` 編譯此樣本
+
+若想在 `windows` 系統底下編譯須將 [settings.json](.vscode/settings.json) 第45行位置原本為 `biber` 更改為 `biber.exe` 如下所示
+
+```json=43
+        {
+            "name": "biber",
+            "command": "biber.exe",
+            "args": [
+                "--output-directory=%OUTDIR%",
+                "%DOCFILE%"
+            ]
+        },
+```
+
 如有問題請提出 **Issus** 將會盡快改善並修正問題
+
+#### 字體
+本範本使用[中華民國教育部標準字體字形檔-楷書](https://language.moe.gov.tw/result.aspx?classify_sn=23&subclassify_sn=436&content_sn=47)，因為在 windows 內建標楷 (ukai.ttf) 的字體編碼問題編譯之後無法顯示<span style="background-color: #FFFF99"><font color=#00AA00>**〇**</font></span>字形，所以採用中華民國教育部標準字體-楷書 (非商用)。
+> [time=Wed, Mar 11, 2020 9:39 AM]更改教育部字體後，日文字體無法顯示
 
 ### 變數宣告
 [config.tex](Configurations/config.tex) <br>

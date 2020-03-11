@@ -8,11 +8,11 @@
     "latex-workshop.latex.autoClean.run": "onBuilt",
     "latex-workshop.synctex.afterBuild.enabled":true,
     "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
-    "latex-workshop.latex.outDir": "build",                 // 設定輸出資料夾
+    "latex-workshop.latex.outDir": "%DIR%/build",                 // 輸出在main目錄底下的build
     "latex-workshop.latex.clean.subfolder.enabled": true,
     "latex-workshop.latex.recipes": [
         {
-            "name": "xe->bib->xe->xe",
+            "name": "xe➔bib➔xe➔xe",
             "tools": [
                 "xelatex",
                 "biber",
@@ -36,8 +36,9 @@
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
+                "-pdf",
                 "--output-directory=%OUTDIR%",
-                "%DOCFILE%"
+                "%DOC%"
             ]
         },
         {

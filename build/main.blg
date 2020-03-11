@@ -1,15 +1,15 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
-[0] Config.pm:307> INFO - Logfile is 'build/main.blg'
-[14] biber:315> INFO - === 二  3月 10, 2020, 11:17:53
-[25] Biber.pm:371> INFO - Reading 'build/main.bcf'
-[59] Biber.pm:889> INFO - Found 3 citekeys in bib section 0
-[67] Biber.pm:4093> INFO - Processing section 0
-[72] Biber.pm:4254> INFO - Looking for bibtex format file 'References/reference.bib' for section 0
-[72] bibtex.pm:1523> INFO - LaTeX decoding ...
-[75] bibtex.pm:1340> INFO - Found BibTeX data source 'References/reference.bib'
-[89] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[89] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[89] Biber.pm:3921> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[89] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
-[90] bbl.pm:636> INFO - Writing 'build/main.bbl' with encoding 'UTF-8'
-[91] bbl.pm:739> INFO - Output to build/main.bbl
+[0] Config.pm:307> INFO - Logfile is '/home/yingchao/STUST-thesis-template/build/main.blg'
+[14] biber:315> INFO - === 三  3月 11, 2020, 09:48:49
+[25] Biber.pm:371> INFO - Reading '/home/yingchao/STUST-thesis-template/build/main.bcf'
+[61] Biber.pm:889> INFO - Found 3 citekeys in bib section 0
+[68] Biber.pm:4093> INFO - Processing section 0
+[73] Biber.pm:4254> INFO - Looking for bibtex format file 'References/reference.bib' for section 0
+[74] bibtex.pm:1523> INFO - LaTeX decoding ...
+[77] bibtex.pm:1340> INFO - Found BibTeX data source 'References/reference.bib'
+[91] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[91] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[91] Biber.pm:3921> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[91] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
+[92] bbl.pm:636> INFO - Writing '/home/yingchao/STUST-thesis-template/build/main.bbl' with encoding 'UTF-8'
+[93] bbl.pm:739> INFO - Output to /home/yingchao/STUST-thesis-template/build/main.bbl

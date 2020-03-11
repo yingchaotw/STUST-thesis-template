@@ -7,6 +7,8 @@
 % Version 1.0 (2020.01.31)
 %----------------------------------------------------------------------------------------
 
+\def \primeval{linux}
+
 %----------------------------------------------------------------------------------------
 %	CLASS DEFINITION AND PARAMETERS
 %----------------------------------------------------------------------------------------
@@ -132,13 +134,16 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{epsfig}
-\usepackage{epstopdf}
 \usepackage{verbatim}
 \usepackage{graphicx}
 \usepackage{amsthm}
 \pagestyle{empty}
 \usepackage{color}
 \usepackage[Lenny]{fncychap}
+\usepackage{ifpdf}
+\ifpdf
+	\usepackage{epstopdf}
+\fi
 
 \usepackage[tight,TABTOPCAP]{subfigure}
 
@@ -571,6 +576,7 @@
 %----------------------------------------------------------------------------------------
 %	Add School Logo Watermark
 %----------------------------------------------------------------------------------------
+% \usepackage{transparent}
 \usepackage{eso-pic,picture}
 \newcommand\STUSTwatermark {
 	\put(185pt,-285pt)	{		% \put(180,-280)

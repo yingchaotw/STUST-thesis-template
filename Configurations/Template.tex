@@ -12,8 +12,9 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \setcounter{tocdepth}{6}
 % \newtheorem{note}{註：}
 
-% \listfiles
-\usepackage[OT1]{fontenc} 
+\usepackage{ifthen}
+\usepackage{xunicode}
+\usepackage{mathptmx}
 \usepackage{lmodern}
 
 %----------------------------------------------------------------------------------------
@@ -30,14 +31,27 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 
 % ----- 中国語,日本語,韓国語使用の設定
 \usepackage{xeCJK}
-\defaultfontfeatures{AutoFakeBold=2.5,AutoFakeSlant=.2}
-\setmainfont{Times New Roman}        %預設英文字體
-\setsansfont{fonts/times.ttf} 		 %直接使用目錄底下指定字體
-\setCJKmainfont{AR PL UKai TW}       %預設中文字體	AR PL UKai TW
-\setCJKsansfont{Noto Serif CJK JP}
-\setCJKmonofont{Noto Serif CJK JP}
-
+\usepackage{lipsum}
 \usepackage{fontspec}
+\usepackage{type1ec,type1cm}
+\defaultfontfeatures{AutoFakeBold=2.5,AutoFakeSlant=.2}
+\setmainfont[Path=\string./fonts/]{times}[        %預設英文字體
+	Extension      = .ttf,
+	BoldFont       = *bd,
+	ItalicFont     = *i,
+	BoldItalicFont = *bi
+	]
+\setsansfont[Path=\string./fonts/]{times} 		 %使用目錄底下指定字體
+
+\ifx \system \primeval
+\setCJKmainfont[Path=\string./fonts/]{edukai-4.0}       %教育部楷書
+\setCJKsansfont{AR PL UKai TW}
+\setCJKmonofont{AR PL UKai TW}
+\else
+\setCJKmainfont{標楷體}
+\setCJKsansfont{標楷體}
+\setCJKmonofont{標楷體}
+\fi
 %----------------------------------------------------------------------------------------
 
 
@@ -50,7 +64,7 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \linespread{1.5} %行距1.5倍
 
 % \usepackage[utf8]{inputenc} % Required for inputting international characters
-\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage[OT1]{fontenc} % Output font encoding for international characters
 \usepackage{palatino} % Use the Palatino font by default
 \usepackage{indentfirst} \setlength{\parindent}{2em}
 \usepackage{xcolor}
@@ -58,7 +72,6 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \usepackage{Package/slashbox}
 \usepackage{booktabs,amsmath}
 \usepackage{algorithm}
-\usepackage{transparent}
 \usepackage{enumerate}
 \usepackage{multirow}
 \usepackage[strict]{changepage}
