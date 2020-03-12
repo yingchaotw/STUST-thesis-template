@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.9.14)  11 MAR 2020 09:48
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.9.14)  12 MAR 2020 13:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -419,7 +419,7 @@ Package scrhack Info: undefining \float@addtolists on input line 163.
 )) (/usr/local/texlive/2019/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-Package scrhack Info: loading setspace hack on input line 181.
+Package scrhack Info: loading setspace hack on input line 179.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/setspace.hak
 File: setspace.hak 2019/02/01 v3.26b KOMA-Script package (hacking package setspace)
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/longtable.sty
@@ -649,7 +649,7 @@ LaTeX Info: Redefining \pageref on input line 6454.
 )
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of hyperref version, that doesn't
-(scrhack)             need that hack, on input line 530.
+(scrhack)             need that hack, on input line 528.
 Package hyperref Info: Driver (autodetected): hxetex.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/hxetex.def
 File: hxetex.def 2018/11/30 v6.88e Hyperref driver for XeTeX
@@ -669,15 +669,15 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip91
 )
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 546.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 546.
-Package hyperref Info: Option `hypertexnames' set `false' on input line 546.
-Package hyperref Info: Option `colorlinks' set `true' on input line 546.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 544.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 544.
+Package hyperref Info: Option `hypertexnames' set `false' on input line 544.
+Package hyperref Info: Option `colorlinks' set `true' on input line 544.
  (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
 File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 )
-Package hyperref Info: Option `unicode' set `true' on input line 546.
-Package hyperref Info: Option `breaklinks' set `true' on input line 546.
+Package hyperref Info: Option `unicode' set `true' on input line 544.
+Package hyperref Info: Option `breaklinks' set `true' on input line 544.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count325
 \lst@gtempboxa=\box64
@@ -699,7 +699,7 @@ File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2019/02/27 1.8b listings configuration
 ))
-Package scrhack Info: loading listings hack on input line 556.
+Package scrhack Info: loading listings hack on input line 554.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/listings.hak
 File: listings.hak 2019/02/01 v3.26b KOMA-Script package (hacking package listings)
 Package tocbasic Info: setting babel extension for `lol' on input line 137.
@@ -961,26 +961,26 @@ Package fontspec Info: Font family 'times(1)' created for font 'times' with
 (fontspec)             <->"[./fonts/times]/OT:embolden=2.5;slant=.2;mapping=tex-text;"
 (fontspec)             - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
 
-LaTeX Info: Redefining \sffamily on input line 45.
+LaTeX Info: Redefining \sffamily on input line 46.
 
-Package fontspec Info: Font family 'edukai-4.0(0)' created for font
-(fontspec)             'edukai-4.0' with options
+Package fontspec Info: Font family 'ukai(0)' created for font 'ukai' with
+(fontspec)             options
 (fontspec)             [AutoFakeBold=2.5,AutoFakeSlant=.2,Script={CJK},Path={./fonts/}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[./fonts/edukai-4.0]/OT:script=hani;language=DFLT;"
+(fontspec)             <->"[./fonts/ukai]/OT:script=hani;language=DFLT;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             - 'bold' (bx/n) with NFSS spec.:
-(fontspec)             <->"[./fonts/edukai-4.0]/OT:script=hani;language=DFLT;embolden=2.5;"
+(fontspec)             <->"[./fonts/ukai]/OT:script=hani;language=DFLT;embolden=2.5;"
 (fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.: 
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"[./fonts/edukai-4.0]/OT:script=hani;language=DFLT;slant=.2;"
+(fontspec)             <->"[./fonts/ukai]/OT:script=hani;language=DFLT;slant=.2;"
 (fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.: 
 (fontspec)             - 'bold italic' (bx/it) with NFSS spec.:
-(fontspec)             <->"[./fonts/edukai-4.0]/OT:script=hani;language=DFLT;embolden=2.5;slant=.2;"
+(fontspec)             <->"[./fonts/ukai]/OT:script=hani;language=DFLT;embolden=2.5;slant=.2;"
 (fontspec)             - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
 
  (/usr/local/texlive/2019/texmf-dist/tex/latex/pdfpages/pdfpages.sty
@@ -1047,18 +1047,14 @@ File: zhnumber-utf8.cfg 2019/04/07 v2.7 Chinese numerals with UTF8 encoding
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
- (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ot1enc.def
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/greek-fontenc/lgrenc.def
+File: lgrenc.def 2015/12/07 v0.13.1 LGR Greek font encoding definitions
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/greek-fontenc/greek-fontenc.def
+File: greek-fontenc.def 2015/08/04 v0.13 Common Greek font encoding definitions
+)) (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ot1enc.def
 File: ot1enc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding OT1 on input line 48.
-)
-LaTeX Font Info:    Try loading font information for OT1+times(0) on input line 105.
-LaTeX Font Info:    No file OT1times(0).fd. on input line 105.
-
-
-LaTeX Font Warning: Font shape `OT1/times(0)/m/n' undefined
-(Font)              using `OT1/cmr/m/n' instead on input line 105.
-
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/palatino.sty
+)) (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/palatino.sty
 Package: palatino 2005/04/12 PSNFSS-v9.2a (SPQR) 
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -1466,6 +1462,12 @@ LaTeX Font Info:    Try loading font information for T3+cmr on input line 13.
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
 LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 13.
+LaTeX Font Info:    Try loading font information for LGR+cmr on input line 13.
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/cbfonts-fd/lgrcmr.fd
+File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
+)
+LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Try loading font information for OT1+ppl on input line 13.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
@@ -1608,6 +1610,29 @@ File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (./Instance/FrontCover.tex
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <36> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 10.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 10.
+
+Package fontspec Info: Font family 'edukai-4.0(0)' created for font
+(fontspec)             'edukai-4.0' with options
+(fontspec)             [AutoFakeBold=2.5,AutoFakeSlant=.2,Script={CJK},Path={./fonts/}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[./fonts/edukai-4.0]/OT:script=hani;language=DFLT;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (bx/n) with NFSS spec.:
+(fontspec)             <->"[./fonts/edukai-4.0]/OT:script=hani;language=DFLT;embolden=2.5;"
+(fontspec)             - 'bold small caps'  (bx/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[./fonts/edukai-4.0]/OT:script=hani;language=DFLT;slant=.2;"
+(fontspec)             - 'italic small caps'  (m/itsc) with NFSS spec.: 
+(fontspec)             - 'bold italic' (bx/it) with NFSS spec.:
+(fontspec)             <->"[./fonts/edukai-4.0]/OT:script=hani;language=DFLT;embolden=2.5;slant=.2;"
+(fontspec)             - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
+
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 12.
 LaTeX Font Info:    Calculating math sizes for size <24> on input line 17.
@@ -1653,8 +1678,6 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <18> not available
 
 ]) (./Instance/title.tex
 Missing character: There is no ϧ in font pplr7t!
-LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 31.
 LaTeX Font Info:    Calculating math sizes for size <18> on input line 34.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <18> on input line 34.
@@ -1792,21 +1815,17 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 107.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 107.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: .
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47977 strings out of 492922
- 906326 string characters out of 6133407
- 1498021 words of memory out of 5000000
- 51423 multiletter control sequences out of 15000+600000
- 638125 words of font info for 175 fonts, out of 8000000 for 9000
+ 48654 strings out of 492922
+ 922773 string characters out of 6133407
+ 1501187 words of memory out of 5000000
+ 52085 multiletter control sequences out of 15000+600000
+ 637867 words of font info for 179 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 52i,11n,70p,1070b,4587s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,11n,70p,1070b,4644s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on /home/yingchao/STUST-thesis-template/build/main.pdf (15 pages).

@@ -41,17 +41,16 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 	ItalicFont     = *i,
 	BoldItalicFont = *bi
 	]
+
 \setsansfont[Path=\string./fonts/]{times} 		 %使用目錄底下指定字體
 
-\ifx \system \primeval
-\setCJKmainfont[Path=\string./fonts/]{edukai-4.0}       %教育部楷書
-\setCJKsansfont{AR PL UKai TW}
-\setCJKmonofont{AR PL UKai TW}
-\else
-\setCJKmainfont{標楷體}
-\setCJKsansfont{標楷體}
-\setCJKmonofont{標楷體}
-\fi
+\setCJKmainfont[Path=\string./fonts/]{ukai}
+\setCJKmonofont[Path=\string./fonts/]{edukai-4.0}
+% \setCJKsansfont[Path=\string./fonts/]{SourceHanSans}                  %思源黑體
+\setCJKfamilyfont{edukai-4.0}[Path=\string./fonts/]{edukai-4.0}       %教育部楷書
+\newcommand{\edukai}{\CJKfamily{edukai-4.0}}
+
+
 %----------------------------------------------------------------------------------------
 
 
@@ -64,7 +63,7 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \linespread{1.5} %行距1.5倍
 
 % \usepackage[utf8]{inputenc} % Required for inputting international characters
-\usepackage[OT1]{fontenc} % Output font encoding for international characters
+\usepackage[LGR,OT1]{fontenc} % Output font encoding for international characters
 \usepackage{palatino} % Use the Palatino font by default
 \usepackage{indentfirst} \setlength{\parindent}{2em}
 \usepackage{xcolor}

@@ -1,8 +1,8 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
 [0] Config.pm:307> INFO - Logfile is '/home/yingchao/STUST-thesis-template/build/main.blg'
-[14] biber:315> INFO - === 三  3月 11, 2020, 09:48:49
+[14] biber:315> INFO - === 四  3月 12, 2020, 13:22:01
 [25] Biber.pm:371> INFO - Reading '/home/yingchao/STUST-thesis-template/build/main.bcf'
-[61] Biber.pm:889> INFO - Found 3 citekeys in bib section 0
+[60] Biber.pm:889> INFO - Found 3 citekeys in bib section 0
 [68] Biber.pm:4093> INFO - Processing section 0
 [73] Biber.pm:4254> INFO - Looking for bibtex format file 'References/reference.bib' for section 0
 [74] bibtex.pm:1523> INFO - LaTeX decoding ...

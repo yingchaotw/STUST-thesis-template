@@ -66,25 +66,13 @@ Compiled with fontconfig version 2.11.0; using 2.13.1
 ### 服用方式
 如電腦有支援 make 功能可直接 `make all` 編譯 latex 產出論文
 也可直接 `xelatex main.tex` 編譯此樣本
-
-若想在 `windows` 系統底下編譯須將 [settings.json](.vscode/settings.json) 第45行位置原本為 `biber` 更改為 `biber.exe` 如下所示
-
-```json=43
-        {
-            "name": "biber",
-            "command": "biber.exe",
-            "args": [
-                "--output-directory=%OUTDIR%",
-                "%DOCFILE%"
-            ]
-        },
-```
-
+`windows` 底下編譯參考文獻若有問題，請先確認系統中有無 `biber` 執行檔。
+開啟 cmd (命令提示字元) 輸入 `biber -v` 若無出現版本，則為系統抓不到此編譯器。
 如有問題請提出 **Issus** 將會盡快改善並修正問題
 
 #### 字體
-本範本使用[中華民國教育部標準字體字形檔-楷書](https://language.moe.gov.tw/result.aspx?classify_sn=23&subclassify_sn=436&content_sn=47)，因為在 windows 內建標楷 (ukai.ttf) 的字體編碼問題編譯之後無法顯示<span style="background-color: #FFFF99"><font color=#00AA00>**〇**</font></span>字形，所以採用中華民國教育部標準字體-楷書 (非商用)。
-> [time=Wed, Mar 11, 2020 9:39 AM]更改教育部字體後，日文字體無法顯示
+為能夠在任何環境下邊寫論文，故將此範本中用到的字體都放在 fonts 目錄底下。
+本範本使用[中華民國教育部標準字體字形檔-楷書](https://language.moe.gov.tw/result.aspx?classify_sn=23&subclassify_sn=436&content_sn=47)，因為在 windows 內建標楷 (ukai.ttf) 的字體編碼問題編譯之後無法顯示<span style="background-color: #FFFF99"><font color=#00AA00>**〇**</font></span>字形，所以採用中華民國教育部標準字體-楷書。
 
 ### 變數宣告
 [config.tex](Configurations/config.tex) <br>
@@ -112,8 +100,6 @@ Compiled with fontconfig version 2.11.0; using 2.13.1
         - Version 8.7.2 <BR>
 **關於 Latex-Workshop 套件設定 請參見[設定檔](.vscode/settings.json)**
 - 文獻管理 [Zotero](https://www.zotero.org/)
-
-
 
 
 [1]: https://academic.stust.edu.tw/Sysid/academic/files/DegreeExamination/THESIS_example.pdf
