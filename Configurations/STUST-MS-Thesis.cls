@@ -4,7 +4,7 @@
 % Department of Electronic Engineering
 % National Souther Taiwan of Sciences and Technology
 % GitHub : https://github.com/yingchao-chen/STUST-thesis-template
-% Version 1.0 (2020.01.31)
+% Version 1.01 (2020.03.14)
 %----------------------------------------------------------------------------------------
 
 %----------------------------------------------------------------------------------------
@@ -133,7 +133,6 @@
 \usepackage{amsthm}
 \usepackage{epsfig}
 \usepackage{verbatim}
-\usepackage{graphicx}
 \usepackage{amsthm}
 \pagestyle{empty}
 \usepackage{color}
@@ -182,6 +181,7 @@
 \usepackage{siunitx} % Required for \SI commands
 
 \usepackage{graphicx} % Required to include images
+
 \graphicspath{{Figures/}{./}} % Specifies where to look for included images
 
 \usepackage{booktabs} % Required for better table rules
@@ -574,14 +574,17 @@
 %----------------------------------------------------------------------------------------
 %	Add School Logo Watermark
 %----------------------------------------------------------------------------------------
-% \usepackage{transparent}
+% \usepackage{tikz} % Required for drawing custom shapes
+% \usepackage{wallpaper}
 \usepackage{eso-pic,picture}
+
 \newcommand\STUSTwatermark {
-	\put(185pt,-285pt)	{		% \put(180,-280)
+	% \LRCornerWallPaper{0.4}{Figures/Logos/stust.png}	
+
+	\put(185pt,-285pt){		% \put(180,-280)
 		\parbox[b][\paperheight]{\paperwidth} {
 			\vfill
 			\centering {
-				% \transparent{0.4} %透明度
 				\includegraphics[scale=1,width=9cm]{Figures/Logos/stust.png}
 			}
 			\vfill

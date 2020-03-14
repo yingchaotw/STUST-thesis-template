@@ -1,15 +1,15 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
-[0] Config.pm:307> INFO - Logfile is '/home/yingchao/STUST-thesis-template/build/main.blg'
-[14] biber:315> INFO - === 四  3月 12, 2020, 13:22:01
-[25] Biber.pm:371> INFO - Reading '/home/yingchao/STUST-thesis-template/build/main.bcf'
-[60] Biber.pm:889> INFO - Found 3 citekeys in bib section 0
-[68] Biber.pm:4093> INFO - Processing section 0
-[73] Biber.pm:4254> INFO - Looking for bibtex format file 'References/reference.bib' for section 0
-[74] bibtex.pm:1523> INFO - LaTeX decoding ...
-[77] bibtex.pm:1340> INFO - Found BibTeX data source 'References/reference.bib'
-[91] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[91] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[91] Biber.pm:3921> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[91] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
-[92] bbl.pm:636> INFO - Writing '/home/yingchao/STUST-thesis-template/build/main.bbl' with encoding 'UTF-8'
-[93] bbl.pm:739> INFO - Output to /home/yingchao/STUST-thesis-template/build/main.bbl
+[1] Config.pm:307> INFO - Logfile is '/home/yingchao/STUST-thesis-template/build/main.blg'
+[36] biber:315> INFO - === 六  3月 14, 2020, 23:23:08
+[65] Biber.pm:371> INFO - Reading '/home/yingchao/STUST-thesis-template/build/main.bcf'
+[132] Biber.pm:889> INFO - Found 3 citekeys in bib section 0
+[147] Biber.pm:4093> INFO - Processing section 0
+[159] Biber.pm:4254> INFO - Looking for bibtex format file 'References/reference.bib' for section 0
+[161] bibtex.pm:1523> INFO - LaTeX decoding ...
+[167] bibtex.pm:1340> INFO - Found BibTeX data source 'References/reference.bib'
+[198] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[198] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[198] Biber.pm:3921> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[198] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
+[202] bbl.pm:636> INFO - Writing '/home/yingchao/STUST-thesis-template/build/main.bbl' with encoding 'UTF-8'
+[204] bbl.pm:739> INFO - Output to /home/yingchao/STUST-thesis-template/build/main.bbl

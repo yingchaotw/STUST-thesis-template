@@ -1,5 +1,5 @@
 # Title: Makefile
-# Date:  2019/10/15
+# Date:  2020/03/14
 # Name:  YingChao
 
 # target and root file name
@@ -11,17 +11,13 @@ BUILD_DIR = build
 # commands to compile document
 LATEX = xelatex
 
-BIBTEX = biber
+BIB = biber
 
 # commands parameter
 TEX_Parameter = -halt-on-error -output-directory=$(BUILD_DIR)
 
 # source files
-# ISSC_LIN+CAN_Transceiver_Test_Report.tex
 TEX_FILES = $(TARGET).tex
-
-#文献データベース、あるならば.
-# REF=Reference/reference.bib
 
 all:
 	@echo =============== make a directory ===============
@@ -29,19 +25,10 @@ all:
 	@echo ========== first commpiling document ==========
 	$(LATEX) $(TEX_Parameter) $(TEX_FILES)
 	@echo ============= reference commpiling =============
-	$(BIBTEX) $(BUILD_DIR)/$(TARGET)
+	#文献データベース、あるならば.
+	$(BIB) $(BUILD_DIR)/$(TARGET)
 	@echo ========== second commpiling document ==========
 	$(LATEX) $(TEX_Parameter) $(TEX_FILES)
 
 clean:
 	rm -rf $(BUILD_DIR)
-
-help:
-	@echo "make pdf"
-	@echo "        Make PDF file from DVI file."
-	@echo
-	@echo "make clean"
-	@echo "        Clean build directory."
-
-
-# https://mytexpert.osdn.jp/index.php?Makefile
