@@ -1,4 +1,6 @@
 {
+    "latex-workshop.latex.external.build.command": "make",
+    "latex-workshop.latex.external.build.args": ["all"],
     "editor.wordWrap": "off",
     "editor.wordWrapColumn": 80,
     "editor.wrappingIndent": "same",
@@ -14,10 +16,7 @@
         {
             "name": "xe➔bib➔xe➔xe",
             "tools": [
-                "xelatex",
-                "bib",
-                "xelatex",
-                "xelatex"
+                "make"
             ]
         },
         {
@@ -28,6 +27,13 @@
         }
     ],
     "latex-workshop.latex.tools": [
+        {
+            "name": "make",
+            "command": "make",
+            "args": [
+                "all"
+            ]
+        },
         {
             // latex 編譯工具和命令
             "name": "xelatex",
