@@ -29,6 +29,8 @@ all:
 	$(BIB) $(BUILD_DIR)/$(TARGET)
 	@echo ========== second commpiling document ==========
 	$(LATEX) $(TEX_Parameter) $(TEX_FILES)
+	@echo =========== third commpiling document ==========
+	$(LATEX) $(TEX_Parameter) $(TEX_FILES)
 
 clean:
 	rm -rf $(BUILD_DIR)

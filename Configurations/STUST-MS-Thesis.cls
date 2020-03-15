@@ -577,28 +577,14 @@
 %----------------------------------------------------------------------------------------
 \usepackage{eso-pic,picture} % \AddToShipoutPictureBG is esp-pic package's function
 \usepackage{tikz} % Required for drawing custom shapes
-% \usepackage{wallpaper}
 
 \newcommand\STUSTwatermark {
 	\begin{tikzpicture}[remember picture, overlay]
-		\node[opacity=0.7,inner sep=0pt] at (170mm,42mm) % (current page.center) 頁面中心
-		 {\includegraphics[width=9cm,scale=1.0]{Figures/Logos/stust.png}};
+		\node[opacity=0.6,inner sep=0pt] at (170mm,42mm) % (current page.center) 頁面中心
+		 {\includegraphics[width=6.8cm,scale=1.0]{Figures/Logos/STUST_LOGO.jpg}};
 	\end{tikzpicture}
 
-	% \LRCornerWallPaper{0.4}{Figures/Logos/stust.png}	
-
-	% \put(185pt,-285pt){		% \put(180,-280)
-	% 	\parbox[b][\paperheight]{\paperwidth} {
-	% 		\vfill
-	% 		\centering {
-	% 			\includegraphics[scale=1,width=9cm]{Figures/Logos/stust.png}
-	% 		}
-	% 		\vfill
-	% 	}
-	% }
 }
 
 %----------------------------------------------------------------------------------------
-
-
 \endinput

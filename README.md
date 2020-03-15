@@ -45,15 +45,13 @@
 
 ## 更新
 Update history
-##### 2020.03.15 Beta
+#### 2020.03.15 Beta
 更換浮水印套件為 tikz <br>
-新增 Settings.json 刪除產出檔案
-##### 2020.03.14 Master
+新增 Settings.json 刪除產出檔案 <br>
+新增繪圖套件 pgfplots <br>
+浮水印尺寸調整
+
+#### 2020.03.14 Master
 修改 Settings.json 變數名稱<br>
 將 /draft(false) 完稿標示移至 main 檔<br>
 清除重複 package (ifthen)
-
-
-<!-- [南臺科大教務處論文範例][1]
-
-[1]: https://academic.stust.edu.tw/Sysid/academic/files/DegreeExamination/THESIS_example.pdf -->
