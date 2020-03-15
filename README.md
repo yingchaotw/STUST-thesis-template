@@ -1,18 +1,19 @@
+<span style="background-color: #DEFFFF"><font Size="5">   [**STUST-THESIS-TAMPLATE Wiki**](https://github.com/yingchao-chen/STUST-thesis-template/wiki)</font></span>
+
 [![](Figures/Logos/stustlargelogo.png "研究生學位考試專區")](https://academic.stust.edu.tw/tc/node/DegreeExam)
+
 # 南臺科技大學 Latex 論文版型
 
 - 南臺科技大學 (南台科技大學)
 - Southern Taiwan University of Science of Technology
 
-<font Size="4">[**STUST-THESIS-TAMPLATE Wiki**](https://github.com/yingchao-chen/STUST-thesis-template/wiki)</font>
-
 ## 前言
-
 [Latex 筆記 - Hackmd](https://hackmd.io/@YingChao/LaTeX/)
 
 <span style="background-color: #FFFF99">目前只有 `Windows`及`Linux` 系統經測試成功。</span>
 
-如果您發現這個板型有問題，請提交 Issus，也非常歡迎您提交 PR 協助修正問題。
+如果您發現這個板型有問題，請提交 Issus。
+也非常歡迎您提交 PR 協助修正問題。
 若有期望加入其他功能改善論文撰寫環境，也歡迎提交 Issus 許願！ 
 
 ## 說明
@@ -34,6 +35,24 @@
 - [X] 14. 作者簡介（視需要）
 
 未勾選部分的第二項及第五項為論文提交時，學校才會提供文檔，屆時再自行匯入論文中合併。
+
+### 快捷鍵說明
+|功能|按鍵|
+|----|----|
+|編譯 TEX|`Ctrl`+`Alt`+`B`|
+|預覽 PDF|`Ctrl`+`Alt`+`V`|
+|清除 OUTPUT 檔案|`Ctrl`+`Alt`+`C`|
+
+## 更新
+Update history
+##### 2020.03.15 Beta
+更換浮水印套件為 tikz <br>
+新增 Settings.json 刪除產出檔案
+##### 2020.03.14 Master
+修改 Settings.json 變數名稱<br>
+將 /draft(false) 完稿標示移至 main 檔<br>
+清除重複 package (ifthen)
+
 
 <!-- [南臺科大教務處論文範例][1]
 
