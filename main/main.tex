@@ -7,8 +7,8 @@
 % Version 1.01 (2020.03.14)
 %========================================================================================
 
-\input{Configurations/Template}
-\input{Configurations/config}
+\input{../Configurations/Template}
+\input{../Configurations/config}
 
 \draftfalse         % 未完稿   (drafttrue 完稿)
 
@@ -24,10 +24,10 @@
 %----------------------------------------------------------------------------------------
 
 % ----- 封面頁 -----
-\input{Instance/FrontCover}
+\input{../Instance/FrontCover}
 
 % ----- 書  脊 -----
-% \input{Instance/Spine}
+% \input{../Instance/Spine}
 
 % ----- 空白頁 -----
 \ifdraft
@@ -35,7 +35,7 @@
 \fi
 
 % ----- 書名頁 -----
-\input{Instance/title}
+\input{../Instance/title}
 
 % ----- 博碩士論文授權書 -----
 % \includepdf[pagecommand={\thispagestyle{empty}}]{Externals/powerofattorney.pdf}
@@ -56,11 +56,11 @@
 \pagenumbering{roman}       %用羅馬RS編號
 
 % 中英文摘要
-\input{Instance/abstract_zhTW} \addchaptertocentry{\abstractname}
-\input{Instance/abstract_EN} \addchaptertocentry{\abstractname}
+\input{../Instance/abstract_zhTW} \addchaptertocentry{\abstractname}
+\input{../Instance/abstract_EN} \addchaptertocentry{\abstractname}
 
 % 誌謝 or 序言 （視需要）
-\input{Instance/acknowledgement} \addchaptertocentry{\acknowledgementname}
+\input{../Instance/acknowledgement} \addchaptertocentry{\acknowledgementname}
 
 % 目次
 \renewcommand{\contentsname}{目\hspace{2em}次}
@@ -81,19 +81,19 @@
 
 % 論文本文
 \mainmatter % Begin numeric (1,2,3...) page numbering
-\input{Chapters/Introduction}
-\input{Chapters/Method}
-\input{Chapters/Result}
-\input{Chapters/Conclusion}
+\input{../Chapters/Introduction}
+\input{../Chapters/Method}
+\input{../Chapters/Result}
+\input{../Chapters/Conclusion}
 
 %----------------------------------------------------------------------------------------
 % 參考文獻  文献データベース
-\input{Chapters/Reference} \addchaptertocentry{\bibname}
+\input{../Chapters/Reference} \addchaptertocentry{\bibname}
 %----------------------------------------------------------------------------------------
 
 % 附錄及符號(公式)彙編（視需要）
 % \appendix
-% \input{Appendices/AppendixA}
+% \input{../Appendices/AppendixA}
 
 %----------------------------------------------------------------------------------------
 %	論文內容 結束

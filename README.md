@@ -57,10 +57,16 @@
 |命令|功能描述|
 |----|----|
 |`make all`|編譯 LaTeX 專案|
-|`make clean`| 清除 build 目錄|
+|`make clean`| 清除 build 目錄<br>清除內容包含 PDF 檔案|
 
 ## 更新
 Update history
+#### 2020.03.17 Master
+加入圖標號之後出現 warning 但不影響編譯<br>
+更改目錄結構將 main.tex 放置 main 目錄底下 <br>
+全專案相依路徑微調 <br>
+修改 makefile 檔案可以在專案目錄直接 make main 目錄底下的 tex 檔 
+
 #### 2020.03.16 Beta
 將 makefile 加入 settings.json <br>
 ➥ windows 無內建 make 功能先把 default 更換回會 build 目錄的 command <br>

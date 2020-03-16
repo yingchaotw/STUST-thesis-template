@@ -19,6 +19,7 @@
 *.log
 *.run.xml
 *.synctex.gz
+*.synctex.gz(buzy)
 *.fdb_latexmk
 *.log
 *.toc
