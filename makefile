@@ -14,12 +14,13 @@ LATEX = xelatex
 BIB = biber
 
 # commands parameter
-TEX_Parameter = -halt-on-error -output-directory=$(BUILD_DIR)
+TEX_Parameter = -synctex=1 -interaction=nonstopmode -halt-on-error -output-directory=$(BUILD_DIR)
 
 # source files
 TEX_FILES = $(TARGET).tex
 
 all:
+	@rm -rf $(BUILD_DIR)
 	@echo =============== make a directory ===============
 	mkdir -p $(BUILD_DIR)
 	@echo ========== first commpiling document ==========
@@ -33,4 +34,4 @@ all:
 	$(LATEX) $(TEX_Parameter) $(TEX_FILES)
 
 clean:
-	rm -rf $(BUILD_DIR)
+	@rm -rf $(BUILD_DIR)

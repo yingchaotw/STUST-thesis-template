@@ -16,7 +16,7 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \usepackage{lmodern}
 
 %----------------------------------------------------------------------------------------
-%見た目を変更するパッケージとして
+% 見た目を変更するパッケージとして
 %----------------------------------------------------------------------------------------
 \usepackage{titlesec, titletoc}   
 \titlecontents{chapter}[0em]{}
@@ -27,7 +27,9 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \titleformat{\chapter}{\centering\Huge\bfseries}{Chapter\,{\thechapter}}{1em}{}
 \titleformat{\chapter}{\centering\Huge\bfseries}{第\,\zhnumber{\thechapter}\,章}{1em}{}    %設定章節樣式
 
-% ----- 中国語,日本語,韓国語使用の設定
+%----------------------------------------------------------------------------------------
+% 中国語,日本語,韓国語使用の設定
+%----------------------------------------------------------------------------------------
 \usepackage{xeCJK}
 \usepackage{lipsum}
 \usepackage{fontspec}
@@ -48,6 +50,10 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \setCJKfamilyfont{edukai-4.0}[Path=\string./fonts/]{edukai-4.0}       %教育部楷書
 \newcommand{\edukai}{\CJKfamily{edukai-4.0}}
 
+% 解決 XeTeX 中文的斷行問題
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
 
 %----------------------------------------------------------------------------------------
 

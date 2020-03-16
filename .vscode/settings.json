@@ -2,6 +2,8 @@
     "editor.wordWrap": "off",
     "editor.wordWrapColumn": 80,
     "editor.wrappingIndent": "same",
+    // "latex-workshop.latex.external.build.command": "make",
+    // "latex-workshop.latex.external.build.args": ["all"],
     "latex-workshop.synctex.afterBuild.enabled":true,
     "latex-workshop.bind.enter.key": true,
     "latex-workshop.hover.citation.enabled": true,
@@ -9,11 +11,17 @@
     "latex-workshop.latex.recipes": [
         {
             "name": "xe➔bib➔xe➔xe",
-            "tools": [
+            "tools":[
                 "xelatex",
                 "bib",
                 "xelatex",
                 "xelatex"
+            ]
+        },
+        {
+            "name": "makefile",
+            "tools": [
+                "make"
             ]
         },
         {
@@ -24,6 +32,13 @@
         }
     ],
     "latex-workshop.latex.tools": [
+        {
+            "name": "make",
+            "command": "make",
+            "args": [
+                "all"
+            ]
+        },
         {
             // latex 編譯工具和命令
             "name": "xelatex",
@@ -47,7 +62,6 @@
         }
     ],
     "latex-workshop.view.pdf.viewer": "tab",
-    "latex-workshop.latex.clean.subfolder.enabled":true,
     "latex-workshop.latex.clean.fileTypes": [
         "**/*.acn",
         "**/*.alg",
@@ -68,8 +82,10 @@
         "**/*.ist",
         "**/*.fls",
         "**/*.log",
+        "**/*.xwm",
         "**/*.run.xml",
         "**/*.fdb_latexmk",
-        "**/*.synctex.gz"
-    ]
+        "**/*.synctex.gz",
+    ],
+    "latex-workshop.latex.clean.subfolder.enabled":true
 }

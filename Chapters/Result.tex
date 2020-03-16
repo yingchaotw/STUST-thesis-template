@@ -16,21 +16,21 @@
 \item 拾壹之型 凪
 \end{itemize}
 
-繪圖範例2：
-\begin{center}
-    \begin{tikzpicture}
-        \begin{axis}[
-            title=Example using the mesh parameter, % 圖標題
-            hide axis,                              % 隱藏座標
-            colormap/cool,                          % 顏色風格
-        ]
-        \addplot3[
-            mesh,                                   % 繪製的三維圖像是網格
-            samples=50,                             % 定義域分割數量
-            domain=-8:8,                            % 定義域
-        ]
-        {sin(deg(sqrt(x^2+y^2)))/sqrt(x^2+y^2)};    % 二元顯式函數
-        \addlegendentry{$\frac{sin(r)}{r}$}         % 添加圖例
-        \end{axis}
-        \end{tikzpicture}
-\end{center}
+% 繪圖範例2：
+% \begin{center}
+%     \begin{tikzpicture}
+%         \begin{axis}[
+%             title=Example using the mesh parameter, % 圖標題
+%             hide axis,                              % 隱藏座標
+%             colormap/cool,                          % 顏色風格
+%         ]
+%         \addplot3[
+%             mesh,                                   % 繪製的三維圖像是網格
+%             samples=50,                             % 定義域分割數量
+%             domain=-8:8,                            % 定義域
+%         ]
+%         {sin(deg(sqrt(x^2+y^2)))/sqrt(x^2+y^2)};    % 二元顯式函數
+%         \addlegendentry{$\frac{sin(r)}{r}$}         % 添加圖例
+%         \end{axis}
+%         \end{tikzpicture}
+% \end{center}

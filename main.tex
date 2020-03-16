@@ -50,8 +50,7 @@
 %	論文內容 由此開始 
 %----------------------------------------------------------------------------------------
 \phantomsection     %加這個命令後，目錄中的超鏈接才指向正確的頁碼
-
-\AddToShipoutPictureBG{\STUSTwatermark}  % 浮水印設定
+\STUSTwatermark  % 浮水印設定
 % \clearpage          %加這個命令後，目錄中的頁碼才顯示正確
 \setcounter{page}{1}        % 摘要為第一頁
 \pagenumbering{roman}       %用羅馬RS編號
@@ -75,7 +74,7 @@
 \newpage
 
 % 圖目錄
-\renewcommand{\figurename}{圖}
+\renewcommand{\figurename}{\bfseries 圖}
 \renewcommand{\listfigurename}{圖\hspace{.5em}目\hspace{.5em}錄}
 \listoffigures \addchaptertocentry{\listfigurename}
 \newpage
