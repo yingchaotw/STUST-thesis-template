@@ -31,4 +31,4 @@ all:
 	$(LATEX) $(TEX_Parameter) $(TEX_FILES)
 
 clean:
-	rm -rf $(BUILD_DIR)
+	@rm -rf $(BUILD_DIR)
