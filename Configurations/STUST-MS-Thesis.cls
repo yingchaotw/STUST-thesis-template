@@ -12,9 +12,9 @@
 %----------------------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}[2018-12-01]
-\ProvidesClass{Configurations/STUST-MS-Thesis}[2020/02/03 v1.0 LaTeX document class]
+\ProvidesClass{../Configurations/STUST-MS-Thesis}[2020/02/03 v1.0 LaTeX document class]
 \providecommand{\baseclass}{book}
-\input{Configurations/config}
+\input{../Configurations/config}
 
 \RequirePackage{etoolbox}
 \RequirePackage{xparse}
@@ -115,12 +115,6 @@
 	}%
 }%
 
-% 解決 XeTeX 中文的斷行問題
-\XeTeXlinebreaklocale "zh"
-\XeTeXlinebreakskip = 0pt plus 1pt
-%%%%%%%%%%%%%%%%%%%%
-\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
-%%%%%%%%%%%%%%%%%%%%
 
 
 %----------------------------------------------------------------------------------------
@@ -157,7 +151,8 @@
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{note}[theorem]{Note}
+% \newtheorem{note}[theorem]{Note}
+\newtheorem{note}{註：}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{prop}[theorem]{Proposition}
 
@@ -368,7 +363,10 @@
     % %{\normalsize \byname{} \authorname \par} % Author name
 	% %\medskip
     % %\ifbool{listtoc}{\addchap{\abstractname}}{\addchap*{\abstractname}}
-	{\huge\textit{\abstractname} \par}
+	\vspace*{1.0em}
+	{\huge \bfseries \titleen \par} % Thesis title
+	\vspace*{1.0em}
+	{\huge \textbf{\abstractname} \par}
 	\bigskip
 	% %{\normalsize \facname \par} % Faculty name
 	\end{center}
@@ -387,7 +385,7 @@
 	\checktoopen
 	\tttypeout{\abstractname}
 
-	%\null\vfil
+	% \null\vfil
 	\begin{center}
 	% {\normalsize \MakeUppercase{\schooltwname} \par} % University name in capitals
 	% %\bigskip
@@ -410,7 +408,8 @@
     % %{\normalsize \byname{} \authorname \par} % Author name
 	% %\medskip
     % %\ifbool{listtoc}{\addchap{\abstractname}}{\addchap*{\abstractname}}
-	{\huge\textit{\abstractname} \par}
+	\vspace*{2.1em}
+	{\huge\textbf{\abstractname} \par}
 	\bigskip
 	% %{\normalsize \facname \par} % Faculty name
 	\end{center}
@@ -498,7 +497,8 @@
 \checktoopen
 \tttypeout{\acknowledgementname}
 \thispagestyle{plain}
-\begin{center}{\huge\textit{\acknowledgementname}\par}\end{center}
+\vspace*{15mm}
+\begin{center}{\huge\textbf{\acknowledgementname}\par}\end{center}
 \bigskip
 \vspace{11mm}
 }
@@ -574,25 +574,26 @@
 %----------------------------------------------------------------------------------------
 %	Add School Logo Watermark
 %----------------------------------------------------------------------------------------
-% \usepackage{tikz} % Required for drawing custom shapes
-% \usepackage{wallpaper}
-\usepackage{eso-pic,picture}
+% \usepackage[printwatermark]{xwatermark}  % 浮水印
+\usepackage[contents=]{background} %如果沒有給 contest空白會自動加上 draft 浮水印字樣
+\usepackage{eso-pic,picture} % \AddToShipoutPictureBG is esp-pic package's function
+\usepackage{tikz} % Required for drawing custom shapes
 
 \newcommand\STUSTwatermark {
-	% \LRCornerWallPaper{0.4}{Figures/Logos/stust.png}	
-
-	\put(185pt,-285pt){		% \put(180,-280)
-		\parbox[b][\paperheight]{\paperwidth} {
-			\vfill
-			\centering {
-				\includegraphics[scale=1,width=9cm]{Figures/Logos/stust.png}
-			}
-			\vfill
+	\backgroundsetup{
+		contents={\includegraphics[width=6.8cm]{\watermarkimage}},
+		angle=0,
+		opacity=1.0,
+		hshift = 56mm,
+		vshift =-90mm,
+		scale=1.25
 		}
-	}
+	% \begin{tikzpicture}[remember picture, overlay]
+	% 	\node[opacity=0.6,inner sep=0pt] at (170mm,42mm) % (current page.center) 頁面中心
+	% 	 {\includegraphics[width=6.8cm,scale=1.0]{Figures/Logos/STUST_LOGO.jpg}};
+	% \end{tikzpicture}
+
 }
 
 %----------------------------------------------------------------------------------------
-
-
 \endinput

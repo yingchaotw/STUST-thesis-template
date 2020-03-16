@@ -5,30 +5,35 @@
 # target and root file name
 TARGET = main
 
+# 設置編譯器
+.PHONY:clean all
+
+# 讀取文件夾
+SUBDIRS=$(shell ls -l | grep ^d | awk '{if($$9 == "main") print $$9}')
+
+# 記住當前根目錄路徑
+ROOT_DIR=$(shell pwd)
+
 # Directories
-BUILD_DIR = build
+SOURCE_DIR = main
+BUILD_DIR = ../build
 
 # commands to compile document
 LATEX = xelatex
-
-BIB = biber
+BIBTEX = biber
 
 # commands parameter
-TEX_Parameter = -halt-on-error -output-directory=$(BUILD_DIR)
+TEX_Parameter = -synctex=1 -interaction=nonstopmode -halt-on-error -output-directory=$(BUILD_DIR)
 
-# source files
-TEX_FILES = $(TARGET).tex
+
+# 獲取當前目錄下的tex文件集，放在變量CUR_SOURCE中
+TEX_SOURCE=${wildcard *.tex}
+
+# 將以下變量導出到子shell中，本次相當於導出到子目錄下的makefile中
+export TARGET SUBDIRS ROOT_DIR BUILD_DIR LATEX BIBTEX TEX_Parameter
 
 all:
-	@echo =============== make a directory ===============
-	mkdir -p $(BUILD_DIR)
-	@echo ========== first commpiling document ==========
-	$(LATEX) $(TEX_Parameter) $(TEX_FILES)
-	@echo ============= reference commpiling =============
-	#文献データベース、あるならば.
-	$(BIB) $(BUILD_DIR)/$(TARGET)
-	@echo ========== second commpiling document ==========
-	$(LATEX) $(TEX_Parameter) $(TEX_FILES)
+	make -C $(SUBDIRS)
 
 clean:
 	@rm -rf $(BUILD_DIR)

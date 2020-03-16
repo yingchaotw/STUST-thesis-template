@@ -6,18 +6,17 @@
 12pt, % The default document font size, options: 10pt, 11pt, 12pt
 english, % ngerman for German
 onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
-]{Configurations/STUST-MS-Thesis} % The class file specifying the document structure
+]{../Configurations/STUST-MS-Thesis} % The class file specifying the document structure
 
 \setcounter{secnumdepth}{6}
 \setcounter{tocdepth}{6}
-% \newtheorem{note}{註：}
 
 \usepackage{xunicode}
 \usepackage{mathptmx}
 \usepackage{lmodern}
 
 %----------------------------------------------------------------------------------------
-%見た目を変更するパッケージとして
+% 見た目を変更するパッケージとして
 %----------------------------------------------------------------------------------------
 \usepackage{titlesec, titletoc}   
 \titlecontents{chapter}[0em]{}
@@ -28,27 +27,33 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \titleformat{\chapter}{\centering\Huge\bfseries}{Chapter\,{\thechapter}}{1em}{}
 \titleformat{\chapter}{\centering\Huge\bfseries}{第\,\zhnumber{\thechapter}\,章}{1em}{}    %設定章節樣式
 
-% ----- 中国語,日本語,韓国語使用の設定
+%----------------------------------------------------------------------------------------
+% 中国語,日本語,韓国語使用の設定
+%----------------------------------------------------------------------------------------
+\def\fontpath{Path=\string../fonts/}
 \usepackage{xeCJK}
 \usepackage{lipsum}
 \usepackage{fontspec}
 \usepackage{type1ec,type1cm}
 \defaultfontfeatures{AutoFakeBold=2.5,AutoFakeSlant=.2}
-\setmainfont[Path=\string./fonts/]{times}[        %預設英文字體
+\setmainfont[\fontpath]{times}[        %預設英文字體
 	Extension      = .ttf,
 	BoldFont       = *bd,
 	ItalicFont     = *i,
 	BoldItalicFont = *bi
 	]
 
-\setsansfont[Path=\string./fonts/]{times} 		 %使用目錄底下指定字體
-
-\setCJKmainfont[Path=\string./fonts/]{ukai}
-\setCJKmonofont[Path=\string./fonts/]{edukai-4.0}
-% \setCJKsansfont[Path=\string./fonts/]{SourceHanSans}                  %思源黑體
-\setCJKfamilyfont{edukai-4.0}[Path=\string./fonts/]{edukai-4.0}       %教育部楷書
+\setsansfont[\fontpath]{times} 		 %使用目錄底下指定字體
+\setCJKmainfont[\fontpath]{ukai}
+\setCJKmonofont[\fontpath]{edukai-4.0}
+% \setCJKsansfont[\fontpath]{SourceHanSans}                  %思源黑體
+\setCJKfamilyfont{edukai-4.0}[\fontpath]{edukai-4.0}       %教育部楷書
 \newcommand{\edukai}{\CJKfamily{edukai-4.0}}
 
+% 解決 XeTeX 中文的斷行問題
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
 
 %----------------------------------------------------------------------------------------
 
@@ -67,7 +72,7 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \usepackage{indentfirst} \setlength{\parindent}{2em}
 \usepackage{xcolor}
 \usepackage{lettrine}  % used for chinese bigger capital
-\usepackage{Package/slashbox}
+\usepackage{../Package/slashbox}
 \usepackage{booktabs,amsmath}
 \usepackage{algorithm}
 \usepackage{enumerate}
@@ -79,7 +84,7 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 %----------------------------------------------------------------------------------------
 \usepackage[redeflists]{IEEEtrantools}   %複数行にわたった数式を書く場合には，IEEEeqnarray 環境が便利です
 \usepackage[hyperref=true,backend=biber,sorting=none,backref=true]{biblatex}
-\addbibresource{References/\RefName.bib} % The filename of the bibliography
+\addbibresource{\RefPath} % The filename of the bibliography
 
 \frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
 \pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
@@ -88,10 +93,12 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 \usepackage{datetime}
 \usepackage{ifthen}
-
-
 \usepackage{xparse}
-% \newwatermark[pages=3-112,fontfamily=bch,color=gray!100,scale=4,xpos=4,ypos=20]{\transparent{0.4}\includegraphics[width=1.25cm]{\watermarkimage}}
 
-
+%----------------------------------------------------------------------------------------
+% 繪圖函數 Graph functions
+%----------------------------------------------------------------------------------------
+\usepackage{pgfplots}
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{compat=newest,compat/show suggested version=false}
 

@@ -1,20 +1,26 @@
 {
-    "latex-workshop.latex.external.build.command": "make",
-    "latex-workshop.latex.external.build.args": ["all"],
     "editor.wordWrap": "off",
     "editor.wordWrapColumn": 80,
     "editor.wrappingIndent": "same",
-    "latex-workshop.progress.barStyle":"Block Quadrants",
-    "latex-workshop.hover.citation.enabled": true,
-    "latex-workshop.bind.enter.key": true,
-    "latex-workshop.latex.autoClean.run": "onBuilt",
+    // 使用 makefile 編譯專案
+    // "latex-workshop.latex.external.build.command": "make",
+    // "latex-workshop.latex.external.build.args": ["all"],
     "latex-workshop.synctex.afterBuild.enabled":true,
-    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
-    "latex-workshop.latex.outDir": "%DIR%/build",                 // 輸出在main目錄底下的build
-    "latex-workshop.latex.clean.subfolder.enabled": true,
+    "latex-workshop.bind.enter.key": true,
+    "latex-workshop.hover.citation.enabled": true,
+    "latex-workshop.latex.outDir": "../build",                 // 輸出在main目錄底下的build
     "latex-workshop.latex.recipes": [
         {
             "name": "xe➔bib➔xe➔xe",
+            "tools":[
+                "xelatex",
+                "bib",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "makefile",
             "tools": [
                 "make"
             ]
@@ -44,7 +50,7 @@
                 "-file-line-error",
                 "-pdf",
                 "--output-directory=%OUTDIR%",
-                "%DOC%"
+                "main.tex"
             ]
         },
         {   // 參考文獻編譯器
@@ -58,8 +64,29 @@
     ],
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.latex.clean.fileTypes": [
-        "%DIR%/build/*",
-        "build/*",
-        "%OUTDIR%/*"
-    ]
+        "**/*.acn",
+        "**/*.alg",
+        "**/*.acr",
+        "**/*.aux",
+        "**/*.bbl",
+        "**/*.bcf",
+        "**/*.blg",
+        "**/*.idx",
+        "**/*.ind",
+        "**/*.lof",
+        "**/*.lot",
+        "**/*.out",
+        "**/*.toc",
+        "**/*.glg",
+        "**/*.glo",
+        "**/*.gls",
+        "**/*.ist",
+        "**/*.fls",
+        "**/*.log",
+        "**/*.xwm",
+        "**/*.run.xml",
+        "**/*.fdb_latexmk",
+        "**/*.synctex.gz",
+    ],
+    "latex-workshop.latex.clean.subfolder.enabled":true
 }
