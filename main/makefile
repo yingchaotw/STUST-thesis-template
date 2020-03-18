@@ -1,20 +1,19 @@
 # Title: Makefile
-# Date:  2020/03/17
+# Date:  2020/03/18
 # Name:  YingChao
 
 # source files
 TEX_FILES=${wildcard *.tex}
 
 all:
-	@echo =============== make a directory ===============
-	mkdir -p $(BUILD_DIR)
-	@echo ========== first commpiling document ==========
-	@echo $(shell pwd)
+	@echo "\033[33m =============== make a directory =============== \033[0m"
+	mkdir -p ../$(BUILD_DIR)
+	@echo "\033[33m =========== 1st commpiling document ============ \033[0m"
+	@echo "\033[33m $(shell pwd) \033[0m"
 	$(LATEX) $(TEX_Parameter) $(TEX_FILES)
-	@echo ============= reference commpiling =============
-	#文献データベース、あるならば.
-	$(BIBTEX) $(BUILD_DIR)/$(TARGET)
-	@echo ========== second commpiling document ==========
+	@echo "\033[33m ============= reference commpiling ============= \033[0m"
+	$(BIBTEX) ../$(BUILD_DIR)/$(TARGET)
+	@echo "\033[33m =========== 2nd commpiling document ============ \033[0m"
 	$(LATEX) $(TEX_Parameter) $(TEX_FILES)
-	@echo =========== third commpiling document ==========
+	@echo "\033[33m ============ 3rd commpiling document =========== \033[0m"
 	$(LATEX) $(TEX_Parameter) $(TEX_FILES)

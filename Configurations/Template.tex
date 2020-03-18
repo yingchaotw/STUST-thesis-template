@@ -36,6 +36,7 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \usepackage{fontspec}
 \usepackage{type1ec,type1cm}
 \defaultfontfeatures{AutoFakeBold=2.5,AutoFakeSlant=.2}
+\setsansfont[\fontpath]{times}
 \setmainfont[\fontpath]{times}[        %預設英文字體
 	Extension      = .ttf,
 	BoldFont       = *bd,
@@ -43,10 +44,10 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 	BoldItalicFont = *bi
 	]
 
-\setsansfont[\fontpath]{times} 		 %使用目錄底下指定字體
+\defaultCJKfontfeatures{AutoFakeBold=2.5,AutoFakeSlant=.2}
 \setCJKmainfont[\fontpath]{ukai}
 \setCJKmonofont[\fontpath]{edukai-4.0}
-% \setCJKsansfont[\fontpath]{SourceHanSans}                  %思源黑體
+\setCJKsansfont[\fontpath]{ukai}
 \setCJKfamilyfont{edukai-4.0}[\fontpath]{edukai-4.0}       %教育部楷書
 \newcommand{\edukai}{\CJKfamily{edukai-4.0}}
 
@@ -61,15 +62,14 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \usepackage[final]{pdfpages}    %PDFの各ページを挿入するためのパッケージです
 
 \usepackage{url}         %URLをリンクとして表示するためのパッケージ
-\usepackage[redeflists]{IEEEtrantools}   %複数行にわたった数式を書く場合には，IEEEeqnarray 環境が便利です
 \usepackage{zhnumber}
-\usepackage{indentfirst}      %首段文章縮排套件
 \linespread{1.5} %行距1.5倍
 
+\usepackage{docmute}
 % \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[LGR,OT1]{fontenc} % Output font encoding for international characters
 \usepackage{palatino} % Use the Palatino font by default
-\usepackage{indentfirst} \setlength{\parindent}{2em}
+\usepackage{indentfirst} \setlength{\parindent}{2em} %首段文章縮排套件
 \usepackage{xcolor}
 \usepackage{lettrine}  % used for chinese bigger capital
 \usepackage{../Package/slashbox}
@@ -77,6 +77,9 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \usepackage{algorithm}
 \usepackage{enumerate}
 \usepackage{multirow}
+\usepackage{array}
+\usepackage{forest}
+\usepackage{ifthen}
 \usepackage[strict]{changepage}
 
 %----------------------------------------------------------------------------------------
@@ -92,7 +95,6 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \cleardoublepage
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 \usepackage{datetime}
-\usepackage{ifthen}
 \usepackage{xparse}
 
 %----------------------------------------------------------------------------------------

@@ -209,16 +209,16 @@
 \RequirePackage{geometry}
 \geometry{
 	paper=a4paper, % Default paper size, change to "letterpaper" for US Letter (you'll need to adjust margins after)
-	% inner=1.5in, % The inner margin (beside binding)
-	% outer=1in, % The outer margin (opposite binding)
 	top=2.5cm, % Top margin
 	bottom=2.75cm, % bottom margin
 	left=3.5cm, % left margin
-	right=2.5cm, % right margin
-	% headheight=20pt, % Header height
-	% headsep=.25in, % Header separation
-	% includehead,
-	includefoot
+	right=2.5cm % right margin
+		% inner=1.5in, % The inner margin (beside binding)
+		% outer=1in, % The outer margin (opposite binding)
+		% headheight=20pt, % Header height
+		% headsep=.25in, % Header separation
+		% includehead,
+		% includefoot
 }
 
 \raggedbottom
@@ -245,16 +245,17 @@
 \fancypagestyle{thesis}{%
 	\fancyhead[LE,RO]{\rmfamily\thepage}%
 	%\fancyhead[RE,LO]{\slshape\MakeMarkcase{\rightmark}}%
-    \fancyhead[RE,LO]{\bfseries\nouppercase{\rightmark}}%
+	\fancyhead[RE,LO]{\bfseries\nouppercase{\rightmark}}%
 }
 \else % If we are in one sided, print the headers on the same positions on all pages
 	\fancypagestyle{thesis}{%
 	%\lhead{\slshape\MakeMarkcase{\rightmark}}% The left top header
     %\lhead{\bfseries\nouppercase{\rightmark}}% The left top header bold italic uppercase
 	\rhead{\rmfamily\thepage}% The right top header
+	% \fancyfoot[LO,CE]{\thepage} 
 }
 \fi
-%\pagestyle{thesis}
+% \pagestyle{thesis}
 \pagestyle{headings}
 
 
@@ -586,7 +587,7 @@
 		opacity=1.0,
 		hshift = 56mm,
 		vshift =-90mm,
-		scale=1.25
+		scale=1.15
 		}
 	% \begin{tikzpicture}[remember picture, overlay]
 	% 	\node[opacity=0.6,inner sep=0pt] at (170mm,42mm) % (current page.center) 頁面中心

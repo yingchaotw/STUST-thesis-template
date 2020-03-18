@@ -5,9 +5,10 @@
     // 使用 makefile 編譯專案
     // "latex-workshop.latex.external.build.command": "make",
     // "latex-workshop.latex.external.build.args": ["all"],
+    "latex-workshop.latex.autoBuild.onSave.enabled": false,
     "latex-workshop.synctex.afterBuild.enabled":true,
     "latex-workshop.bind.enter.key": true,
-    "latex-workshop.hover.citation.enabled": true,
+    // "latex-workshop.hover.citation.enabled": true,
     "latex-workshop.latex.outDir": "../build",                 // 輸出在main目錄底下的build
     "latex-workshop.latex.recipes": [
         {

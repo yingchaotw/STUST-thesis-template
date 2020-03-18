@@ -58,9 +58,15 @@
 |----|----|
 |`make all`|編譯 LaTeX 專案|
 |`make clean`| 清除 build 目錄<br>清除內容包含 PDF 檔案|
+|`make staypdf`| build 目錄下清除  PDF 以外檔案|
 
 ## 更新
 Update history
+#### 2020.03.17 Beta
+新增 makefile 命令清除 pdf 以外檔案<br>
+修正 03.17 更新浮水印過大<br>
+圖標 warning 屬字體問題，仍在解決中
+
 #### 2020.03.17 Master
 加入圖標號之後出現 warning 但不影響編譯<br>
 更改目錄結構將 main.tex 放置 main 目錄底下 <br>
