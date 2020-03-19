@@ -118,23 +118,15 @@
 
 
 %----------------------------------------------------------------------------------------
-%	REQUIRED PACKAGES
+%	必要套件 REQUIRED PACKAGES
 %----------------------------------------------------------------------------------------
 
 \usepackage{amscd}
-\usepackage{amsmath}
+\usepackage{amsmath} 
 \usepackage{amssymb}
 \usepackage{amsthm}
-\usepackage{epsfig}
 \usepackage{verbatim}
-\usepackage{amsthm}
-\pagestyle{empty}
-\usepackage{color}
 \usepackage[Lenny]{fncychap}
-\usepackage{ifpdf}
-\ifpdf
-	\usepackage{epstopdf}
-\fi
 
 \usepackage[tight,TABTOPCAP]{subfigure}
 
@@ -144,7 +136,6 @@
 
 \usepackage{subfigure}
 \usepackage{moreverb}
-
 
 \newtheorem{definition}{Definition}
 \newtheorem{problem}{Problem}
@@ -161,26 +152,17 @@
 \newtheorem{defi}{Definition}
 \newtheorem{rul}{Rule}
 
-
-
 \usepackage{babel} % Required for automatically changing names of document elements to languages besides english
 
 \RequirePackage{scrbase} % Required for handling language-dependent names of sections/document elements
-
 \RequirePackage{scrhack} % Loads fixes for various packages
-
 \RequirePackage{setspace} % Required for changing line spacing
-
 \RequirePackage{longtable} % Required for tables that span multiple pages (used in the symbols, abbreviations and physical constants pages)
 
 \usepackage{siunitx} % Required for \SI commands
-
 \usepackage{graphicx} % Required to include images
-
 \graphicspath{{Figures/}{./}} % Specifies where to look for included images
-
 \usepackage{booktabs} % Required for better table rules
-
 \RequirePackage[centerlast,small,sc]{caption} % Required for customising the captions
 \setlength{\captionmargin}{50pt}
 
@@ -190,7 +172,7 @@
 \if@openright\cleardoublepage\else\clearpage\fi
 }
 
-\newcommand\bhrule{\typeout{--------------------}}
+\newcommand\bhrule{\typeout{------------------------------------------------}}
 \newcommand\tttypeout[1]{\bhrule\typeout{\space #1}\bhrule}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
@@ -209,6 +191,8 @@
 \RequirePackage{geometry}
 \geometry{
 	paper=a4paper, % Default paper size, change to "letterpaper" for US Letter (you'll need to adjust margins after)
+	includehead,
+	includefoot,
 	top=2.5cm, % Top margin
 	bottom=2.75cm, % bottom margin
 	left=3.5cm, % left margin
@@ -216,9 +200,7 @@
 		% inner=1.5in, % The inner margin (beside binding)
 		% outer=1in, % The outer margin (opposite binding)
 		% headheight=20pt, % Header height
-		% headsep=.25in, % Header separation
-		% includehead,
-		% includefoot
+		% headsep=.25in % Header separation
 }
 
 \raggedbottom
@@ -284,23 +266,6 @@
 \newcommand{\aref}[1]{\appendixname~\ref{#1}}
 
 %----------------------------------------------------------------------------------------
-%	DEFINE CUSTOM THESIS INFORMATION COMMANDS
-%----------------------------------------------------------------------------------------
-
-\newcommand*{\supervisor}[1]{\def\supname{#1}}
-\newcommand*{\thesistitle}[1]{\def\@title{#1}\def\ttitle{#1}}
-\newcommand*{\examiner}[1]{\def\examname{#1}}
-\newcommand*{\degree}[1]{\def\degreename{#1}}
-\renewcommand*{\author}[1]{\def\authorname{#1}}
-\newcommand*{\addresses}[1]{\def\addressname{#1}}
-\newcommand*{\university}[1]{\def\univname{#1}}
-\newcommand*{\department}[1]{\def\deptname{#1}}
-\newcommand*{\group}[1]{\def\groupname{#1}}
-\newcommand*{\faculty}[1]{\def\facname{#1}}
-\newcommand*{\subject}[1]{\def\subjectname{#1}}
-\newcommand*{\keywords}[1]{\def\keywordnames{#1}}
-\renewcommand{\thefootnote}{\Alph{footnote}}
-%----------------------------------------------------------------------------------------
 %	DECLARATION PAGE DESIGN
 %----------------------------------------------------------------------------------------
 
@@ -342,28 +307,6 @@
 	\tttypeout{\abstractname}
 
 	\begin{center}
-	% {\normalsize \schoolenname \par} % 學校名稱
-    % {\normalsize \deptenname \par} % Department name
-    % {\normalsize \degreeen \par} % Degree name
-	% \bigskip
-    % {\normalsize\bfseries \titleen \par} % Thesis title
-	% \medskip
-
-    % \begin{minipage}{0.4\textwidth}
-	% \begin{flushleft}
-    % \emph{Author\hspace{4mm}}{\byname{} \bfseries \authorenname} % Author name - remove the \href bracket to remove the link
-    % \end{flushleft}
-    % \end{minipage}
-    
-	% \begin{minipage}{0.5\textwidth}
-	% \begin{flushright}
-    % \emph{Supervisor\hspace{4mm}}{\bfseries \Advisorenname}
-    % \end{flushright}
-	% \end{minipage}\\[1cm]
-
-    % %{\normalsize \byname{} \authorname \par} % Author name
-	% %\medskip
-    % %\ifbool{listtoc}{\addchap{\abstractname}}{\addchap*{\abstractname}}
 	\vspace*{1.0em}
 	{\huge \bfseries \titleen \par} % Thesis title
 	\vspace*{1.0em}
@@ -388,31 +331,9 @@
 
 	% \null\vfil
 	\begin{center}
-	% {\normalsize \MakeUppercase{\schooltwname} \par} % University name in capitals
-	% %\bigskip
-    % {\normalsize \depttwname \par} % Department name
-	% %\bigskip
-    % {\normalsize \degreetw\par} % Degree name
-	% \bigskip
-    % {\normalsize\bfseries \titletw \par} % Thesis title
-	% \medskip
-    % \begin{minipage}{0.4\textwidth}
-    % \begin{flushleft}
-    % \emph{作者\hspace{4mm}}{\byname{} \bfseries \authortwname} % Author name - remove the \href bracket to remove the link
-    % \end{flushleft}
-    % \end{minipage}
-    % \begin{minipage}{0.5\textwidth}
-    % \begin{flushright}
-    % \emph{指導教授\hspace{4mm}}{\bfseries \Advisortwname}
-    % \end{flushright}
-    % \end{minipage}\\[1cm]
-    % %{\normalsize \byname{} \authorname \par} % Author name
-	% %\medskip
-    % %\ifbool{listtoc}{\addchap{\abstractname}}{\addchap*{\abstractname}}
-	\vspace*{2.1em}
+	\vspace*{8mm}
 	{\huge\textbf{\abstractname} \par}
 	\bigskip
-	% %{\normalsize \facname \par} % Faculty name
 	\end{center}
 }
 {
@@ -461,16 +382,6 @@
 \providecaptionname{english,british,american}{\constantsname}{Physical Constants}
 \providecaptionname{ngerman,german,austrian,naustrian}{\constantsname}{Physikalische Konstanten}
 
-
-% \NewDocumentEnvironment{constants}{ m }{%
-% 	\ifbool{nolistspace}{\begingroup\singlespacing}{}
-% 	\ifbool{listtoc}{\addchap{\constantsname}}{\addchap*{\constantsname}}
-% 	\begin{longtable}{#1}
-% }{%
-% \end{longtable}
-% \ifbool{nolistspace}{\endgroup}{}
-% }
-
 %----------------------------------------------------------------------------------------
 %	SYMBOLS PAGE DESIGN
 %----------------------------------------------------------------------------------------
@@ -498,7 +409,7 @@
 \checktoopen
 \tttypeout{\acknowledgementname}
 \thispagestyle{plain}
-\vspace*{15mm}
+\vspace*{8mm}
 \begin{center}{\huge\textbf{\acknowledgementname}\par}\end{center}
 \bigskip
 \vspace{11mm}
@@ -575,25 +486,17 @@
 %----------------------------------------------------------------------------------------
 %	Add School Logo Watermark
 %----------------------------------------------------------------------------------------
-% \usepackage[printwatermark]{xwatermark}  % 浮水印
 \usepackage[contents=]{background} %如果沒有給 contest空白會自動加上 draft 浮水印字樣
-\usepackage{eso-pic,picture} % \AddToShipoutPictureBG is esp-pic package's function
-\usepackage{tikz} % Required for drawing custom shapes
 
 \newcommand\STUSTwatermark {
 	\backgroundsetup{
 		contents={\includegraphics[width=6.8cm]{\watermarkimage}},
 		angle=0,
 		opacity=1.0,
-		hshift = 56mm,
-		vshift =-90mm,
-		scale=1.15
+		hshift = 69mm,
+		vshift =-109mm,
+		scale=1
 		}
-	% \begin{tikzpicture}[remember picture, overlay]
-	% 	\node[opacity=0.6,inner sep=0pt] at (170mm,42mm) % (current page.center) 頁面中心
-	% 	 {\includegraphics[width=6.8cm,scale=1.0]{Figures/Logos/STUST_LOGO.jpg}};
-	% \end{tikzpicture}
-
 }
 
 %----------------------------------------------------------------------------------------

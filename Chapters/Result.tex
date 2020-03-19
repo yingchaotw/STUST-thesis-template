@@ -19,17 +19,19 @@
 
 \begin{figure}
 
-   繪圖範例 2：\\
+   圖片插入範例 2：\\
    \centering
    \includegraphics[width=8cm]{../Figures/Result/我就爛}
    \caption{我就爛}\label{fig:我就爛}
 
-   \includegraphics[width=8cm]{../Figures/Result/你也爛}
-   \caption{你也爛}\label{fig:你也爛}
-
-   \includegraphics[width=8cm]{../Figures/Result/一起爛}
-   \caption{一起爛}\label{fig:一起爛}
-
+   \subfigure[你也爛]{
+      \includegraphics[width=4cm]{../Figures/Result/你也爛}
+      \hspace{0.5 in}
+   }
+   \subfigure[一起爛]{
+      \includegraphics[width=4cm]{../Figures/Result/一起爛}
+   }
+   \caption{爛起來}\label{fig:爛起來}
 \end{figure}
 
 % 繪圖範例2：

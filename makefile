@@ -12,6 +12,9 @@ TARGET = main
 SUBDIRS=$(shell ls -l | grep ^d | awk '{if($$9 == "$(TARGET)") print $$9}')
 OUTDIRS=$(shell ls -l | grep ^d | awk '{if($$9 == "$(BUILD_DIR)") print $$9}')
 
+# 讀取pdf以外的輸出文件
+OUTFILE=$(shell ls -l $(OUTDIRS) | grep ^- | awk '{if($$9 != "$(TARGET).pdf") print $$9}')
+
 # 記住當前根目錄路徑
 ROOT_DIR=$(shell pwd)
 
@@ -36,5 +39,12 @@ clean:
 	@rm -rf $(OUTDIRS)
 
 staypdf:
+ifeq ($(strip $(OUTFILE)),)
+	@echo "\033[1;31m檔案已清除完畢\033[0m"
+else
+	@echo "\033[1;31m開始清除檔案\033[0m"
 	@cd $(OUTDIRS);\
-	rm $(shell ls -l $(OUTDIRS) | grep ^- | awk '{if($$9 != "$(TARGET).pdf") print $$9}')
+	pwd;\
+	echo 保留 pdf 其餘檔案刪除;\
+	rm $(OUTFILE)
+endif

@@ -13,7 +13,6 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 
 \usepackage{xunicode}
 \usepackage{mathptmx}
-\usepackage{lmodern}
 
 %----------------------------------------------------------------------------------------
 % 見た目を変更するパッケージとして
@@ -31,25 +30,31 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 % 中国語,日本語,韓国語使用の設定
 %----------------------------------------------------------------------------------------
 \def\fontpath{Path=\string../fonts/}
-\usepackage{xeCJK}
+\usepackage{lmodern}
+\usepackage[BoldFont,SlantFont]{xeCJK}
+\xeCJKsetup{PunctStyle=kaiming}
 \usepackage{lipsum}
 \usepackage{fontspec}
-\usepackage{type1ec,type1cm}
+% \usepackage{type1cm,type1ec} % If your installation uses scaleable versions of the Computer Modern or European Computer Modern (EC) fonts
 \defaultfontfeatures{AutoFakeBold=2.5,AutoFakeSlant=.2}
 \setsansfont[\fontpath]{times}
-\setmainfont[\fontpath]{times}[        %預設英文字體
+\setmainfont[
+	\fontpath,
 	Extension      = .ttf,
 	BoldFont       = *bd,
 	ItalicFont     = *i,
 	BoldItalicFont = *bi
-	]
+	]{times}        %預設英文字體
 
 \defaultCJKfontfeatures{AutoFakeBold=2.5,AutoFakeSlant=.2}
-\setCJKmainfont[\fontpath]{ukai}
+\CJKfontspec[\fontpath]{ukai}
+\setCJKmainfont[\fontpath]{ukai.ttc}
+\newCJKfontfamily\kai{ukai}[\fontpath,AutoFakeBold]
 \setCJKmonofont[\fontpath]{edukai-4.0}
 \setCJKsansfont[\fontpath]{ukai}
 \setCJKfamilyfont{edukai-4.0}[\fontpath]{edukai-4.0}       %教育部楷書
-\newcommand{\edukai}{\CJKfamily{edukai-4.0}}
+\newcommand*{\edukai}{\CJKfamily{edukai-4.0}}
+
 
 % 解決 XeTeX 中文的斷行問題
 \XeTeXlinebreaklocale "zh"
@@ -57,7 +62,9 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
 
 %----------------------------------------------------------------------------------------
-
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{colortbl}			%表格標題註解之巨集套件
 
 \usepackage[final]{pdfpages}    %PDFの各ページを挿入するためのパッケージです
 
@@ -73,11 +80,9 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \usepackage{xcolor}
 \usepackage{lettrine}  % used for chinese bigger capital
 \usepackage{../Package/slashbox}
-\usepackage{booktabs,amsmath}
-\usepackage{algorithm}
+\usepackage{booktabs}
 \usepackage{enumerate}
 \usepackage{multirow}
-\usepackage{array}
 \usepackage{forest}
 \usepackage{ifthen}
 \usepackage[strict]{changepage}
@@ -104,3 +109,8 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \usepgfplotslibrary{colorbrewer}
 \pgfplotsset{compat=newest,compat/show suggested version=false}
 
+%----------------------------------------------------------------------------------------
+% 圖片套件 Image functions
+%----------------------------------------------------------------------------------------
+\usepackage{tikz} % Required for drawing custom shapes
+\usepackage{eso-pic,picture} % \AddToShipoutPictureBG is esp-pic package's function

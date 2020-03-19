@@ -62,7 +62,16 @@
 
 ## 更新
 Update history
-#### 2020.03.17 Beta
+#### 2020.03.19 Beta
+修正封面共同指導教授 Error <br>
+參照學校範例浮水印位置調整 <br>
+新增文字樣式及表格範例 <br>
+新增圖片並排範例 <br>
+加入 makefile 判斷 build 目錄中檔案是否清除完畢 <br>
+論文架構 應為國字 **第一章** (未修正)
+**Issue** `Warning Font shape 'TU/ukai(0)/m/sc' undefined`
+
+#### 2020.03.18 Beta
 新增 makefile 命令清除 pdf 以外檔案<br>
 修正 03.17 更新浮水印過大<br>
 圖標 warning 屬字體問題，仍在解決中
