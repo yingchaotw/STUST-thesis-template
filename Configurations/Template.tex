@@ -15,9 +15,9 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \usepackage{mathptmx}
 
 %----------------------------------------------------------------------------------------
-% 見た目を変更するパッケージとして
+% 更變章節目錄的套件
 %----------------------------------------------------------------------------------------
-\usepackage{titlesec, titletoc}   
+\usepackage{titlesec, titletoc}
 \titlecontents{chapter}[0em]{}
 {\hspace{0em}\makebox[4.1em][l]
 	{第\zhnumber{\thecontentslabel}章}}{}
@@ -114,3 +114,27 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 %----------------------------------------------------------------------------------------
 \usepackage{tikz} % Required for drawing custom shapes
 \usepackage{eso-pic,picture} % \AddToShipoutPictureBG is esp-pic package's function
+
+%----------------------------------------------------------------------------------------
+%	Source Code include Setup
+%----------------------------------------------------------------------------------------
+\usepackage{listings}
+\lstset{
+			language={C},   %言語の指定．C言語ならCとします
+			basicstyle={\ttfamily}, %標準の書体
+			identifierstyle={\small},
+			commentstyle={\small\ttfamily \color[rgb]{0,0.5,0}},    %注釈の書体 
+			keywordstyle={\small\bfseries \color[rgb]{0,0,1}},      %キーワード(int, ifなど)の書体
+			stringstyle={\small\ttfamily \color[rgb]{1,0,1}},
+			frame=tRBl, %フレームの指定
+			framesep=10pt, %フレームと中身（コード）の間隔
+			breaklines=true, %行が長くなったときの自動改行
+			linewidth=15cm, %フレームの横幅
+			lineskip=-0.5ex, %行間の調整
+			columns=[l]{fullflexible},  %書体による列幅の違いを調整するか
+			numbers=left,
+			stepnumber=1,   %行番号をいくつとばしで表示するか
+			numbersep=14pt,
+			tabsize=2, %Tabを何文字幅にするかの指定
+			morecomment=[l]{//}
+		}

@@ -163,7 +163,8 @@
 \usepackage{graphicx} % Required to include images
 \graphicspath{{Figures/}{./}} % Specifies where to look for included images
 \usepackage{booktabs} % Required for better table rules
-\RequirePackage[centerlast,small,sc]{caption} % Required for customising the captions
+% \RequirePackage[centerlast,small,sc]{caption} % Required for customising the captions
+\usepackage[hang,small,bf]{caption}
 \setlength{\captionmargin}{50pt}
 
 %----------------------------------------------------------------------------------------
@@ -458,30 +459,6 @@
 \pdfstringdefDisableCommands{ % If there is an explicit linebreak in a section heading (or anything printed to the pdf-bookmarks), it is replaced by a space
    \let\\\space
 }
-
-%----------------------------------------------------------------------------------------
-%	Source Code include Setup
-%----------------------------------------------------------------------------------------
-\usepackage{listings}
-\lstset{
-			language={C},   %言語の指定．C言語ならCとします
-			basicstyle={\ttfamily\small}, %標準の書体
-			identifierstyle={\small},
-			commentstyle={\small\ttfamily \color[rgb]{0,0.5,0}},    %注釈の書体 
-			keywordstyle={\small\bfseries \color[rgb]{0,0,1}},      %キーワード(int, ifなど)の書体
-			stringstyle={\small\ttfamily \color[rgb]{1,0,1}},
-			frame=tRBl, %フレームの指定
-			framesep=10pt, %フレームと中身（コード）の間隔
-			breaklines=true, %行が長くなったときの自動改行
-			linewidth=19cm, %フレームの横幅
-			lineskip=-0.5ex, %行間の調整
-			columns=[l]{fullflexible},  %書体による列幅の違いを調整するか
-			numbers=left,
-			stepnumber=1,   %行番号をいくつとばしで表示するか
-			numbersep=14pt,
-			tabsize=2, %Tabを何文字幅にするかの指定
-			morecomment=[l]{//}
-		}
 
 %----------------------------------------------------------------------------------------
 %	Add School Logo Watermark
