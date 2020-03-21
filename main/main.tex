@@ -63,19 +63,24 @@
 \input{../Instance/acknowledgement} \addchaptertocentry{\acknowledgementname}
 
 % 目次
-\renewcommand{\contentsname}{目\hspace{2em}次}
+\renewcommand{\contentsname}{\edukai 目\hspace{2em}次}
 \tableofcontents \addchaptertocentry{\contentsname}
 \newpage
 
 % 表目錄
+
+\renewcommand{\listtablename}{\edukai 表\hspace{.5em}目\hspace{.5em}錄}
+\newcommand{\lotlabel}{表}
+\renewcommand{\numberline}[1]{\lotlabel~#1\hspace*{1em}}
 \renewcommand{\tablename}{表}
-\renewcommand{\listtablename}{表\hspace{.5em}目\hspace{.5em}錄}
 \listoftables \addchaptertocentry{\listtablename}
 \newpage
 
 % 圖目錄
-\renewcommand{\figurename}{\bfseries 圖}
-\renewcommand{\listfigurename}{圖\hspace{.5em}目\hspace{.5em}錄}
+\newcommand{\loflabel}{圖}
+\renewcommand{\listfigurename}{\edukai 圖\hspace{.5em}目\hspace{.5em}錄}
+\renewcommand{\figurename}{圖}
+\renewcommand{\numberline}[1]{\loflabel~#1\hspace*{1em}}
 \listoffigures \addchaptertocentry{\listfigurename}
 \newpage
 

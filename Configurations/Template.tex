@@ -13,12 +13,11 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 
 \usepackage{xunicode}
 \usepackage{mathptmx}
-\usepackage{lmodern}
 
 %----------------------------------------------------------------------------------------
-% 見た目を変更するパッケージとして
+% 更變章節目錄的套件
 %----------------------------------------------------------------------------------------
-\usepackage{titlesec, titletoc}   
+\usepackage{titlesec, titletoc}
 \titlecontents{chapter}[0em]{}
 {\hspace{0em}\makebox[4.1em][l]
 	{第\zhnumber{\thecontentslabel}章}}{}
@@ -31,24 +30,31 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 % 中国語,日本語,韓国語使用の設定
 %----------------------------------------------------------------------------------------
 \def\fontpath{Path=\string../fonts/}
-\usepackage{xeCJK}
+\usepackage{lmodern}
+\usepackage[BoldFont,SlantFont]{xeCJK}
+\xeCJKsetup{PunctStyle=kaiming}
 \usepackage{lipsum}
 \usepackage{fontspec}
-\usepackage{type1ec,type1cm}
+% \usepackage{type1cm,type1ec} % If your installation uses scaleable versions of the Computer Modern or European Computer Modern (EC) fonts
 \defaultfontfeatures{AutoFakeBold=2.5,AutoFakeSlant=.2}
-\setmainfont[\fontpath]{times}[        %預設英文字體
+\setsansfont[\fontpath]{times}
+\setmainfont[
+	\fontpath,
 	Extension      = .ttf,
 	BoldFont       = *bd,
 	ItalicFont     = *i,
 	BoldItalicFont = *bi
-	]
+	]{times}        %預設英文字體
 
-\setsansfont[\fontpath]{times} 		 %使用目錄底下指定字體
-\setCJKmainfont[\fontpath]{ukai}
+\defaultCJKfontfeatures{AutoFakeBold=2.5,AutoFakeSlant=.2}
+\CJKfontspec[\fontpath]{ukai}
+\setCJKmainfont[\fontpath]{ukai.ttc}
+\newCJKfontfamily\kai{ukai}[\fontpath,AutoFakeBold]
 \setCJKmonofont[\fontpath]{edukai-4.0}
-% \setCJKsansfont[\fontpath]{SourceHanSans}                  %思源黑體
+\setCJKsansfont[\fontpath]{ukai}
 \setCJKfamilyfont{edukai-4.0}[\fontpath]{edukai-4.0}       %教育部楷書
-\newcommand{\edukai}{\CJKfamily{edukai-4.0}}
+\newcommand*{\edukai}{\CJKfamily{edukai-4.0}}
+
 
 % 解決 XeTeX 中文的斷行問題
 \XeTeXlinebreaklocale "zh"
@@ -56,27 +62,29 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
 
 %----------------------------------------------------------------------------------------
-
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{colortbl}			%表格標題註解之巨集套件
 
 \usepackage[final]{pdfpages}    %PDFの各ページを挿入するためのパッケージです
 
 \usepackage{url}         %URLをリンクとして表示するためのパッケージ
-\usepackage[redeflists]{IEEEtrantools}   %複数行にわたった数式を書く場合には，IEEEeqnarray 環境が便利です
 \usepackage{zhnumber}
-\usepackage{indentfirst}      %首段文章縮排套件
 \linespread{1.5} %行距1.5倍
 
+\usepackage{docmute}
 % \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[LGR,OT1]{fontenc} % Output font encoding for international characters
 \usepackage{palatino} % Use the Palatino font by default
-\usepackage{indentfirst} \setlength{\parindent}{2em}
+\usepackage{indentfirst} \setlength{\parindent}{2em} %首段文章縮排套件
 \usepackage{xcolor}
 \usepackage{lettrine}  % used for chinese bigger capital
 \usepackage{../Package/slashbox}
-\usepackage{booktabs,amsmath}
-\usepackage{algorithm}
+\usepackage{booktabs}
 \usepackage{enumerate}
 \usepackage{multirow}
+\usepackage{forest}
+\usepackage{ifthen}
 \usepackage[strict]{changepage}
 
 %----------------------------------------------------------------------------------------
@@ -92,7 +100,6 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \cleardoublepage
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 \usepackage{datetime}
-\usepackage{ifthen}
 \usepackage{xparse}
 
 %----------------------------------------------------------------------------------------
@@ -102,3 +109,32 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \usepgfplotslibrary{colorbrewer}
 \pgfplotsset{compat=newest,compat/show suggested version=false}
 
+%----------------------------------------------------------------------------------------
+% 圖片套件 Image functions
+%----------------------------------------------------------------------------------------
+\usepackage{tikz} % Required for drawing custom shapes
+\usepackage{eso-pic,picture} % \AddToShipoutPictureBG is esp-pic package's function
+
+%----------------------------------------------------------------------------------------
+%	Source Code include Setup
+%----------------------------------------------------------------------------------------
+\usepackage{listings}
+\lstset{
+			language={C},   %言語の指定．C言語ならCとします
+			basicstyle={\ttfamily}, %標準の書体
+			identifierstyle={\small},
+			commentstyle={\small\ttfamily \color[rgb]{0,0.5,0}},    %注釈の書体 
+			keywordstyle={\small\bfseries \color[rgb]{0,0,1}},      %キーワード(int, ifなど)の書体
+			stringstyle={\small\ttfamily \color[rgb]{1,0,1}},
+			frame=tRBl, %フレームの指定
+			framesep=10pt, %フレームと中身（コード）の間隔
+			breaklines=true, %行が長くなったときの自動改行
+			linewidth=15cm, %フレームの横幅
+			lineskip=-0.5ex, %行間の調整
+			columns=[l]{fullflexible},  %書体による列幅の違いを調整するか
+			numbers=left,
+			stepnumber=1,   %行番号をいくつとばしで表示するか
+			numbersep=14pt,
+			tabsize=2, %Tabを何文字幅にするかの指定
+			morecomment=[l]{//}
+		}

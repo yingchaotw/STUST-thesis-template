@@ -13,19 +13,32 @@
 \begin{equation}
    \sqrt[n]{\frac{x^2+\sqrt 2}{x+y}}
 \end{equation}
-
-繪圖範例1：
-\begin{figure}[H]
-
+\vspace*{3em}
+% 表格範例：
+\begin{table}[h]
    \centering
-      \pgfplotsset{width=6cm}          % 設置繪圖尺寸
+   \caption{tabular 表格的基本結構}\label{booktabs_1}
+		\begin{tabular}[t]{lll}
+		\hline
+		column1 & column2 & column3 \\
+		\hline
+		item1   & item2   & item3 \\
+		itemA   & itemB   & itemC \\
+		\hline
+		\end{tabular}
+\end{table}
+
+
+\begin{figure}
+繪圖範例 1：\\[1em]
+   \centering
+      \pgfplotsset{width=8cm}          % 設置繪圖尺寸
       \begin{tikzpicture}
          \begin{axis}                  % 繪製座標
             % dashes = [10, 5, 100, 5] # 10 points on, 0 off, 100 on, 0 off
-            \addplot [dash pattern=on 10 off 0 on 100 off 0, domain=0:7, samples=100, very thick, cyan] {sin(deg(x))};
+            \addplot [dash pattern=on 10 off 0 on 100 off 0, domain=0:6, samples=100, very thick, cyan] {sin(deg(x))};
          \end{axis}
       \end{tikzpicture}
-   \caption{SIN FUNCTION}
-   \label{fig:SIN FUNCTION}
-
+   \caption{SIN FUNCTION}\label{fig:SIN FUNCTION}
 \end{figure}
+

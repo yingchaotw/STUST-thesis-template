@@ -58,9 +58,28 @@
 |----|----|
 |`make all`|編譯 LaTeX 專案|
 |`make clean`| 清除 build 目錄<br>清除內容包含 PDF 檔案|
+|`make staypdf`| build 目錄下清除  PDF 以外檔案|
 
 ## 更新
 Update history
+#### 2020.03.21
+修正圖片標號 warning font shape 問題 <br>
+新增插入 C code 範例
+
+#### 2020.03.19 Beta
+修正封面共同指導教授 Error <br>
+參照學校範例浮水印位置調整 <br>
+新增文字樣式及表格範例 <br>
+新增圖片並排範例 <br>
+加入 makefile 判斷 build 目錄中檔案是否清除完畢 <br>
+論文架構 應為國字 **第一章** (未修正) <br>
+**Issue** `Warning Font shape 'TU/ukai(0)/m/sc' undefined`
+
+#### 2020.03.18 Beta
+新增 makefile 命令清除 pdf 以外檔案<br>
+修正 03.17 更新浮水印過大<br>
+圖標 warning 屬字體問題，仍在解決中
+
 #### 2020.03.17 Master
 加入圖標號之後出現 warning 但不影響編譯<br>
 更改目錄結構將 main.tex 放置 main 目錄底下 <br>
