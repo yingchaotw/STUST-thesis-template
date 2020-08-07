@@ -43,6 +43,7 @@
 * ***Figures*** : 文中的所有圖片
 * ***fonts*** : 本專案使用到的字體檔
 * ***Instance*** : 封面/書名頁/封面/摘要/誌謝/書脊
+* ***main*** : 主要文件 main.tex
 * ***Packages*** : 套件
 * ***References*** : 參考文獻 bib 檔案
 
