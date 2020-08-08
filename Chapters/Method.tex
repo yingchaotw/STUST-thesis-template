@@ -1,20 +1,39 @@
-\chapter{きめつのやいば}\label{structure}
+\chapter{範例 はんれい}\label{structure}
 
-論文不知道寫什麼，去學一下呼吸型，寫論文就輕鬆了！
+各式各樣的範例。
 
-\section{日之呼吸}
-學一下呼吸法阿$\sim$ \\
-基本型有十二種，從千壽郎的書信中得知真正的型有十三種，炭治郎配戴的日輪花紙耳飾就是該呼吸法的繼承者之證。
-
-\section{火之神神樂}
-竈門家代代相傳的神事，其與「日之呼吸」有著深厚的關聯，使用者：竈門家族繼承者。
-
-公式範例：
+\section{公式範例}
 \begin{equation}
    \sqrt[n]{\frac{x^2+\sqrt 2}{x+y}}
 \end{equation}
+
+\begin{equation}
+   a:b:c = ma : mb: mc = \frac{a}{m} : \frac{b}{m} : \frac{c}{m} , (m \neq 0)
+\end{equation}
+
+\begin{equation}
+\lim_{n \to \infty}\sum_{i=1}^n{\frac{1}{n}}\sin\frac{k}{n}
+\end{equation}
+
+\begin{equation}
+   g(x,y) = \left\{\begin{array}{ll}
+      f(x,y), & \mbox{if $x<y$} \\  % 文字的部份要用 \mbox
+      f(y,x), & \mbox{if $x>y$} \\  % 包住，讓他使用正常字體
+      0,      & \mbox{otherwise.}
+     \end{array} \right.
+\end{equation}
+
+\begin{equation}
+   A =\begin{pmatrix}                % 使用小括號
+  t_{11} & t_{12} & t_{13} \\
+  t_{21} & t_{22} & t_{23} \\
+  t_{31} & t_{32} & t_{33}
+   \end{pmatrix}
+\end{equation}
 \vspace*{3em}
-% 表格範例：
+\clearpage
+
+\section{表格範例}
 \begin{table}[h]
    \centering
    \caption{tabular 表格的基本結構}\label{booktabs_1}
@@ -28,11 +47,68 @@
 		\end{tabular}
 \end{table}
 
+\subsection{表格小數點對齊}
+\begin{tabular}{lD{.}{.}{3}D{.}{.}{3}D{.}{.}{3}D{.}{.}{3}}
+   \toprule
+         & headA & headB & headC & headD \\
+   \midrule
+   test1 & 65536  & 32768 & 1382.81 & 998.98 \\
+   test2 & 12.457 & 35.21 & 321.3   & 51787.787 \\
+   test3 & 211.97 & 5.2457& 23.6449 & 74294.106 \\
+   \bottomrule
+\end{tabular}
 
-\begin{figure}
-繪圖範例 1：\\[1em]
+
+\begin{landscape}
+   \begin{table}[h]
+   \caption{橫式表格範例}
+   \label{Tab:Commercial_App_Features_Comparison}
+   \begin{center}               
+   \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+   \hline
+      & column1  & column2  & column3 & column4 & column5 & column6 & column7 & column8 \\ \hline
+   1. & item1    & -        & -       & -       & -       &     \color{red}{${\surd}$} &  \color{red}{${\surd}$}    &  \color{red}{${\surd}$}     \\ \hline
+   2. & item2    & -        & -       & -       & \color{red}{${\surd}$}      & \color{red}{${\surd}$}     & -    & -     \\ \hline
+   3. & item3    & -        & -       & \color{red}{${\surd}$} & -     &  -    &  \color{red}{${\surd}$}    & -     \\ \hline
+   4. & item4    & -        & -       & -       &  \color{red}{${\surd}$}     &  -    & -    &      \color{red}{${\surd}$} \\ \hline
+   5. & item5    & -        & -       & -       &  -   &    \color{red}{${\surd}$}  &  \color{red}{${\surd}$}    &  \color{red}{${\surd}$}     \\ \hline
+   6. & item6    & -        & -       & -       &  \color{red}{${\surd}$}   &  -    & -    &      - \\ \hline
+   7. & item7    & -        & -       & -       &  -     &  \color{red}{${\surd}$}    & -    &     *- \\ \hline
+   8. & item8    & -        & -       & -       &   \color{red}{${\surd}$}    &   \color{red}{${\surd}$}   & -    &      \color{red}{${\surd}$} \\ \hline
+   9. & item9    &  \color{red}{${\surd}$}    &  -    & \color{red}{${\surd}$}                  &   \color{red}{${\surd}$}    &   \color{red}{${\surd}$}   &  \color{red}{${\surd}$}    &  \color{red}{${\surd}$}     \\ \hline
+   \end{tabular}
+   \end{center}
+   \end{table}
+\end{landscape}
+\clearpage
+
+\section{圖像範例}
+\LaTeX 繪圖及圖片插入測試區塊。
+
+\subsection{插圖範例}
+\begin{figure}[h]
+圖片插入範例： \\
    \centering
-      \pgfplotsset{width=8cm}          % 設置繪圖尺寸
+   \includegraphics[width=10cm]{../Figures/Result/我就爛}
+   \caption{我就爛}\label{fig:我就爛}
+
+   \subfigure[你也爛]{
+      \includegraphics[width=5cm]{../Figures/Result/你也爛}
+      \hspace{0.5 in}
+   }
+   \subfigure[一起爛]{
+      \includegraphics[width=5cm]{../Figures/Result/一起爛}
+   }
+   \caption{爛起來}\label{fig:爛起來}
+\end{figure}
+圖片插入及圖片並排測試。
+
+
+\subsection{繪圖範例}
+\begin{figure}[h]
+繪圖範例 1： \\
+   \centering
+      \pgfplotsset{width=10cm}          % 設置繪圖尺寸
       \begin{tikzpicture}
          \begin{axis}                  % 繪製座標
             % dashes = [10, 5, 100, 5] # 10 points on, 0 off, 100 on, 0 off
@@ -41,4 +117,24 @@
       \end{tikzpicture}
    \caption{SIN FUNCTION}\label{fig:SIN FUNCTION}
 \end{figure}
+正弦波形繪製
 
+繪圖範例2：
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+            title=Example using the mesh parameter, % 圖標題
+            hide axis,                              % 隱藏座標
+            colormap/cool,                          % 顏色風格
+        ]
+        \addplot3[
+            mesh,                                   % 繪製的三維圖像是網格
+            samples=50,                             % 定義域分割數量
+            domain=-8:8,                            % 定義域
+        ]
+        {sin(deg(sqrt(x^2+y^2)))/sqrt(x^2+y^2)};    % 二元顯式函數
+        \addlegendentry{$\frac{sin(r)}{r}$}         % 添加圖例
+        \end{axis}
+        \end{tikzpicture}
+\bfseries
+\end{center}
