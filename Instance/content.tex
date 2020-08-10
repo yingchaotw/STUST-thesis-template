@@ -1,0 +1,30 @@
+
+% 目次
+\renewcommand{\contentsname}{\edukai 目\hspace{2em}次}
+\cleardoublepage
+\phantomsection
+\addchaptertocentry{\contentsname}
+\tableofcontents
+\cleardoublepage
+
+% 表目錄
+\renewcommand{\listtablename}{\edukai 表\hspace{.5em}目\hspace{.5em}錄}
+\newcommand{\lotlabel}{表}
+\renewcommand{\numberline}[1]{\lotlabel~#1\hspace*{1em}}
+\renewcommand{\tablename}{表}
+\cleardoublepage
+\phantomsection
+\addchaptertocentry{\listtablename}
+\listoftables
+\cleardoublepage
+
+% 圖目錄
+\newcommand{\loflabel}{圖}
+\renewcommand{\listfigurename}{\edukai 圖\hspace{.5em}目\hspace{.5em}錄}
+\renewcommand{\figurename}{圖}
+\renewcommand{\numberline}[1]{\loflabel~#1\hspace*{1em}}
+\cleardoublepage
+\phantomsection
+\addchaptertocentry{\listfigurename}
+\listoffigures 
+\cleardoublepage

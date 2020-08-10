@@ -1,6 +1,6 @@
 \chapter{實驗結果}\label{result}
 
-\section{水之呼吸}
+\section{標號範例}
 \begin{itemize}
 \item 壹之型 水面斬
 \item 貳之型 水車
@@ -18,7 +18,7 @@
 
 \clearpage
 
-\subsection{程式碼範例}
+\section{程式碼範例}
 
 \begin{lstlisting}[language=C]
    /* 範例就來個熟悉的 Hello world */
@@ -30,40 +30,6 @@
    }
 \end{lstlisting}
 
+\clearpage
 
-\begin{figure}
 
-   圖片插入範例 2：\\
-   \centering
-   \includegraphics[width=8cm]{../Figures/Result/我就爛}
-   \caption{我就爛}\label{fig:我就爛}
-
-   \subfigure[你也爛]{
-      \includegraphics[width=4cm]{../Figures/Result/你也爛}
-      \hspace{0.5 in}
-   }
-   \subfigure[一起爛]{
-      \includegraphics[width=4cm]{../Figures/Result/一起爛}
-   }
-   \caption{爛起來}\label{fig:爛起來}
-\end{figure}
-
-繪圖範例2：
-\begin{center}
-    \begin{tikzpicture}
-        \begin{axis}[
-            title=Example using the mesh parameter, % 圖標題
-            hide axis,                              % 隱藏座標
-            colormap/cool,                          % 顏色風格
-        ]
-        \addplot3[
-            mesh,                                   % 繪製的三維圖像是網格
-            samples=50,                             % 定義域分割數量
-            domain=-8:8,                            % 定義域
-        ]
-        {sin(deg(sqrt(x^2+y^2)))/sqrt(x^2+y^2)};    % 二元顯式函數
-        \addlegendentry{$\frac{sin(r)}{r}$}         % 添加圖例
-        \end{axis}
-        \end{tikzpicture}
-\bfseries
-\end{center}

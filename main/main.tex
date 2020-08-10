@@ -49,40 +49,26 @@
 %----------------------------------------------------------------------------------------
 %	論文內容 由此開始 
 %----------------------------------------------------------------------------------------
-\phantomsection     %加這個命令後，目錄中的超鏈接才指向正確的頁碼
-\STUSTwatermark  % 浮水印設定
-% \clearpage          %加這個命令後，目錄中的頁碼才顯示正確
+\phantomsection     % 加這個命令後，目錄中的超鏈接才指向正確的頁碼
+\STUSTwatermark     % 浮水印設定
+\cleardoublepage    % 加這個命令後，目錄中的頁碼才顯示正確
 \setcounter{page}{1}        % 摘要為第一頁
-\pagenumbering{roman}       %用羅馬RS編號
+\pagenumbering{roman}       % 用羅馬RS編號
 
-% 中英文摘要
-\input{../Instance/abstract_zhTW} \addchaptertocentry{\abstractname}
-\input{../Instance/abstract_EN} \addchaptertocentry{\abstractname}
+% 中文摘要
+\input{../Instance/abstract_zhTW}
+\addchaptertocentry{\abstractname}
+
+% 英文摘要 Abstract
+\input{../Instance/abstract_EN} 
+\addchaptertocentry{\abstractname}
 
 % 誌謝 or 序言 （視需要）
-\input{../Instance/acknowledgement} \addchaptertocentry{\acknowledgementname}
+\input{../Instance/acknowledgement}
+\addchaptertocentry{\acknowledgementname}
 
-% 目次
-\renewcommand{\contentsname}{\edukai 目\hspace{2em}次}
-\tableofcontents \addchaptertocentry{\contentsname}
-\newpage
-
-% 表目錄
-
-\renewcommand{\listtablename}{\edukai 表\hspace{.5em}目\hspace{.5em}錄}
-\newcommand{\lotlabel}{表}
-\renewcommand{\numberline}[1]{\lotlabel~#1\hspace*{1em}}
-\renewcommand{\tablename}{表}
-\listoftables \addchaptertocentry{\listtablename}
-\newpage
-
-% 圖目錄
-\newcommand{\loflabel}{圖}
-\renewcommand{\listfigurename}{\edukai 圖\hspace{.5em}目\hspace{.5em}錄}
-\renewcommand{\figurename}{圖}
-\renewcommand{\numberline}[1]{\loflabel~#1\hspace*{1em}}
-\listoffigures \addchaptertocentry{\listfigurename}
-\newpage
+% 目錄 （圖，表目錄）
+\input{../Instance/content}
 
 % 論文本文
 \mainmatter % Begin numeric (1,2,3...) page numbering
@@ -93,7 +79,8 @@
 
 %----------------------------------------------------------------------------------------
 % 參考文獻  文献データベース
-\input{../Chapters/Reference} \addchaptertocentry{\bibname}
+\input{../Chapters/Reference}
+\addchaptertocentry{\bibname}
 %----------------------------------------------------------------------------------------
 
 % 附錄及符號(公式)彙編（視需要）
