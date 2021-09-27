@@ -2,36 +2,35 @@
 
 
 \section{前言}\label{1-1}
-我想畢業 \cite{talbot97}，測試testテスト(日文測試片假名)てすと(日文測試平假名)\cite{m1} 。
+想在畢業之前多學習一些東西，除了常用 office 軟體之外，更想挑戰自我使用 \LaTeX 撰寫畢業論文。
+透過 F Mittelbach 所撰寫的 LaTeX 夥伴一文中 \cite{mittelbach2004} 可以學習到 LaTeX\cite{the-latex-project} 的使用方式，其實最大的門檻還是起步的樣板(模板)，在朝陽科大碩士學位論文研究 \cite{ShellLATEX} 中，使用 Shell 的方式；與本樣板使用 makefile 方式大同小異。
 
-\subsection{文字醒目提示測試}
-\colorbox{yellow}{初次見面請多指教。} \\
-\color{blue}{初めまして、よろしくお願いします！} \\
-\color{red}{\colorbox{pink}{Nice to meet you.}} \\
-\color{black}
+\subsection{為什麼使用 LaTeX？}
+使用 Microsoft Office Word 寫論文也可以完成學位呀！為什麼要這麼麻煩？特地使用一個自己不熟悉的軟體進行論文撰寫呢？
+難到使用 /LaTeX 寫出來的論文就會比較高級嗎？
 
-\subsection{你還活著？}
-想不出來要寫什麼嗎？可能會寫不出來呢！\cite{goossens97}
+使用 LaTeX 撰寫論文，將好處整理並羅列如下：\\
+\begin{itemize}
+\item 將內容變成純文字檔，可以更方便透過 git \cite{git-version-control}對論文作控管版本 \cite{spinellis2012git}，在與教授進行論文修改的同時可以將之前所撰寫的紀錄保存起來 \cite{chacon2014pro}。
+\item 可以將怒氣發洩在註解上(誤)，能夠透過註解有效紀錄 Todo 事項。
+\item 與寫程式使用相同的 IDE ， 能在同一個 IDE 下完成許多事情。
+\item 不用在意標點符號溢出邊界問題，不用在意交互參照問題，在此樣板中已設定完成。只需專心撰寫論文內容後，在 Terminal 下 Command 就完成 pdf 檔案。
+\item 整份文件的一致性，讓您的文件看起來更專業。
+\item 若有想到新的優點再更新上來。
+\end{itemize}
 
 \newpage
 
-\section{研究動機}\label{1-2}
-你好，這是測試！
-こんにちは、これはてすとだ！
+\section{製作樣板動機}\label{1-2}
+使用 \LaTeX 的過程中，最困難的那一步並不是架設環境，也不是建立文字內容，是文件的版面設定(邊框多少、浮水印的透明度、套件衝突等...)，為幫助有心想使用 LaTeX 卻沒有時間設定瑣碎事務的人們。
+也建立自己在畢業前對學校的貢獻度(或許南台根本不在意？)，也可能畢業十年、廿十年都不會被發現這個放在 github 上設為 pulic 的 repository。若學校有看到希望能加入到教務處的論文樣板中，讓更多學生能夠看見這份為南臺精心設計的 latex 論文樣板。
 
 \newpage
 
-\section{論文架構}\label{1-3}
-\n 本論文編排方式如下：
-
-第\ref{explanation}章　說明本研究平台的硬體配備說明，並介紹系統原理與平台架構
-
-第\ref{structure}章　說明系統架構與操作
-
-第\ref{result}章　驗證系統的結果
-		
-　　　      驗證系統之結果
-
-　　　      驗證系統1與系統2整合之結果
-
-第\ref{conclusion_and_future}章　結論與未來展望
+\section{樣板架構}\label{1-3}
+\n 本論文樣板編排方式如下：\\
+第\ref{explanation}章　說明本製作樣板動機與好處\\
+第\ref{example}章　本樣板精心製作 \LaTeX 語法範例\\
+第\ref{algorithm}章　演算法及程式碼插入語法範例\\
+第\ref{result}章　驗證樣板結果\\
+第\ref{conclusion}章　樣板設計結論與對此樣本的未來期許

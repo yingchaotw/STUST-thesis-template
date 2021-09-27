@@ -31,6 +31,7 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 %----------------------------------------------------------------------------------------
 \def\fontpath{Path=\string../fonts/}
 \usepackage{lmodern}
+\usepackage{anyfontsize}
 \usepackage[BoldFont,SlantFont]{xeCJK}
 \xeCJKsetup{PunctStyle=kaiming}
 \usepackage{lipsum}
@@ -51,7 +52,7 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \setCJKmainfont[\fontpath]{ukai.ttc}
 \newCJKfontfamily\kai{ukai}[\fontpath,AutoFakeBold]
 \setCJKmonofont[\fontpath]{edukai-4.0}
-\setCJKsansfont[\fontpath]{ukai}
+\setCJKsansfont[\fontpath]{edukai-4.0}
 \setCJKfamilyfont{edukai-4.0}[\fontpath]{edukai-4.0}       %教育部楷書
 \newcommand*{\edukai}{\CJKfamily{edukai-4.0}}
 

@@ -1,5 +1,5 @@
 # Title: Makefile
-# Date:  2020/03/18
+# Date:  2021/09/24
 # Name:  YingChao
 
 # 設置編譯器
@@ -8,11 +8,11 @@
 # target and root file name
 TARGET = main
 
-# 讀取文件夾
+# 讀取子目錄
 SUBDIRS=$(shell ls -l | grep ^d | awk '{if($$9 == "$(TARGET)") print $$9}')
 OUTDIRS=$(shell ls -l | grep ^d | awk '{if($$9 == "$(BUILD_DIR)") print $$9}')
 
-# 讀取pdf以外的輸出文件
+# 讀取 pdf 以外的輸出文件
 OUTFILE=$(shell ls -l $(OUTDIRS) | grep ^- | awk '{if($$9 != "$(TARGET).pdf") print $$9}')
 
 # 記住當前根目錄路徑
