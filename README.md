@@ -42,7 +42,7 @@
 * ***Exteranls*** : 外部匯入的PDF檔案
 * ***Figures*** : 文中的所有圖片
 * ***fonts*** : 本專案使用到的字體檔
-* ***Instance*** : 封面/書名頁/封面/摘要/誌謝/目錄/書脊
+* ***Instance*** : 封面/書名頁/摘要/誌謝/目錄/書脊
 * ***main*** : 主要文件 main.tex
 * ***Packages*** : 套件
 * ***Readme*** : 專案說明相關文件
@@ -62,3 +62,6 @@
 |`make clean`| 清除 build 目錄<br>清除內容包含 PDF 檔案|
 |`make staypdf`| build 目錄下清除  PDF 以外檔案|
 
+# 專案相關資訊
+- [備註:自行補檔](./Externals/note.md)
+- [更新歷史](./Readme/update_history.md)

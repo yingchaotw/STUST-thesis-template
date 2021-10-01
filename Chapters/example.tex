@@ -1,4 +1,4 @@
-\chapter{範例 はんれい}\label{example}
+\chapter{範例}\label{example}
 
 % 表格範例
 \section{表格}
@@ -14,7 +14,6 @@
 		\hline
 		\end{tabular}
 \end{table}
-\clearpage
 
 \subsection{對齊小數點}
 \begin{tabular}{lD{.}{.}{3}D{.}{.}{3}D{.}{.}{3}D{.}{.}{3}}
@@ -23,7 +22,7 @@
    \midrule
    test1 & 65536  & 32768 & 1382.81 & 998.98 \\
    test2 & 12.457 & 35.21 & 321.3   & 51787.787 \\
-   test3 & 211.97 & 5.2457& 23.6449 & 74294.106 \\
+   test3 & 211.97 & 5.257& 23.649 & 744.106 \\
    \bottomrule
 \end{tabular}
 \clearpage
@@ -157,62 +156,87 @@
 \footnote{腳註的格式有時候是零散的、即興的、偶然的、信筆成文的，因此它並不是有章法的、系統的、全面的、學術論文式樣的行筆條理清晰。腳註不同於參考文獻(交互參照)，有對於原文若干字句、詞語、典故、暗示、比喻等文筆的疏通和講解。}
 在版面的下方，\LaTeX 會畫一條短線，用比較小的字型將附註的編號和內容安排在短線之下。
 
+\section{日文範例}
+設定字體為 google fonts SawarabiMincho (明朝字體) \newline
+\mincho
+日本語(にほんご、にっぽんご)は、主に日本国內や日本人同士の間で使われている言
+語である。日本は法令によって公用語を規定していないが、法令その他の公用文は全て
+日本語で記述され、各種法令において日本語を用いることが定められ、学校教育におい
+ては「国語」として教えられるなど、事実上、唯一の公用語となっている。
+\rmfamily
+\newline
+回復預設字體
+
+\clearpage
 
 % 字體範例
 \section{字體}
 \subsection{文字特效}
-中文文字特效, Hello world!\\
+
+\hbox{中文文字特效, Hello world!}
 {\LARGE
-\textbf{Hello world!, bold face, 粗體} \\
-\textit{Hello world!, italic, 斜體} \\
-\textsl{Hello world!, slanted, 傾斜} \\
-\underline{Hello world!, underline, 底線} \\
+\hbox{\textbf{Hello world!, bold face, 粗體}}
+\hbox{\textit{Hello world!, italic, 斜體}}
+\hbox{\textsl{Hello world!, slanted, 傾斜}}
+\hbox{\underline{Hello world!, underline, 底線}}
 }
 
-英文文字家族，Hello world!\\
+~\\
+
+\hbox{英文文字家族，Hello world!}
 {\LARGE
-\textrm{Hello world!, roman, 羅馬} \\
-\texttt{Hello world!, typewriter, 等寬} \\
-\textsf{Hello world!, sans serif} \\
-\textsc{Hello world!, Small Caps} \\
+   \hbox{\textrm{Hello world!, roman, 羅馬}}
+   \hbox{\texttt{Hello world!, typewriter, 等寬}}
+   \hbox{\textsf{Hello world!, sans serif}}
+   \hbox{\textsc{Hello world!, Small Caps}}
 }
+\clearpage
 
 % 文字範例
-\section{文字大小}
-一般文字大小範例, Font Size.\\
-{\tiny 文字大小範例, Font Size.}\\
-{\scriptsize 文字大小範例, Font Size.}\\
-{\footnotesize 文字大小範例, Font Size.}\\
-{\small 文字大小範例, Font Size.}\\
-{\normalsize 文字大小範例, Font Size.}\\
-{\large 文字大小範例, Font Size.}\\
-{\Large 文字大小範例, Font Size.}\\
-{\LARGE 文字大小範例, Font Size.}\\
+\subsection{文字大小}
+一般文字大小範例, Font Size. \\
+{\tiny 文字大小範例, Font Size.} \\
+{\scriptsize 文字大小範例, Font Size.} \\
+{\footnotesize 文字大小範例, Font Size.} \\
+{\small 文字大小範例, Font Size.} \\
+{\normalsize 文字大小範例, Font Size.} \\
+{\large 文字大小範例, Font Size.} \\
+{\Large 文字大小範例, Font Size.} \\
+{\LARGE 文字大小範例, Font Size.} \\
 {\huge 文字大小範例, Font Size.} \\
 {\Huge 文字大小範例, Font Size.}
 \clearpage
 
-\section{醒目提示範例}
-\colorbox{yellow}{黃底黑字。} \\
-\color{blue}{青い文字} \\
-\color{red}{\colorbox{pink}{Red color box and red font.}} \\
-\color{black}{最後請記得回復成預設黑色字體}
+\subsection{文字醒目提示}
 
-\subsection{盒子}
-Latex排板小到一個字母，大到一個段落，都可以視為一個矩型盒子（box），就像html一樣。
+\hbox{\colorbox{yellow}{黃底黑字。}}
+\hbox{\color{blue}{藍色文字}}
+\hbox{\color{red}{\colorbox{pink}{Red color box and red font.}}}
+\hbox{\color{black}{最後請記得回復成預設黑色字體}}
+
+\subsubsection{文字畫線效果}
+
+\hbox{\uline{這是底線}}
+\hbox{\uuline{這是加倍的 底線 (雙底線)}}
+\hbox{\uwave{波浪線}}
+\hbox{\sout{刪除線}}
+\hbox{\dotuline{點點線}}
+
+\subsubsection{盒子}
+Latex 就像html一樣，排版小到一個字母，大到一個段落，都可以將其視為一個矩型盒子（box）。
 
 mbox:
-\mbox{只是一個句子 被組合成盒子 的句子}
+\mbox{一個 被組合成盒子 的句子}
 
 fbox:
-\fbox{只是一個句子 被組合成盒子 但是有外框 的句子}
+\fbox{一個 被組合成有外框盒子  的句子}
 
 makebox/framebox:可加上一些設定的盒子
 
 %語法:[寬][對齊]{內容}
-\makebox[\textwidth][c]{只是一個句子 被組合成盒子 的句子}
+\hbox{\makebox[\textwidth][c]{一個 被組合成盒子 的句子}}
+\framebox[0.3\textwidth][r]{被組合成有外框盒子 的句子 還不夠寬}
 
-\framebox[0.5\textwidth][r]{被組合成盒子 但是有外框 的句子 還不夠寬}
+
 
 \newpage
-

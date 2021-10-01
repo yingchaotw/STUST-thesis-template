@@ -1,5 +1,9 @@
 ## 更新
 Update history
+#### 2021.10.01
+解 reference Underfull \hbox (badness 2205) 警告 <br>
+解 Small Caps 警告
+
 #### 2021.09.27
 新增 MIT License <br>
 變更/修正 Tex 檔內容，簡介此樣板專案。<br>
