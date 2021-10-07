@@ -40,10 +40,10 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \CJKfontspec[\fontpath]{edukai-4.0}
 \defaultCJKfontfeatures{AutoFakeBold=2.5,AutoFakeSlant=.2}
 
-\newcommand*{\edukai}{\CJKfamily{edukai-4.0}}
 \renewcommand*{\rmdefault}{lmr}
 \renewcommand*{\sfdefault}{lmss}
 \renewcommand*{\ttdefault}{lmtt}
+\newcommand*{\edukai}{\CJKfamily{edukai-4.0}}
 
 \newCJKfontfamily\kai{edukai-4.0}[\fontpath,AutoFakeBold]
 \newCJKfontfamily\mincho{SawarabiMincho-Regular}[\fontpath,AutoFakeBold]
@@ -75,25 +75,30 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \usepackage{lettrine}  			% used for chinese bigger capital
 \usepackage{../Package/slashbox}
 \usepackage{booktabs}
-\usepackage{enumerate}
 \usepackage{multirow}
 \usepackage{forest}
 \usepackage{ifthen}
 \usepackage[strict]{changepage}
 \usepackage{lscape} 			% Place selected parts of a document in landscape
 \usepackage{dcolumn} 			% Align on the decimal point of numbers in tabular columns
+% \usepackage{blindtext}
+\usepackage{enumerate}
+\usepackage{enumitem}
 
 %----------------------------------------------------------------------------------------
 % 參考文獻 Reference package
 %----------------------------------------------------------------------------------------
 \usepackage[redeflists]{IEEEtrantools}   %複数行にわたった数式を書く場合には，IEEEeqnarray 環境が便利です
 \usepackage[hyperref=true,backend=biber,sorting=none,backref=true]{biblatex}
+% \usepackage[backend=biber,sorting=none,style=ieee]{biblatex}  %
+\addbibresource{\RefPath} % The filename of the bibliography
 
 \frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
 \pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
 \usepackage{makecell}
 \cleardoublepage
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+% \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage{datetime}
 \usepackage{xparse}
 

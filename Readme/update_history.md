@@ -1,5 +1,9 @@
 ## 更新
 Update history
+#### 2021.10.08
+新增條列式範例 <br>
+STUST-MS-Thesis.cls 與 Template.tex 減少重複設定
+
 #### 2021.10.01
 解 reference Underfull \hbox (badness 2205) 警告 <br>
 解 Small Caps 警告

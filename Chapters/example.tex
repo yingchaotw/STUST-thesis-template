@@ -89,25 +89,25 @@
 \end{figure}
 正弦波形繪製
 
-繪圖範例2：
-\begin{center}
-    \begin{tikzpicture}
-        \begin{axis}[
-            title=Example using the mesh parameter, % 圖標題
-            hide axis,                              % 隱藏座標
-            colormap/cool,                          % 顏色風格
-        ]
-        \addplot3[
-            mesh,                                   % 繪製的三維圖像是網格
-            samples=50,                             % 定義域分割數量
-            domain=-8:8,                            % 定義域
-        ]
-        {sin(deg(sqrt(x^2+y^2)))/sqrt(x^2+y^2)};    % 二元顯式函數
-        \addlegendentry{$\frac{sin(r)}{r}$}         % 添加圖例
-        \end{axis}
-        \end{tikzpicture}
-\bfseries
-\end{center}
+% 繪圖範例2：
+% \begin{center}
+%     \begin{tikzpicture}
+%         \begin{axis}[
+%             title=Example using the mesh parameter, % 圖標題
+%             hide axis,                              % 隱藏座標
+%             colormap/cool,                          % 顏色風格
+%         ]
+%         \addplot3[
+%             mesh,                                   % 繪製的三維圖像是網格
+%             samples=50,                             % 定義域分割數量
+%             domain=-8:8,                            % 定義域
+%         ]
+%         {sin(deg(sqrt(x^2+y^2)))/sqrt(x^2+y^2)};    % 二元顯式函數
+%         \addlegendentry{$\frac{sin(r)}{r}$}         % 添加圖例
+%         \end{axis}
+%         \end{tikzpicture}
+% \bfseries
+% \end{center}
 
 % 公式範例
 \section{公式}
@@ -168,6 +168,61 @@
 回復預設字體
 
 \clearpage
+
+\section{條列式} \label{sec_item}
+
+\begin{description}
+\item[第一大項] 這裡是第一大項。
+\item[第二大項] 這裡是第二大項。
+   \begin{description}
+   \item[第一小項] 這裡是第一小項。
+   \item[第二小項] 這裡是第二小項。
+   \end{description}
+\item[第三大項] 這裡是第三大項。
+\item[第四大項] 這裡是第四大項。
+\end{description}
+   
+
+\begin{itemize}
+    \item 這邊是第1大項
+    \item 這邊是第2大項
+        \begin{itemize}
+            \item 這邊是第1小項
+            \item 這邊是第2小項
+        \end{itemize}
+    \item 這邊是第3大項
+\end{itemize}
+
+\begin{enumerate}
+    \item 這邊是第1大項
+    \item 這邊是第2大項
+        \begin{enumerate}
+            \item[*] 這邊是第1小項
+            \item 這邊是第2小項
+            \item 這邊是第3小項
+        \end{enumerate}
+    \item 這邊是第3大項
+\end{enumerate}
+
+\newpage
+
+\section{對齊}
+\begin{flushleft}
+    本段落\\
+    向左對齊
+\end{flushleft}
+
+\begin{flushright}
+    本段落\\
+    向右對齊
+\end{flushright}
+
+\begin{center}
+    本段落\\
+    置中對齊
+\end{center}
+
+\newpage
 
 % 字體範例
 \section{字體}
