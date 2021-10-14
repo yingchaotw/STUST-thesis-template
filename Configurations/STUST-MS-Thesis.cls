@@ -462,22 +462,6 @@
 }
 
 %----------------------------------------------------------------------------------------
-% 參考文獻 Reference package
-%----------------------------------------------------------------------------------------
-\usepackage[redeflists]{IEEEtrantools}
-% \usepackage[hyperref=true,backend=biber,sorting=none,backref=true]{biblatex}
-% \addbibresource{\RefPath} % The filename of the bibliography
-
-% \frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
-% \pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
-% \usepackage{makecell}
-% \cleardoublepage
-% \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
-% % \usepackage[utf8]{inputenc} % Required for inputting international characters
-% \usepackage{datetime}
-% \usepackage{xparse}
-
-%----------------------------------------------------------------------------------------
 %	增加校徽浮水印
 %----------------------------------------------------------------------------------------
 \usepackage[contents=]{background} %如果沒有給 contest空白會自動加上 draft 浮水印字樣

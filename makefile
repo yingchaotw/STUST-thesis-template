@@ -27,7 +27,7 @@ LATEX = xelatex
 BIBTEX = biber		#文献データベース、あるならば.
 
 # commands parameter
-TEX_Parameter = -synctex=1 -interaction=nonstopmode -halt-on-error -output-directory=../$(BUILD_DIR)
+TEX_Parameter = -synctex=1 -file-line-error -interaction=nonstopmode -halt-on-error -output-directory=../$(BUILD_DIR)
 
 # 宣告以下為廣域變數，使子目錄的 makefile 也能讀取以下變數
 export TARGET ROOT_DIR BUILD_DIR LATEX BIBTEX TEX_Parameter

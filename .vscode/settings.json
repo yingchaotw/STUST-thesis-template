@@ -45,6 +45,7 @@
             "args": [
                 "-synctex=1",
                 "-interaction=nonstopmode",
+                "-halt-on-error",
                 "-file-line-error",
                 "-pdf",
                 "--output-directory=%OUTDIR%",

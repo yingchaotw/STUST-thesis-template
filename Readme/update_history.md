@@ -1,5 +1,10 @@
 ## 更新
 Update history
+#### 2021.10.14
+修正 /usepackage 重複設定部分<br>
+修正快捷鍵編譯 error 時，停不下來的 issues <br>
+Reference 拆出 Book 文獻獨立 bib 檔
+
 #### 2021.10.08
 新增條列式範例 <br>
 STUST-MS-Thesis.cls 與 Template.tex 減少重複設定

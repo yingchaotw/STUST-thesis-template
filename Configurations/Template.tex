@@ -62,15 +62,47 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
 
 %----------------------------------------------------------------------------------------
+% 參考文獻 Reference package
+%----------------------------------------------------------------------------------------
+\usepackage[redeflists]{IEEEtrantools}   %複数行にわたった数式を書く場合には，IEEEeqnarray 環境が便利です
+\usepackage[hyperref=true,backend=biber,sorting=none,backref=true]{biblatex}
+% \usepackage[backend=biber,sorting=none,style=ieee]{biblatex}  %
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+\usepackage{makecell}
+\cleardoublepage
+\usepackage{inputenc} % Required for inputting international characters
+\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+
+% solve the Underfull \hbox (badness 2205) issues
+\usepackage{etoolbox}
+% Variant A
+\apptocmd{\sloppy}{\hbadness 10000\relax}{}{}	
+% Variant B
+% \apptocmd{\thebibliography}{\raggedright}{}{}
+
+% The filename of the bibliography
+\addbibresource{\RefPath} 
+\addbibresource{\RefBook}
+
+
+%----------------------------------------------------------------------------------------
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{colortbl}			%表格標題註解之巨集套件
-\usepackage[final]{pdfpages}    %PDFの各ページを挿入するためのパッケージです
+\usepackage{pdfpages}    		%PDFの各ページを挿入するためのパッケージです
 \usepackage{url}         		% URLをリンクとして表示するためのパッケージ
+\usepackage{varioref}
+
 \usepackage{zhnumber}
+\zhnumsetup{style={Traditional,Normal}}
+
 \linespread{1.5} 				% 行距1.5倍
 
+\usepackage{xparse}
 \usepackage{docmute}
+\usepackage{datetime}
 \usepackage{xcolor}
 \usepackage{lettrine}  			% used for chinese bigger capital
 \usepackage{../Package/slashbox}
@@ -84,32 +116,6 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 % \usepackage{blindtext}
 \usepackage{enumerate}
 \usepackage{enumitem}
-
-%----------------------------------------------------------------------------------------
-% 參考文獻 Reference package
-%----------------------------------------------------------------------------------------
-\usepackage[redeflists]{IEEEtrantools}   %複数行にわたった数式を書く場合には，IEEEeqnarray 環境が便利です
-\usepackage[hyperref=true,backend=biber,sorting=none,backref=true]{biblatex}
-% \usepackage[backend=biber,sorting=none,style=ieee]{biblatex}  %
-\addbibresource{\RefPath} % The filename of the bibliography
-
-\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
-\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
-\usepackage{makecell}
-\cleardoublepage
-\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
-% \usepackage[utf8]{inputenc} % Required for inputting international characters
-\usepackage{datetime}
-\usepackage{xparse}
-
-% solve the Underfull \hbox (badness 2205) issues
-\usepackage{etoolbox}
-% Variant A
-\apptocmd{\sloppy}{\hbadness 10000\relax}{}{}	
-% Variant B
-% \apptocmd{\thebibliography}{\raggedright}{}{}
-
-\addbibresource{\RefPath} % The filename of the bibliography
 
 %----------------------------------------------------------------------------------------
 % 繪圖函數 Graph functions
