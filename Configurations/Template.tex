@@ -19,8 +19,8 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \usepackage[LGR,T1]{fontenc} 				% Output font encoding for international characters
 \usepackage{palatino} 						% Use the Palatino font by default
 \usepackage{lipsum}							% Easy access to the Lorem Ipsum and other dummy texts
-\usepackage{fontspec}						% Advanced font selection in XELATEX
-\usepackage{babel} 							% 外國語系字母支援
+\usepackage{fontspec}						% Advanced font selection in XELATE
+\usepackage[english]{babel} 				% 外國語系字母支援
 \usepackage{lmodern}						% 大綱格式的拉丁現代字體
 \usepackage{anyfontsize}					% Select any font size in LATEX
 \usepackage{xltxtra}						% “Extras” for LATEX users of XETEX
@@ -65,15 +65,21 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 % 參考文獻 Reference package
 %----------------------------------------------------------------------------------------
 \usepackage[redeflists]{IEEEtrantools}   %複数行にわたった数式を書く場合には，IEEEeqnarray 環境が便利です
-\usepackage[hyperref=true,backend=biber,sorting=none,backref=true]{biblatex}
-% \usepackage[backend=biber,sorting=none,style=ieee]{biblatex}  %
+\usepackage[hyperref=true,
+			backend=biber,
+			sorting=none,
+			backref=true,
+			style=ieee,
+			defernumbers]{biblatex}
 
-\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
-\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+\DefineBibliographyStrings{english}{%
+			backrefpage = {page},% originally "cited on page"
+			backrefpages = {pages},% originally "cited on pages"
+			}
+
 \usepackage{makecell}
-\cleardoublepage
 \usepackage{inputenc} % Required for inputting international characters
-\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+\usepackage{csquotes} % Required to generate language-dependent quotes in the bibliography
 
 % solve the Underfull \hbox (badness 2205) issues
 \usepackage{etoolbox}
@@ -85,7 +91,33 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 % The filename of the bibliography
 \addbibresource{\RefPath} 
 \addbibresource{\RefBook}
+\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
 
+%----------------------------------------------------------------------------------------
+
+%設定超連結文字顏色，目錄連結:黑色，url:藍色，cite:黑色
+\usepackage{hyperref} % Required for customising links and the PDF
+\hypersetup{ %
+			pdfpagemode={UseOutlines}, %
+			bookmarksopen=true, %
+			bookmarksopenlevel=0, %
+			bookmarksnumbered=true, %
+			hypertexnames=true, %
+			colorlinks=true, % Set to false to disable coloring links
+			citecolor=black, % The color of citations
+			linkcolor=black, % The color of references to document elements (sections, figures, etc)
+			urlcolor=blue, % The color of hyperlinks (URLs)
+			pdfstartview={FitV}, %
+			pdftitle = {The title}, % 
+			filecolor=magenta, %
+			unicode, %
+			% linktocpage, % Set link at page number
+			breaklinks=true %
+}
+
+\pdfstringdefDisableCommands{ % If there is an explicit linebreak in a section heading (or anything printed to the pdf-bookmarks), it is replaced by a space
+   \let\\\space
+}
 
 %----------------------------------------------------------------------------------------
 \usepackage{array}

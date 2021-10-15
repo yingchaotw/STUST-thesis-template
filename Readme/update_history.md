@@ -1,5 +1,9 @@
 ## 更新
 Update history
+#### 2021.10.16
+Makefile 參數拆分 <br>
+調整 referene 套件使用 <br>
+
 #### 2021.10.14
 修正 /usepackage 重複設定部分<br>
 修正快捷鍵編譯 error 時，停不下來的 issues <br>
