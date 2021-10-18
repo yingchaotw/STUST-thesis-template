@@ -1,5 +1,5 @@
 # Title: Makefile
-# Date:  2021/09/24
+# Date:  2021/10/15
 # Name:  YingChao
 
 # 設置編譯器
@@ -27,7 +27,14 @@ LATEX = xelatex
 BIBTEX = biber		#文献データベース、あるならば.
 
 # commands parameter
-TEX_Parameter = -synctex=1 -file-line-error -interaction=nonstopmode -halt-on-error -output-directory=../$(BUILD_DIR)
+
+FILESYNC = -synctex=1
+FILE_ERR = -file-line-error
+INTERACT = -interaction=nonstopmode 
+HALT_ERR = -halt-on-error
+OUTP_DIR = -output-directory=$(ROOT_DIR)/$(BUILD_DIR)
+
+TEX_Parameter = $(FILESYNC) $(FILE_ERR) $(INTERACT) $(HALT_ERR) $(OUTP_DIR)
 
 # 宣告以下為廣域變數，使子目錄的 makefile 也能讀取以下變數
 export TARGET ROOT_DIR BUILD_DIR LATEX BIBTEX TEX_Parameter

@@ -49,11 +49,11 @@
 %----------------------------------------------------------------------------------------
 %	論文內容 由此開始 
 %----------------------------------------------------------------------------------------
-\phantomsection     % 加這個命令後，目錄中的超鏈接才指向正確的頁碼
-\STUSTwatermark     % 浮水印設定
-\cleardoublepage    % 加這個命令後，目錄中的頁碼才顯示正確
-\pagenumbering{roman}       % 用羅馬RS編號
-\setcounter{page}{1}        % 重置頁數計數
+\STUSTwatermark                    % 浮水印設定
+\providecommand\phantomsection     % 加這個命令，使目錄中的超鏈接才指向正確的頁碼
+\cleardoublepage                   % 加這個命令，目錄中的頁碼才顯示正確
+\pagenumbering{roman}              % 用羅馬RS編號
+\setcounter{page}{1}               % 重置頁數計數
 
 % 中文摘要
 \input{../Instance/abstract_zhTW}

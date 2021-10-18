@@ -436,32 +436,6 @@
 }
 
 %----------------------------------------------------------------------------------------
-
-%設定超連結文字顏色，目錄連結:黑色，url:藍色，cite:黑色
-\usepackage{hyperref} % Required for customising links and the PDF
-\hypersetup{ %
-			pdfpagemode={UseOutlines}, %
-			bookmarksopen=true, %
-			bookmarksopenlevel=0, %
-			bookmarksnumbered=true, %
-			hypertexnames=false, %
-			colorlinks=true, % Set to false to disable coloring links
-			citecolor=black, % The color of citations
-			linkcolor=black, % The color of references to document elements (sections, figures, etc)
-			urlcolor=blue, % The color of hyperlinks (URLs)
-			pdfstartview={FitV}, %
-			pdftitle = {The title}, % 
-			filecolor=magenta, %
-			unicode, %
-			% linktocpage, % Set link at page number
-			breaklinks=true %
-}
-
-\pdfstringdefDisableCommands{ % If there is an explicit linebreak in a section heading (or anything printed to the pdf-bookmarks), it is replaced by a space
-   \let\\\space
-}
-
-%----------------------------------------------------------------------------------------
 %	增加校徽浮水印
 %----------------------------------------------------------------------------------------
 \usepackage[contents=]{background} %如果沒有給 contest空白會自動加上 draft 浮水印字樣
