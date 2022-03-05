@@ -1,7 +1,4 @@
-%----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
 \documentclass[oneside,
 12pt, % The default document font size, options: 10pt, 11pt, 12pt
 english, % ngerman for German
@@ -11,9 +8,7 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \setcounter{secnumdepth}{6}
 \setcounter{tocdepth}{6}
 
-%----------------------------------------------------------------------------------------
 % 字體設定
-%----------------------------------------------------------------------------------------
 \def\fontpath{Path=\string../fonts/}		% 設定字體目錄
 \usepackage[BoldFont,SlantFont]{xeCJK}		% xelatex 中文套件設定
 \usepackage[LGR,T1]{fontenc} 				% Output font encoding for international characters
@@ -38,7 +33,8 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \setCJKsansfont[\fontpath]{edukai-4.0}					% 設置正文無襯線族的CJK字體，影響\sffamily和\textsf 的字體
 \setCJKfamilyfont{edukai-4.0}[\fontpath]{edukai-4.0}    % 教育部楷書
 \CJKfontspec[\fontpath]{edukai-4.0}
-\defaultCJKfontfeatures{AutoFakeBold=2.5,AutoFakeSlant=.2}
+\defaultCJKfontfeatures{AutoFakeBold=2.5,
+						AutoFakeSlant=.2}
 
 \renewcommand*{\rmdefault}{lmr}
 \renewcommand*{\sfdefault}{lmss}
@@ -49,11 +45,9 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \newCJKfontfamily\mincho{SawarabiMincho-Regular}[\fontpath,AutoFakeBold]
 \newCJKfontfamily\ukai{ukai.ttc}[\fontpath,AutoFakeBold]
 
-%----------------------------------------------------------------------------------------
-% 排版套件 / 設定
-%----------------------------------------------------------------------------------------
+% 排版套件
 \usepackage{indentfirst} \setlength{\parindent}{2em} 		% 首段文章縮排套件
-\usepackage{ulem}											% 底線樣式
+\usepackage[normalem]{ulem}											% 底線樣式
 \usepackage{microtype}
 
 % 解決 XeTeX 中文的斷行問題
@@ -61,9 +55,7 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \XeTeXlinebreakskip = 0pt plus 1pt
 \XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
 
-%----------------------------------------------------------------------------------------
 % 參考文獻 Reference package
-%----------------------------------------------------------------------------------------
 \usepackage[redeflists]{IEEEtrantools}   %複数行にわたった数式を書く場合には，IEEEeqnarray 環境が便利です
 \usepackage[hyperref=true,
 			backend=biber,
@@ -88,12 +80,10 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 % Variant B
 % \apptocmd{\thebibliography}{\raggedright}{}{}
 
-% The filename of the bibliography
+% 參考文獻檔名連結
 \addbibresource{\RefPath} 
 \addbibresource{\RefBook}
 \pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
-
-%----------------------------------------------------------------------------------------
 
 %設定超連結文字顏色，目錄連結:黑色，url:藍色，cite:黑色
 \usepackage{hyperref} % Required for customising links and the PDF
@@ -119,13 +109,13 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
    \let\\\space
 }
 
-%----------------------------------------------------------------------------------------
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{colortbl}			%表格標題註解之巨集套件
 \usepackage{pdfpages}    		%PDFの各ページを挿入するためのパッケージです
 \usepackage{url}         		% URLをリンクとして表示するためのパッケージ
 \usepackage{varioref}
+% \usepackage{atbegshi}			% 文字轉向套件
 
 \usepackage{zhnumber}
 \zhnumsetup{style={Traditional,Normal}}
@@ -149,22 +139,17 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \usepackage{enumerate}
 \usepackage{enumitem}
 
-%----------------------------------------------------------------------------------------
-% 繪圖函數 Graph functions
-%----------------------------------------------------------------------------------------
+% 繪圖函數
 \usepackage{pgfplots}
 \usepgfplotslibrary{colorbrewer}
 \pgfplotsset{compat=newest,compat/show suggested version=false}
 
-%----------------------------------------------------------------------------------------
 % 圖片套件 Image functions
-%----------------------------------------------------------------------------------------
 \usepackage{tikz} % Required for drawing custom shapes
 \usepackage{eso-pic,picture} % \AddToShipoutPictureBG is esp-pic package's function
 
-%----------------------------------------------------------------------------------------
-%	Source Code include Setup
-%----------------------------------------------------------------------------------------
+
+% 程式碼套件
 \usepackage{listings}
 \lstset{
 			language={C},   %言語の指定．C言語ならCとします
