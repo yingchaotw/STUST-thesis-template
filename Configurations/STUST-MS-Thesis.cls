@@ -5,11 +5,11 @@
 % National Souther Taiwan of Sciences and Technology
 % GitHub : https://github.com/yingchao-chen/STUST-thesis-template
 % Version 1.01 (2020.03.14)
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 %	CLASS DEFINITION AND PARAMETERS
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}[2018-12-01]
 \ProvidesClass{../Configurations/STUST-MS-Thesis}[2020/02/03 v1.0 LaTeX document class]
@@ -33,9 +33,9 @@
 
 \LoadClass{\baseclass}
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 %	CLASS OPTIONS
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 
 \ifbool{parskip}{\RequirePackage{parskip}} % If the parskip option is passed to the class, require the parskip package
 
@@ -117,9 +117,9 @@
 
 
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 %	必要套件 REQUIRED PACKAGES
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 
 \usepackage{amscd}
 \usepackage{amsmath} 
@@ -133,6 +133,7 @@
 \usepackage{algorithm}
 \usepackage{algorithmicx}
 \usepackage{algpseudocode}
+
 
 \usepackage{subfigure}
 \usepackage{moreverb}
@@ -168,7 +169,7 @@
 \usepackage[hang,small,bf]{caption}
 \setlength{\captionmargin}{50pt}
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 
 \newcommand{\checktoopen}{% New command to move content to the next page which prints to the next odd page if twosided mode is active
 \if@openright\cleardoublepage\else\clearpage\fi
@@ -186,9 +187,9 @@
 \providecommand\addchaptertocentry[1]{%
 \addcontentsline{toc}{chapter}{#1}}
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 %	邊界 MARGINS
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 
 \RequirePackage{geometry}
 \geometry{
@@ -207,9 +208,9 @@
 
 \raggedbottom
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 %	PENALTIES
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 
 \doublehyphendemerits=10000 % No consecutive line hyphens
 \brokenpenalty=10000 % No broken words across columns/pages
@@ -217,9 +218,9 @@
 \clubpenalty=9999 % Almost no orphans at top of page
 \interfootnotelinepenalty=9999 % Almost never break footnotes
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 %	HEADERS AND FOOTERS
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 
 \RequirePackage{fancyhdr} % Required to customise headers and footers
 \providecommand{\MakeMarkcase}{} % Add \MakeUppercase to make header text all capitals
@@ -252,9 +253,9 @@
 \newpage
 \if@twocolumn\hbox{}\newpage\fi\fi\fi}
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 %	REFERENCING DOCUMENT ELEMENTS
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 
 \newcommand{\fref}[1]{\figurename~\ref{#1}}
 \newcommand{\tref}[1]{\tablename~\ref{#1}}
@@ -267,9 +268,9 @@
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\sectionname}{Section}
 \newcommand{\aref}[1]{\appendixname~\ref{#1}}
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 %	DECLARATION PAGE DESIGN
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 
 
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\authorshipname}{Declaration of Authorship} % Declaration of Authorship text for English countries
@@ -298,9 +299,9 @@
 	\vfil\null
 }
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 %	英文摘要樣板
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 
 \providecaptionname{german,ngerman,austrian,naustrian}{\byname}{von}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\byname}{}
@@ -321,9 +322,9 @@
   \vfil\vfil\vfil\null
 }
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 %	中文摘要樣板
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 
 \providecaptionname{german,ngerman,austrian,naustrian}{\byname}{von}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\byname}{}
@@ -342,9 +343,9 @@
   \vfil\vfil\vfil\null
 }
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 %	PUBLICATION DESIGN
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\publicationname}{Publications} % Declaration of Authorship text for English countries
 \providecaptionname{german,ngerman,austrian,naustrian}{\publicationname}{Eidesstattliche Erkl\"arung} % Declaration of Authorship text for Germanic countries
@@ -362,9 +363,9 @@
 
 
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 %	ABBREVIATIONS PAGE DESIGN
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 
 \providecaptionname{english,british,american}{\abbrevname}{List of Abbreviations}
 \providecaptionname{ngerman,german,austrian,naustrian}{\abbrevname}{Abk\"urzungsverzeichnis}
@@ -377,16 +378,16 @@
 \ifbool{nolistspace}{\endgroup}{}
 }
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 %	PHYSICAL CONSTANTS PAGE DESIGN
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 
 \providecaptionname{english,british,american}{\constantsname}{Physical Constants}
 \providecaptionname{ngerman,german,austrian,naustrian}{\constantsname}{Physikalische Konstanten}
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 %	SYMBOLS PAGE DESIGN
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 
 \providecaptionname{english,british,american}{\symbolsname}{List of Symbols}
 \providecaptionname{ngerman,german,austrian,naustrian}{\symbolsname}{Symbolverzeichnis}
@@ -400,9 +401,9 @@
 \ifbool{nolistspace}{\endgroup}{}
 }
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 %	ACKNOWLEDGEMENTS PAGE DESIGN
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\acknowledgementname}{Acknowledgements} % Acknowledgement text for English countries
 \providecaptionname{german,ngerman,austrian,naustrian}{\acknowledgementname}{Danksagung} % Acknowledgement text for Germanic countries
@@ -420,9 +421,9 @@
 \vfil\vfil\null
 }
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 %	REFERENCE DESIGN
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 
 \providecaptionname{english,british,american}{\referencename}{References}
 \providecaptionname{ngerman,german,austrian,naustrian}{\referencename}{Abk\"References}
@@ -435,9 +436,10 @@
 \ifbool{nolistspace}{\endgroup}{}
 }
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 %	增加校徽浮水印
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
+\usepackage{everypage}
 \usepackage[contents=]{background} %如果沒有給 contest空白會自動加上 draft 浮水印字樣
 
 \newcommand\STUSTwatermark {
@@ -451,9 +453,9 @@
 		}
 }
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 % 更變章節目錄的套件
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 \usepackage{titlesec, titletoc}
 \titlecontents{chapter}[0em]{}
 {\hspace{0em}\makebox[4.1em][l]
@@ -464,5 +466,5 @@
 \titleformat{\chapter}{\centering\Huge\bfseries}{第\,\zhnumber{\thechapter}\,章}{1em}{}    %設定章節樣式
 
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------
 \endinput

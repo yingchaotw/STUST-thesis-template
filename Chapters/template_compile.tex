@@ -1,0 +1,61 @@
+
+\chapter{使用此模版並編譯論文}\label{Compiled}
+
+本模版使用 \href{https://tug.org/texlive/}{texlive} 編譯，並支援 \href{https://www.docker.com/}{Docker} 之套件 \href{https://hub.docker.com/r/texlive/texlive}{texlive/texlive} 進行 \LaTeX 論文編譯。
+
+\section{Docker}\label{docker}
+
+\href{https://www.docker.com/}{Docker} 是一個開放原始碼平台，用於建置、部署及管理容器化應用程式。瞭解容器、容器與 VM 的比較，以及為何 Docker 如此被廣泛地採用及使用。
+
+\subsection{texlive}
+
+使用 \href{https://hub.docker.com/r/texlive/texlive}{texlive/texlive} 套件，安裝方式如下
+
+\begin{lstlisting}
+    docker pull texlive/texlive // 下載 texlive 套件
+
+\end{lstlisting}
+
+\section{texlive}
+\href{https://www.tug.org/texlive/}{Texlive}
+這邊都是 Texlive 各國的鏡像下載區，台灣的 latex 鏡像站由元智大學及中正大學所建置，但因為中正大學的鏡像站已經Not Found 404，元智大學的鏡像站檔案下載的時候會 loss 掉很多檔案，最後我從台灣的鄰近國家下載 \href{http://ftp.kddilabs.jp/}{株式会社KDDI総合研究所}。
+
+\href{https://texwiki.texjp.org/}{日本 latex wiki}
+
+\section{MiKTeX}
+經測試 \href{https://miktex.org/}{MiKTeX} 安裝完成能夠使用 make 指令編譯本模版，但使用 VSCODE 套件 LaTeX Workshop 編譯時，暫有些問題。
+
+\section{編輯器}\label{editor}
+
+推薦使用 \href{https://code.visualstudio.com/}{Visual Studio Code} (以下簡稱 VSCODE)，在 VSCODE 中可利用多種套件使工作更便利。
+
+\subsection{REMOTE}
+
+VSCODE 的 \href{https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack}{Remote Development} 套件包允許您打開容器、遠端電腦或 Windows Linux 子系統 (WSL) 並利用 VSCODE 的完整功能集。 由於這使您可以在任何地方建立一個全職的開發環境，您可以：
+
+\begin{itemize}
+    \item    在您部署到的相同操作系統上進行開發，或者使用比本地電腦更大、更快或更專業的硬體。
+    \item    在不同的獨立開發環境之間快速切換並進行更新，而不必擔心影響您的本地機器。
+    \item    通過輕鬆啟動、一致的開發容器幫助新的團隊成員/貢獻者快速獲得生產力。
+    \item    從功能齊全的開發工具中直接從舒適的 Windows 中利用基於 Linux 的工具鏈。
+\end{itemize}
+
+由於遠端開發直接在遠端電腦上運行命令和擴充，因此無需在本地機器上放置源代碼即可獲得這些好處。 
+
+
+\subsection{LATEX}
+\href{https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop}{LaTeX Workshop} 是 Visual Studio Code 套件，旨在為使用 Visual Studio Code 進行 LaTeX 排版提供核心功能。 
+
+\subsection{PDF}
+
+\href{https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf}{vscode-pdf} 為在 VSCODE 直接開啟 PDF，方便 LATEX 編譯完成之 PDF 檔案直接校閱。
+
+\subsection{GIT}
+
+\href{https://git-scm.com/}{git} 是一個開源的分佈式版本控制系統，用於敏捷高效地處理任何或小或大的項目。
+
+Git 是 Linus Torvalds 為了幫助管理 Linux 核心開發而開發的一個開放源碼的版本控制軟體。
+
+Git 與常用的版本控制工具 CVS, Subversion 等不同，它採用了分佈式版本庫的方式，不必服務器端軟件支持。
+
+幫助論文進行版本控制。

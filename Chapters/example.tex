@@ -1,4 +1,77 @@
-\chapter{範例}\label{example}
+\chapter{基本排版範例}\label{example}
+
+% 字體範例
+\section{字體}
+\subsection{文字特效}
+
+\hbox{中文文字特效, Hello world!}
+{\LARGE
+\hbox{\textbf{Hello world!, bold face, 粗體}}
+\hbox{\textit{Hello world!, italic, 斜體}}
+\hbox{\textsl{Hello world!, slanted, 傾斜}}
+\hbox{\underline{Hello world!, underline, 底線}}
+}
+
+~\\
+
+\hbox{英文文字家族，Hello world!}
+
+{\LARGE
+   \hbox{\textrm{Hello world!, roman, 羅馬}}
+   \hbox{\texttt{Hello world!, typewriter, 等寬}}
+   \hbox{\textsf{Hello world!, sans serif}}
+   \hbox{\textsc{Hello world!, Small Caps}}
+}
+
+\clearpage
+
+% 文字範例
+\subsection{文字大小}
+一般文字大小範例, Font Size. \\
+{\tiny 文字大小範例, Font Size.} \\
+{\scriptsize 文字大小範例, Font Size.} \\
+{\footnotesize 文字大小範例, Font Size.} \\
+{\small 文字大小範例, Font Size.} \\
+{\normalsize 文字大小範例, Font Size.} \\
+{\large 文字大小範例, Font Size.} \\
+{\Large 文字大小範例, Font Size.} \\
+{\LARGE 文字大小範例, Font Size.} \\
+{\huge 文字大小範例, Font Size.} \\
+{\Huge 文字大小範例, Font Size.}
+\clearpage
+
+\subsection{文字醒目提示}
+
+\hbox{\colorbox{yellow}{黃底黑字。}}
+\hbox{\color{blue}{藍色文字}}
+\hbox{\color{red}{\colorbox{pink}{Red color box and red font.}}}
+\hbox{\color{black}{最後請記得回復成預設黑色字體}}
+
+\subsubsection{文字畫線效果}
+
+\hbox{\uline{這是底線}}
+\hbox{\uuline{這是加倍的 底線 (雙底線)}}
+\hbox{\uwave{波浪線}}
+\hbox{\sout{刪除線}}
+\hbox{\dotuline{點點線}}
+
+\subsubsection{盒子}
+Latex 就像html一樣，排版小到一個字母，大到一個段落，都可以將其視為一個矩型盒子（box）。
+
+mbox:
+\mbox{一個 被組合成盒子 的句子}
+
+fbox:
+\fbox{一個 被組合成有外框盒子  的句子}
+
+makebox/framebox:可加上一些設定的盒子
+
+%語法:[寬][對齊]{內容}
+\hbox{\makebox[\textwidth][c]{一個 被組合成盒子 的句子}}
+\framebox[0.3\textwidth][r]{被組合成有外框盒子 的句子 還不夠寬}
+
+\newpage
+
 
 % 表格範例
 \section{表格}
@@ -15,7 +88,7 @@
 		\end{tabular}
 \end{table}
 
-\subsection{對齊小數點}
+\subsection{小數點對齊}
 \begin{tabular}{lD{.}{.}{3}D{.}{.}{3}D{.}{.}{3}D{.}{.}{3}}
    \toprule
          & headA & headB & headC & headD \\
@@ -58,19 +131,19 @@
 \begin{figure}[h]
 圖片插入範例： \\
    \centering
-   \includegraphics[width=10cm]{../Figures/Result/我就爛}
-   \caption{我就爛}\label{fig:我就爛}
+   \includegraphics[width=10cm]{../Figures/Result/南臺校園.jpg}
+   \caption{南臺校園}\label{fig:南臺校園}
 
-   \subfigure[你也爛]{
-      \includegraphics[width=5cm]{../Figures/Result/你也爛}
+   \subfigure[校門]{
+      \includegraphics[width=5cm]{../Figures/Result/校門-1.jpg}
       \hspace{0.5 in}
    }
-   \subfigure[一起爛]{
-      \includegraphics[width=5cm]{../Figures/Result/一起爛}
+   \subfigure[校徽]{
+      \includegraphics[width=5cm]{../Figures/Result/校徽-1.png}
    }
-   \caption{爛起來}\label{fig:爛起來}
+   \caption{南臺科技大學}\label{fig:STUST}
 \end{figure}
-圖片插入及圖片並排測試。
+圖片插入及圖片並排測試，並排之 subfigure 之間不能有空行。
 \clearpage
 
 % 繪圖範例
@@ -225,74 +298,3 @@
 
 \newpage
 
-% 字體範例
-\section{字體}
-\subsection{文字特效}
-
-\hbox{中文文字特效, Hello world!}
-{\LARGE
-\hbox{\textbf{Hello world!, bold face, 粗體}}
-\hbox{\textit{Hello world!, italic, 斜體}}
-\hbox{\textsl{Hello world!, slanted, 傾斜}}
-\hbox{\underline{Hello world!, underline, 底線}}
-}
-
-~\\
-
-\hbox{英文文字家族，Hello world!}
-{\LARGE
-   \hbox{\textrm{Hello world!, roman, 羅馬}}
-   \hbox{\texttt{Hello world!, typewriter, 等寬}}
-   \hbox{\textsf{Hello world!, sans serif}}
-   \hbox{\textsc{Hello world!, Small Caps}}
-}
-\clearpage
-
-% 文字範例
-\subsection{文字大小}
-一般文字大小範例, Font Size. \\
-{\tiny 文字大小範例, Font Size.} \\
-{\scriptsize 文字大小範例, Font Size.} \\
-{\footnotesize 文字大小範例, Font Size.} \\
-{\small 文字大小範例, Font Size.} \\
-{\normalsize 文字大小範例, Font Size.} \\
-{\large 文字大小範例, Font Size.} \\
-{\Large 文字大小範例, Font Size.} \\
-{\LARGE 文字大小範例, Font Size.} \\
-{\huge 文字大小範例, Font Size.} \\
-{\Huge 文字大小範例, Font Size.}
-\clearpage
-
-\subsection{文字醒目提示}
-
-\hbox{\colorbox{yellow}{黃底黑字。}}
-\hbox{\color{blue}{藍色文字}}
-\hbox{\color{red}{\colorbox{pink}{Red color box and red font.}}}
-\hbox{\color{black}{最後請記得回復成預設黑色字體}}
-
-\subsubsection{文字畫線效果}
-
-\hbox{\uline{這是底線}}
-\hbox{\uuline{這是加倍的 底線 (雙底線)}}
-\hbox{\uwave{波浪線}}
-\hbox{\sout{刪除線}}
-\hbox{\dotuline{點點線}}
-
-\subsubsection{盒子}
-Latex 就像html一樣，排版小到一個字母，大到一個段落，都可以將其視為一個矩型盒子（box）。
-
-mbox:
-\mbox{一個 被組合成盒子 的句子}
-
-fbox:
-\fbox{一個 被組合成有外框盒子  的句子}
-
-makebox/framebox:可加上一些設定的盒子
-
-%語法:[寬][對齊]{內容}
-\hbox{\makebox[\textwidth][c]{一個 被組合成盒子 的句子}}
-\framebox[0.3\textwidth][r]{被組合成有外框盒子 的句子 還不夠寬}
-
-
-
-\newpage

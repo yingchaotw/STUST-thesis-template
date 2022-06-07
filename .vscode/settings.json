@@ -87,6 +87,6 @@
         "**/*.fdb_latexmk",
         "**/*.synctex.gz",
     ],
-    "latex-workshop.latex.clean.subfolder.enabled":true,
+    "latex-workshop.latex.clean.subfolder.enabled": true,
     "docker.commands.runInteractive": "docker run --rm -it -w /home/thesis -v ${workspaceFolder}:/home/thesis ${exposedPorts} ${tag} bash"
 }

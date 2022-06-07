@@ -55,6 +55,8 @@
 \pagenumbering{roman}              % 用羅馬RS編號
 \setcounter{page}{1}               % 重置頁數計數
 
+\addtocontents{toc}{~\hfill\textbf{頁碼}\par}
+
 % 中文摘要
 \input{../Instance/abstract_zhTW}
 \addchaptertocentry{\abstractname}
@@ -72,11 +74,12 @@
 
 % 論文本文
 \mainmatter % Begin numeric (1,2,3...) page numbering
-\input{../Chapters/Introduction}        % 導論/前言
-\input{../Chapters/example}             % 範例
-\input{../Chapters/eg_Algorithm}        % 演算法/程式 範例
-\input{../Chapters/Result}              % 結果
-\input{../Chapters/Conclusion}          % 結論
+\input{../Chapters/Introduction}            % 導論/前言
+\input{../Chapters/template_compile.tex}    % 模版編譯  
+\input{../Chapters/example}                 % 範例
+\input{../Chapters/algorithm}               % 演算法/程式 範例
+\input{../Chapters/Result}                  % 結果
+\input{../Chapters/Conclusion}              % 結論
 
 %----------------------------------------------------------------------------------------
 % 參考文獻  文献データベース

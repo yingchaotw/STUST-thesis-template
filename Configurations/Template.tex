@@ -11,15 +11,20 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 % 字體設定
 \def\fontpath{Path=\string../fonts/}		% 設定字體目錄
 \usepackage[BoldFont,SlantFont]{xeCJK}		% xelatex 中文套件設定
-\usepackage[LGR,T1]{fontenc} 				% Output font encoding for international characters
-\usepackage{palatino} 						% Use the Palatino font by default
-\usepackage{lipsum}							% Easy access to the Lorem Ipsum and other dummy texts
-\usepackage{fontspec}						% Advanced font selection in XELATE
+\usepackage[LGR,T1]{fontenc} 				% 國際字符的輸出字體編碼
+\usepackage{libertine}
+\usepackage{lmodern} 
+\usepackage{palatino} 						% 默認使用 Palatino 字體
+\usepackage{lipsum}							% 輕鬆訪問 Lorem Ipsum 和其他虛擬文本
+\usepackage{fontspec}						% XELATE 中的高級字體選擇
 \usepackage[english]{babel} 				% 外國語系字母支援
 \usepackage{lmodern}						% 大綱格式的拉丁現代字體
-\usepackage{anyfontsize}					% Select any font size in LATEX
-\usepackage{xltxtra}						% “Extras” for LATEX users of XETEX
-\usepackage{type1cm,type1ec} 				% If your installation uses scaleable versions of the Computer Modern or European Computer Modern (EC) fonts
+\usepackage{anyfontsize}					% 在 LATEX 中選擇任何字體大小
+\usepackage{xltxtra}						% XETEX 的 LATEX 用戶的“附加”
+\usepackage{type1cm,type1ec} 				% 如果安裝使用可縮放版本的 Computer Modern 或 European Computer Modern (EC) 字體
+
+\usepackage{float}
+
 \xeCJKsetup{PunctStyle=kaiming}
 \defaultfontfeatures{AutoFakeBold=2.5,AutoFakeSlant=.2}
 
@@ -47,8 +52,8 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 
 % 排版套件
 \usepackage{indentfirst} \setlength{\parindent}{2em} 		% 首段文章縮排套件
-\usepackage[normalem]{ulem}											% 底線樣式
-\usepackage{microtype}
+\usepackage[normalem]{ulem}									% 底線樣式
+% \usepackage{microtype}									% 與 xeCJK 套件衝突,先註解
 
 % 解決 XeTeX 中文的斷行問題
 \XeTeXlinebreaklocale "zh"
@@ -56,8 +61,7 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
 
 % 參考文獻 Reference package
-\usepackage{inputenc} % Required for inputting international characters
-\usepackage[redeflists]{IEEEtrantools}   %複数行にわたった数式を書く場合には，IEEEeqnarray 環境が便利です
+\usepackage[redeflists]{IEEEtrantools}   %IEEEeqnarray 環境對於編寫跨多行的公式很有用。
 \usepackage[hyperref=true,
 			backend=biber,
 			sorting=none,
@@ -71,7 +75,8 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 			}
 
 \usepackage{makecell}
-\usepackage{csquotes} % Required to generate language-dependent quotes in the bibliography
+\usepackage{inputenc} % 輸入國際字符時需要
+\usepackage{csquotes} % 需要在參考書目中生成與語言相關的引用
 
 % solve the Underfull \hbox (badness 2205) issues
 \usepackage{etoolbox}
@@ -83,16 +88,19 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 % 參考文獻檔名連結
 \addbibresource{\RefPath} 
 \addbibresource{\RefBook}
-\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+\pagestyle{plain} % 預設為普通標題樣式，直到正文內容調用論文樣式
 
 %設定超連結文字顏色，目錄連結:黑色，url:藍色，cite:黑色
-\usepackage{hyperref} % Required for customising links and the PDF
-\hypersetup{ %
+\usepackage{hyperref} 
+
+\hypersetup{ % 自定義超連結
 			pdfpagemode={UseOutlines}, %
 			bookmarksopen=true, %
 			bookmarksopenlevel=0, %
 			bookmarksnumbered=true, %
-			hypertexnames=true, %
+			% hypertexnames=true, %
+			% linktocpage=true, % Set link at page number
+			linktoc=all, % Set link at page number and texname
 			colorlinks=true, % Set to false to disable coloring links
 			citecolor=black, % The color of citations
 			linkcolor=black, % The color of references to document elements (sections, figures, etc)
@@ -101,21 +109,19 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 			pdftitle = {The title}, % 
 			filecolor=magenta, %
 			unicode, %
-			% linktocpage, % Set link at page number
 			breaklinks=true %
 }
 
-\pdfstringdefDisableCommands{ % If there is an explicit linebreak in a section heading (or anything printed to the pdf-bookmarks), it is replaced by a space
+\pdfstringdefDisableCommands{ % 如果節標題（或打印到 pdf 書籤的任何內容）中有明確的換行符，則將其替換為空格
    \let\\\space
 }
 
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{colortbl}			%表格標題註解之巨集套件
-\usepackage{pdfpages}    		%PDFの各ページを挿入するためのパッケージです
-\usepackage{url}         		% URLをリンクとして表示するためのパッケージ
+\usepackage{pdfpages}    		%插入 PDF 套件
+\usepackage{url}         		%將 URL 顯示為超連結的套件
 \usepackage{varioref}
-% \usepackage{atbegshi}			% 文字轉向套件
 
 \usepackage{zhnumber}
 \zhnumsetup{style={Traditional,Normal}}
@@ -126,18 +132,22 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \usepackage{docmute}
 \usepackage{datetime}
 \usepackage{xcolor}
-\usepackage{lettrine}  			% used for chinese bigger capital
+\usepackage{lettrine}  			% 用於中文更大的標題
 \usepackage{../Package/slashbox}
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{forest}
 \usepackage{ifthen}
 \usepackage[strict]{changepage}
-\usepackage{lscape} 			% Place selected parts of a document in landscape
-\usepackage{dcolumn} 			% Align on the decimal point of numbers in tabular columns
+\usepackage{lscape} 			% 橫向放置文檔的選定部分
+% \usepackage{atbegshi}			% 文字轉向套件
+\usepackage{dcolumn} 			% 對齊表格列中數字的小數點
 % \usepackage{blindtext}
 \usepackage{enumerate}
 \usepackage{enumitem}
+\setenumerate[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\setitemize[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\setdescription{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
 
 % 繪圖函數
 \usepackage{pgfplots}
@@ -145,28 +155,38 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \pgfplotsset{compat=newest,compat/show suggested version=false}
 
 % 圖片套件 Image functions
-\usepackage{tikz} % Required for drawing custom shapes
-\usepackage{eso-pic,picture} % \AddToShipoutPictureBG is esp-pic package's function
+\usepackage{tikz} % 繪製自定義所需形狀
+\usepackage{eso-pic,picture}
 
+% 演算法區塊名稱變更
+\renewcommand{\ALG@name}{演算法}
 
 % 程式碼套件
 \usepackage{listings}
 \lstset{
-			language={C},   %言語の指定．C言語ならCとします
-			basicstyle={\ttfamily}, %標準の書体
+			language={C},   %語言指定．C言語ならCとします
+			basicstyle={\ttfamily}, %標準字體
 			identifierstyle={\small},
-			commentstyle={\small\ttfamily \color[rgb]{0,0.5,0}},    %注釈の書体 
-			keywordstyle={\small\bfseries \color[rgb]{0,0,1}},      %キーワード(int, ifなど)の書体
+			commentstyle={\small\ttfamily \color[rgb]{0,0.5,0}},    %註釋字體
+			keywordstyle={\small\bfseries \color[rgb]{0,0,1}},      %保留字的字體（int、if 等）
 			stringstyle={\small\ttfamily \color[rgb]{1,0,1}},
-			frame=tRBl, %フレームの指定
-			framesep=10pt, %フレームと中身（コード）の間隔
-			breaklines=true, %行が長くなったときの自動改行
-			linewidth=15cm, %フレームの横幅
-			lineskip=-0.5ex, %行間の調整
-			columns=[l]{fullflexible},  %書体による列幅の違いを調整するか
+			frame=tRBl, %指定框架
+			framesep=10pt, %框架和內容之間的間距（程式碼）
+			breaklines=true, %自動換行
+			linewidth=15cm, %框架寬度
+			lineskip=-0.5ex, %行距調整
+			columns=[l]{fullflexible},  %根據字體調整列寬差異
 			numbers=left,
-			stepnumber=1,   %行番号をいくつとばしで表示するか
+			stepnumber=1,   %行號遞增
 			numbersep=14pt,
-			tabsize=2, %Tabを何文字幅にするかの指定
+			tabsize=2, %指定 Tab 應該有多少個字符
 			morecomment=[l]{//}
-		}
+}
+
+% 過濾警告
+\usepackage{silence}
+\WarningFilter{biblatex}{File 'english-ieee.lbx'}
+\WarningsOff[everypage]% Suppress warnings related to package everypage
+
+\usepackage{caption}
+% \usepackage{subcaption}
