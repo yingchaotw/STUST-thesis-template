@@ -56,6 +56,7 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
 
 % 參考文獻 Reference package
+\usepackage{inputenc} % Required for inputting international characters
 \usepackage[redeflists]{IEEEtrantools}   %複数行にわたった数式を書く場合には，IEEEeqnarray 環境が便利です
 \usepackage[hyperref=true,
 			backend=biber,
@@ -70,7 +71,6 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 			}
 
 \usepackage{makecell}
-\usepackage{inputenc} % Required for inputting international characters
 \usepackage{csquotes} % Required to generate language-dependent quotes in the bibliography
 
 % solve the Underfull \hbox (badness 2205) issues
