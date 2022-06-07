@@ -8,14 +8,16 @@
 - Southern Taiwan University of Science of Technology
 
 ## 前言
-[Latex 筆記 - Hackmd](https://hackmd.io/@YingChao/LaTeX/)
+<!-- [Latex 筆記 - Hackmd](https://hackmd.io/@YingChao/LaTeX/) -->
 
-<span style="background-color: #FFFF99">目前只有 `Windows`及`Linux` 系統經測試成功。</span>
+<span style="background-color: #FFFF99"> Docker 虛擬機器上編譯成功。</span>
 
-如果您發現這個板型有問題，請提交 Issues。
-也非常歡迎您提交 PR 協助修正問題。
+更多內容請見[編譯結果](./build/main.pdf)與內文。
+
+如果您發現這個板型有問題，請提交 Issues，也非常歡迎您提交 PR 協助修正問題。
 若有期望加入其他功能改善論文撰寫環境，也歡迎提交 Issus 許願！ 
 
+歡迎各位先進、學長姊、學弟妹 Fork 本 Repo
 ## 說明
 依照[南臺科技大學學位論文格式規範](https://academic.stust.edu.tw/tc/node/DegreeExam)之內容，
 論文裝訂之內容及順序應依下列順序辦理：
@@ -39,13 +41,13 @@
 * ***build*** : 編譯結果 *.pdf*
 * ***Chapters*** : 論文章節本體
 * ***Configurations*** : 設定檔案含版型
+* ***Docker*** : Docker Script
 * ***Exteranls*** : 外部匯入的PDF檔案
 * ***Figures*** : 文中的所有圖片
 * ***fonts*** : 本專案使用到的字體檔
 * ***Instance*** : 封面/書名頁/摘要/誌謝/目錄/書脊
 * ***main*** : 主要文件 main.tex
 * ***Packages*** : 套件
-* ***Readme*** : 專案說明相關文件
 * ***References*** : 參考文獻 bib 檔案
 
 ### 快捷鍵
@@ -64,4 +66,3 @@
 
 # 專案相關資訊
 - [備註:自行補檔](./Externals/note.md)
-- [更新歷史](./Readme/update_history.md)
