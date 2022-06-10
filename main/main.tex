@@ -7,10 +7,9 @@
 % Version 1.01 (2020.03.14)
 %========================================================================================
 
-\input{../Configurations/Template}
-\input{../Configurations/config}
+\input{../Configurations/Template}              % 版型/套件載入
+\input{../Customization/Thesis_Defined.tex}     % 論文相關名稱定義
 
-\draftfalse         % 未完稿   (drafttrue 完稿)
 
 \begin{document}\sloppy
 \newcommand\n{\mbox{\qquad}}
@@ -31,6 +30,7 @@
 
 % ----- 空白頁 -----
 \ifdraft
+\else
 \newpage　\thispagestyle{empty}\newpage
 \fi
 
@@ -66,20 +66,17 @@
 \addchaptertocentry{\abstractname}
 
 % 誌謝 or 序言 （視需要）
+\ifACK
 \input{../Instance/acknowledgement}
 \addchaptertocentry{\acknowledgementname}
+\fi
 
 % 目錄 （圖，表目錄）
 \input{../Instance/content}
 
 % 論文本文
 \mainmatter % Begin numeric (1,2,3...) page numbering
-\input{../Chapters/Introduction}            % 導論/前言
-\input{../Chapters/template_compile.tex}    % 模版編譯  
-\input{../Chapters/example}                 % 範例
-\input{../Chapters/algorithm}               % 演算法/程式 範例
-\input{../Chapters/Result}                  % 結果
-\input{../Chapters/Conclusion}              % 結論
+\input{../Customization/Chapter_Settings.tex}
 
 %----------------------------------------------------------------------------------------
 % 參考文獻  文献データベース

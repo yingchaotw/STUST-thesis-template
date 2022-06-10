@@ -43,7 +43,7 @@ VSCODE 的 \href{https://marketplace.visualstudio.com/items?itemName=ms-vscode-r
 由於遠端開發直接在遠端電腦上運行命令和擴充，因此無需在本地機器上放置源代碼即可獲得這些好處。 
 
 
-\subsection{LATEX}
+\subsection{LATEX}\label{latex_workshop}
 \href{https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop}{LaTeX Workshop} 是 Visual Studio Code 套件，旨在為使用 Visual Studio Code 進行 LaTeX 排版提供核心功能。 
 
 \subsection{PDF}
@@ -59,3 +59,14 @@ Git 是 Linus Torvalds 為了幫助管理 Linux 核心開發而開發的一個�
 Git 與常用的版本控制工具 CVS, Subversion 等不同，它採用了分佈式版本庫的方式，不必服務器端軟件支持。
 
 幫助論文進行版本控制。
+
+\subsection{make}
+
+透過 make 命令執行論文 PDF 的編譯，或是透過 \ref*{latex_workshop} 套件的功能編譯本論文模版。
+
+\begin{description}
+    \item[make all] 編譯論文 PDF ，也可直接使用 make 命令。
+    \item[make clean] 清除整個 build 目錄。
+    \item[make staypdf] 清除 build 目錄底下 PDF 以外的檔案。
+\end{description}
+

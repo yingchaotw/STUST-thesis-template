@@ -14,7 +14,7 @@
 \NeedsTeXFormat{LaTeX2e}[2018-12-01]
 \ProvidesClass{../Configurations/STUST-MS-Thesis}[2020/02/03 v1.0 LaTeX document class]
 \providecommand{\baseclass}{book}
-\input{../Configurations/config}
+\input{../Configurations/Config}
 
 \RequirePackage{etoolbox}
 \RequirePackage{xparse}
@@ -439,18 +439,18 @@
 %----------------------------------------------------------------------
 %	增加校徽浮水印
 %----------------------------------------------------------------------
-\usepackage{everypage}
-\usepackage[contents=]{background} %如果沒有給 contest空白會自動加上 draft 浮水印字樣
+
+% https://www.aq-test.com/latex/texmf-dist/doc/latex/draftwatermark/draftwatermark.pdf
+\usepackage{draftwatermark}
+\SetWatermarkText{}					% 清除預設 draft 字樣
 
 \newcommand\STUSTwatermark {
-	\backgroundsetup{
-		contents={\includegraphics[width=6.8cm]{\watermarkimage}},
-		angle=0,
-		opacity=1.0,
-		hshift = 69mm,
-		vshift =-109mm,
-		scale=1
-		}
+	\SetWatermarkText{\includegraphics[width=6.8cm]{\watermarkimage}}
+	\SetWatermarkLightness{0.9}		% 亮度
+	\SetWatermarkAngle{0}			% 角度; 預設為 45 度
+	\SetWatermarkScale{1.0} 		% 縮放比例, 預設 1.2 倍
+	\SetWatermarkHorCenter{174mm}	% 橫向位置, A4 紙張尺寸 210mm 寬
+	\SetWatermarkVerCenter{260mm}	% 縱向位置, A4 紙張尺寸 297mm 高
 }
 
 %----------------------------------------------------------------------

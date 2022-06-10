@@ -9,7 +9,6 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 \setcounter{tocdepth}{6}
 
 % 字體設定
-\def\fontpath{Path=\string../fonts/}		% 設定字體目錄
 \usepackage[BoldFont,SlantFont]{xeCJK}		% xelatex 中文套件設定
 \usepackage[LGR,T1]{fontenc} 				% 國際字符的輸出字體編碼
 \usepackage{libertine}
@@ -62,6 +61,7 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 
 % 參考文獻 Reference package
 \usepackage[redeflists]{IEEEtrantools}   %IEEEeqnarray 環境對於編寫跨多行的公式很有用。
+\usepackage{inputenc} % 輸入國際字符時需要
 \usepackage[hyperref=true,
 			backend=biber,
 			sorting=none,
@@ -75,7 +75,6 @@ onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespa
 			}
 
 \usepackage{makecell}
-\usepackage{inputenc} % 輸入國際字符時需要
 \usepackage{csquotes} % 需要在參考書目中生成與語言相關的引用
 
 % solve the Underfull \hbox (badness 2205) issues

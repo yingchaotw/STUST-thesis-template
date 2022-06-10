@@ -41,6 +41,7 @@
 * ***build*** : 編譯結果 *.pdf*
 * ***Chapters*** : 論文章節本體
 * ***Configurations*** : 設定檔案含版型
+* ***Customization*** : 論文相關自定義檔
 * ***Docker*** : Docker Script
 * ***Exteranls*** : 外部匯入的PDF檔案
 * ***Figures*** : 文中的所有圖片
@@ -60,7 +61,7 @@
 ### 命令
 |命令|功能描述|
 |----|----|
-|`make all`|編譯 LaTeX 專案|
+|`make all`|編譯論文 PDF|
 |`make clean`| 清除 build 目錄<br>清除內容包含 PDF 檔案|
 |`make staypdf`| build 目錄下清除  PDF 以外檔案|
 

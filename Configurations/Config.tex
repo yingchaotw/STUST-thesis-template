@@ -1,0 +1,20 @@
+%
+% file: Config
+% 說明: 路徑設定,參考文獻等
+% 
+
+% 加入判斷式
+\newif\ifdraft      % 論文是否已定稿
+\newif\ifCoAdvisor  % 是否有共同指導教授參與
+\newif\ifACK        % 是否加入致謝篇幅
+
+% 浮水印圖片路徑
+\def\watermarkimage{../Figures/Logos/STUST_LOGO.jpg}
+
+% 參考文獻[BIB]檔名
+\def\RefName{reference}
+\def\RefPath{../References/\RefName.bib}
+\def\RefBook{../References/bookref.bib}
+
+% 設定字體目錄
+\def\fontpath{Path=\string../fonts/}
