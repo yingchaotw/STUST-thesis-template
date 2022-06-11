@@ -37,8 +37,8 @@
 - [X] 14. 作者簡介（視需要）
 
 未勾選部分的第二項及第五項為論文提交時，學校才會提供文檔，屆時再自行匯入論文中合併。
-### 檔案結構
-* ***build*** : 編譯結果 *.pdf*
+### 目錄結構
+* ***build*** : 編譯器產生出來的檔案
 * ***Chapters*** : 論文章節本體
 * ***Configurations*** : 設定檔案含版型
 * ***Customization*** : 論文相關自定義檔
@@ -62,8 +62,8 @@
 |命令|功能描述|
 |----|----|
 |`make all`|編譯論文 PDF|
-|`make clean`| 清除 build 目錄<br>清除內容包含 PDF 檔案|
-|`make staypdf`| build 目錄下清除  PDF 以外檔案|
+|`make clean`| 清除 build 目錄<br>包含編譯產生的 PDF 檔案|
+|`make staypdf`| 不清除 PDF 檔案|
 
 # 專案相關資訊
 - [備註:自行補檔](./Externals/note.md)

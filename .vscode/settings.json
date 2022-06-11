@@ -1,53 +1,37 @@
 {
-    ///////// 使用 makefile 編譯專案
-    // "latex-workshop.latex.external.build.command": "make",
-    // "latex-workshop.latex.external.build.args": ["all"],
+    ///////// 使用 latex-workshop 編譯論文
+    "latex-workshop.docker.enabled": true,
     "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.synctex.afterBuild.enabled":true,
     "latex-workshop.bind.enter.key": true,
+    "latex-workshop.message.error.show":true,
+    "latex-workshop.message.warning.show":true,
+    "latex-workshop.view.outline.floats.enabled": false,
     "latex-workshop.hover.citation.enabled": true,
     "latex-workshop.latex.outDir": "../build",                 // 輸出在main目錄底下的build
     "latex-workshop.latex.recipes": [
         {
-            "name": "xe➔bib➔xe➔xe",
+            "name": "xe➔bib➔2xe➔pdf",
             "tools":[
-                "xelatex",
+                "xetex",
                 "bib",
-                "xelatex",
-                "xelatex"
-            ]
-        },
-        {
-            "name": "makefile",
-            "tools": [
-                "make"
-            ]
-        },
-        {
-            "name": "xelatex",
-            "tools": [
-                "xelatex"
+                "xetex",
+                "xetex",
+                "xdvipdfmx",
             ]
         }
     ],
     "latex-workshop.latex.tools": [
         {
-            "name": "make",
-            "command": "make",
-            "args": [
-                "all"
-            ]
-        },
-        {
             // latex 編譯工具和命令
-            "name": "xelatex",
+            "name": "xetex",
             "command": "xelatex",
             "args": [
                 "-synctex=1",
                 "-interaction=nonstopmode",
+                "-no-pdf",
                 "-halt-on-error",
                 "-file-line-error",
-                "-pdf",
                 "--output-directory=%OUTDIR%",
                 "main.tex"
             ]
@@ -59,10 +43,20 @@
                 "--output-directory=%OUTDIR%",
                 "%DOCFILE%"
             ]
+        },
+        {   // xdv 轉 PDF
+            "name": "xdvipdfmx",
+            "command": "xdvipdfmx",
+            "args": [
+                "../build/main.xdv",
+                "-E",
+                "-otemplate.pdf",
+            ]
         }
     ],
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.latex.clean.fileTypes": [
+        "**/*.xdv",
         "**/*.acn",
         "**/*.alg",
         "**/*.acr",

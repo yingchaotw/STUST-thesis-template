@@ -1,25 +1,25 @@
 # Title: Makefile
-# Date:  2020/03/18
+# Date:  2022/06/11
 # Name:  YingChao
 
 # source files
 TEX_FILES=${wildcard *.tex}
+XDV_FILES = ../$(BUILD_DIR)/${MAINDOC}.xdv
 
 all:
-	@echo "\033[33m =========================== make a directory =========================== \033[0m"
-	mkdir -p ../$(BUILD_DIR)
-
-	@echo "\033[33m ======================== 1st compiling document ======================== \033[0m"
 	@echo "\033[33m $(shell pwd) \033[0m"
+	@make xetex		# 1st commpiling
+	@make bibtex	# reference commpiling
+	@make xetex		# 2nd commpiling
+	@make xetex		# 3rd commpiling 
+	@make pdf		# PDF Genrate
+	@echo "\033[32m  Successly compiled  \033[0m"
+
+xetex:
 	$(LATEX) $(TEX_Parameter) $(TEX_FILES)
 
-	@echo "\033[33m ========================= reference compiling ========================= \033[0m"
-	$(BIBTEX) ../$(BUILD_DIR)/$(TARGET)
+bibtex:
+	$(BIBTEX) ../$(BUILD_DIR)/$(MAINDOC)
 
-	@echo "\033[33m ======================== 2nd compiling document ======================== \033[0m"
-	$(LATEX) $(TEX_Parameter) $(TEX_FILES)
-	
-	@echo "\033[33m ======================== 3rd compiling document ======================== \033[0m"
-	$(LATEX) $(TEX_Parameter) $(TEX_FILES)
-
-	@echo "\033[32m ========================== Successly compiled ========================== \033[0m"
+pdf:
+	$(MAKEPDF) $(xDVI_PDFMx) $(XDV_FILES)

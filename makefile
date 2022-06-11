@@ -2,56 +2,59 @@
 # Date:  2021/10/15
 # Name:  YingChao
 
-# 設置編譯器
-.PHONY:clean all
+
+# Document Name
+MAINDOC  = main
+
+# Directories
+BUILD_DIR = build
 
 # target and root file name
-TARGET = main
+OUTPDF = template
+TARGET = ${BUILD_DIR}/${OUTPDF}.pdf
 
 # 讀取子目錄
-SUBDIRS=$(shell ls -l | grep ^d | awk '{if($$9 == "$(TARGET)") print $$9}')
+SUBDIRS=$(shell ls -l | grep ^d | awk '{if($$9 == "$(MAINDOC)") print $$9}')
 OUTDIRS=$(shell ls -l | grep ^d | awk '{if($$9 == "$(BUILD_DIR)") print $$9}')
-
-# 讀取 pdf 以外的輸出文件
-OUTFILE=$(shell ls -l $(OUTDIRS) | grep ^- | awk '{if($$9 != "$(TARGET).pdf") print $$9}')
 
 # 記住當前根目錄路徑
 ROOT_DIR=$(shell pwd)
 
-# Directories
-SOURCE_DIR = main
-BUILD_DIR = build
-
 # commands to compile document
-LATEX = xelatex
-BIBTEX = biber		#文献データベース、あるならば.
+LATEX   = xelatex
+MAKEPDF = xdvipdfmx
+BIBTEX  = biber		#文献データベース、あるならば.
 
 # commands parameter
-
 FILESYNC = -synctex=1
 FILE_ERR = -file-line-error
 INTERACT = -interaction=nonstopmode 
 HALT_ERR = -halt-on-error
+NONE_PDF = -no-pdf
 OUTP_DIR = -output-directory=$(ROOT_DIR)/$(BUILD_DIR)
+OUTP_DRV = -output-driver='xdvipdfmx -z0'
 
-TEX_Parameter = $(FILESYNC) $(FILE_ERR) $(INTERACT) $(HALT_ERR) $(OUTP_DIR)
+xDVI_PDFMx = -E -o $(OUTPDF).pdf
+
+TEX_Parameter = $(FILESYNC) $(FILE_ERR) $(INTERACT) $(HALT_ERR) $(NONE_PDF) $(OUTP_DIR) $(OUTP_DRV)
 
 # 宣告以下為廣域變數，使子目錄的 makefile 也能讀取以下變數
-export TARGET ROOT_DIR BUILD_DIR LATEX BIBTEX TEX_Parameter
+export MAINDOC ROOT_DIR BUILD_DIR LATEX BIBTEX TEX_Parameter
+export MAKEPDF xDVI_PDFMx OUTPDF
 
-all:
+all: ${TARGET}
+
+${TARGET}:
+	@echo "\033[33m make a directory \033[0m"
+	@mkdir -p $(BUILD_DIR)
 	make -C $(SUBDIRS)
 
 clean:
 	@rm -rf $(OUTDIRS)
+	@rm -f $(SUBDIRS)/*.pdf
 
 staypdf:
-ifeq ($(strip $(OUTFILE)),)
-	@echo "\033[1;31m檔案已清除完畢\033[0m"
-else
-	@echo "\033[1;31m開始清除檔案\033[0m"
-	@cd $(OUTDIRS);\
-	pwd;\
-	echo 保留 pdf 其餘檔案刪除;\
-	rm $(OUTFILE)
-endif
+	@rm -rf $(OUTDIRS)
+
+
+.PHONY: clean all
