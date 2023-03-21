@@ -1,3 +1,8 @@
+[![STUST-Thesis-Template](https://img.shields.io/static/v1?label=&message=STUST-Thesis-Template&color=gray&logo=Github)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![license - CC BY-SA 4.0](https://img.shields.io/static/v1?label=license&message=CC+BY-SA+4.0&color=2eacce)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![forks - STUST-thesis-template](https://img.shields.io/github/forks/tw1chao/STUST-thesis-template?style=social)](https://github.com/tw1chao/STUST-thesis-template/fork)
+[![stars - STUST-thesis-template](https://img.shields.io/github/stars/tw1chao/STUST-thesis-template?style=social)](https://github.com/tw1chao/STUST-thesis-template/stargazers)
+
 <span style="background-color: #DEFFFF"><font Size="5">   [**STUST-THESIS-TAMPLATE Wiki**](https://github.com/yingchao-chen/STUST-thesis-template/wiki)</font></span>
 
 [![](Figures/Logos/stustlargelogo.png "研究生學位考試專區")](https://academic.stust.edu.tw/tc/node/DegreeExam)
