@@ -1,4 +1,4 @@
-[![STUST-Thesis-Template](https://img.shields.io/static/v1?label=&message=STUST-Thesis-Template&color=gray&logo=Github)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![STUST-Thesis-Template](https://img.shields.io/static/v1?label=&message=STUST-Thesis-Template&color=gray&logo=Github)](https://github.com/tw1chao/STUST-thesis-template)
 [![license - CC BY-SA 4.0](https://img.shields.io/static/v1?label=license&message=CC+BY-SA+4.0&color=2eacce)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![forks - STUST-thesis-template](https://img.shields.io/github/forks/tw1chao/STUST-thesis-template?style=social)](https://github.com/tw1chao/STUST-thesis-template/fork)
 [![stars - STUST-thesis-template](https://img.shields.io/github/stars/tw1chao/STUST-thesis-template?style=social)](https://github.com/tw1chao/STUST-thesis-template/stargazers)
@@ -29,7 +29,7 @@
 - [X] 3. 空白頁（封面與書名頁間加一空白頁）
 - [X] 4. 書名頁
 - [ ] 5. 論文口試委員審定書
-- [X] 6. 摘要（中文及英文)
+- [X] 6. 摘要（中文及英文）
 - [X] 7. 誌謝（視需要）
 - [X] 8. 目次
 - [X] 9. 表目錄
@@ -128,6 +128,7 @@ $ docker pull texlive/texlive
 $ git clone https://github.com/tw1chao/STUST-thesis-template.git
 $ sh STUST-thesis-template/Docker/linux/build.sh
 $ sh STUST-thesis-template/Docker/linux/start.sh
+$ sh STUST-thesis-template/Docker/linux/attach.sh
 ```
 
 ### [Git](http://git-scm.com/)
