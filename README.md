@@ -3,8 +3,6 @@
 [![forks - STUST-thesis-template](https://img.shields.io/github/forks/tw1chao/STUST-thesis-template?style=social)](https://github.com/tw1chao/STUST-thesis-template/fork)
 [![stars - STUST-thesis-template](https://img.shields.io/github/stars/tw1chao/STUST-thesis-template?style=social)](https://github.com/tw1chao/STUST-thesis-template/stargazers)
 
-<span style="background-color: #DEFFFF"><font Size="5">   [**STUST-THESIS-TAMPLATE Wiki**](https://github.com/yingchao-chen/STUST-thesis-template/wiki)</font></span>
-
 [![](Figures/Logos/stustlargelogo.png "研究生學位考試專區")](https://academic.stust.edu.tw/tc/node/DegreeExam)
 
 # 南臺科技大學 LaTeX 論文版型
@@ -13,14 +11,24 @@
 - Southern Taiwan University of Science of Technology
 
 ## 前言
-<!-- [Latex 筆記 - Hackmd](https://hackmd.io/@YingChao/LaTeX/) -->
 
 更多內容請見[編譯結果](./build/main.pdf)與內文。
 
-如果您發現這個板型有問題，請提交 Issues，也非常歡迎您提交 PR 協助修正問題。
-若有期望加入其他功能改善論文撰寫環境，也歡迎提交 Issus 許願！ 
-
+---
+<div class="Success" style='padding:0.1em; background-color:#D8EED0; color:#30652E'>
+<span>
+<p style='margin-top:1em; text-align:center'>
+<b>Note</b></p>
+<p style='margin-left:6em;'>
+如果您發現這個板型有問題，請提交 Issues，也非常歡迎您提交 PR 協助修正問題。<BR>
+若有期望加入其他功能改善論文撰寫環境，也歡迎提交 Issus 許願！ <BR>
 歡迎各位先進、學長姊、學弟妹 Fork 本 Repo
+</p>
+</span>
+</div>
+
+---
+
 ### 說明
 依照[南臺科技大學學位論文格式規範](https://academic.stust.edu.tw/tc/node/DegreeExam)之內容，
 論文裝訂之內容及順序應依下列順序辦理：
@@ -116,20 +124,53 @@ $ cd ~/texlive_ISO
 $ sudo sh ./install.sh
 ```
 
-### [Docker](https://www.docker.com/)
->   如已有 xelatex 編譯環境的使用者，不須安裝此工具。
+### Containers
+Docker 與 Podman 同為管理容器 (container) 的軟體，皆可以使用 [Make](#make) 命令編譯此專案。
 
-適用於不想建立環境的用戶，安裝文件請見[官方文件](https://docs.docker.com/engine/install/)。
+#### [Docker](https://www.docker.com/)
+>   如已有 xelatex 編譯環境的使用者，不須安裝此工具。
+>   Docker 與 Podman 擇一即可
+
+適用於不想建立環境的用戶，安裝說明詳見[官方文件](https://docs.docker.com/engine/install/)。
 使用的 image [texlive/texlive](https://hub.docker.com/r/texlive/texlive/)
 
 ```
 ### debian / ubuntu
 $ docker pull texlive/texlive
 $ git clone https://github.com/tw1chao/STUST-thesis-template.git
-$ sh STUST-thesis-template/Docker/linux/build.sh
-$ sh STUST-thesis-template/Docker/linux/start.sh
-$ sh STUST-thesis-template/Docker/linux/attach.sh
+$ cd STUST-thesis-template/Containers/Docker/linux/
+$ sh build.sh
+$ sh start.sh
+$ sh attach.sh
 ```
+
+#### [Podman](https://podman.io/)
+>   如已有 xelatex 編譯環境的使用者，不須安裝此工具。
+>   Podman 與 Docker 擇一即可
+
+也適用於不想建立環境的用戶，安裝說明詳見[官方文件](https://podman.io/getting-started/installation.html)
+與 Docker 使用相同 image [texlive/texlive](https://hub.docker.com/r/texlive/texlive/)，並且有 [Podman-Desktop](https://podman-desktop.io/) 的圖形介面支援。
+
+```
+### debian / ubuntu
+$ podman pull docker.io/texlive/texlive
+$ git clone https://github.com/tw1chao/STUST-thesis-template.git
+$ cd STUST-thesis-template/Containers/podman/linux/
+$ sh build.sh
+$ sh start.sh
+$ sh attach.sh
+```
+
+```
+### windows
+ podman pull docker.io/texlive/texlive
+ git clone https://github.com/tw1chao/STUST-thesis-template.git
+ cd STUST-thesis-template/Containers/podman/win/
+ build.bat
+ start.bat
+ attach.bat
+```
+
 
 ### [Git](http://git-scm.com/)
 >   極度推薦，非必要。
